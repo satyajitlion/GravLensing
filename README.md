@@ -60,8 +60,8 @@ project/
 - scikit-learn
 - pandas
 
-### Custom Implementation
-- `pygravlens.py` - Custom gravitational lensing simulation library
+### Lens Modeling Implementation
+- `pygravlens.py` - Dr. Keeton's gravlens software
 
 ## Quick Start
 
