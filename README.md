@@ -45,7 +45,7 @@ project/
 
 ### Phase 3: Hubble Constant Application (Future)
 - **Input**: Real lens systems (e.g., from H0LiCOW, TDCOSMO)
-- **Process**: Apply trained ML models to infer H₀
+- **Process**: Apply trained ML models to infer $H_0$
 - **Output**: Hubble Constant constraints with uncertainty estimates
 
 ## Requirements
