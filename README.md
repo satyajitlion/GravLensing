@@ -92,6 +92,7 @@ jupyter notebook MockLensTests.ipynb
 ```
 
 ## Labels (Network Targets)
+```
 {
     'ellipc': float,       # Ellipticity component 1 (cosine)
     'ellips': float,       # Ellipticity component 2 (sine)  
@@ -102,6 +103,7 @@ jupyter notebook MockLensTests.ipynb
     'zSrc': float,         # Source redshift (known from spectroscopy)
     # H₀ is derived from these parameters + time delays
 }
+```
 
 ## Research Context
 This work contributes to the Hubble tension - the discrepancy between early-universe (CMB) and late-universe (supernovae, lenses) measurements of $H_0$. Machine learning approaches could help resolve systematic uncertainties in lens modeling.
