@@ -1,4 +1,4 @@
-
+tag: #MockLens #MockLensGeneration #TrainingData
 ### Today's Focus
 
 Create a GitHub repository for the research. Convert the mock lens generation code from Jupyter notebook format to an executable Python script for more efficient large-scale processing. Use obsidian to document the research through research logs. 
