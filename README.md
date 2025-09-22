@@ -70,3 +70,38 @@ project/
 # Generate mock lenses for ML training
 python generateMockLenses.py
 ```
+
+### 2. Analyze Data Properties
+```
+jupyter notebook analysis.ipynb
+```
+
+### 3. Validate Data Structure
+```
+jupyter notebook MockLensTests.ipynb
+```
+
+## Features (Network Input)
+```
+{
+    'img': array,          # Image positions [RA, Dec] × N_images
+    'mu': array,           # Magnifications for each image
+    'time': array,         # Relative time delays
+    # Derived features: image separation, magnification ratios, etc.
+}
+```
+
+## Labels (Network Targets)
+{
+    'ellipc': float,       # Ellipticity component 1 (cosine)
+    'ellips': float,       # Ellipticity component 2 (sine)  
+    'gammc': float,        # External shear component 1
+    'gamms': float,        # External shear component 2
+    'einrad': float,       # Einstein radius
+    'zLens': float,        # Lens redshift (known from spectroscopy)
+    'zSrc': float,         # Source redshift (known from spectroscopy)
+    # H₀ is derived from these parameters + time delays
+}
+
+## Research Context
+This work contributes to the Hubble tension - the discrepancy between early-universe (CMB) and late-universe (supernovae, lenses) measurements of $H_0$. Machine learning approaches could help resolve systematic uncertainties in lens modeling.
