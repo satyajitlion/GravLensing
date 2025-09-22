@@ -1,4 +1,3 @@
-
 ### Notes
 1. Consider if I want a chronological research log or project management based research log. Is it possible to incorporate elements from both types of approaches? (<u>Solution I found</u>: use tags to showcase what aspect of the project I worked on while logging chronologically).
 2. Go through old comp astro notes to relearn Amarel and try to find the exact terminal commands used to connect and give batch jobs to Amarel. Check if Amarel ID still works (if not, will need to request that).

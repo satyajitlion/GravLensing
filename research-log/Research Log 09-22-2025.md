@@ -25,6 +25,6 @@ Amarel, the Rutgers super computer, might simplify the above issue and make the 
 ***
 ### Next Steps
 
-Study how Amarel works and go back to notes from Computational Astro to learn how to login to Amarel and how to provide it with executable scripts. There might be a queue time which might extend the time it takes to execute the file. Learn about parallel processing to split the script into several pieces that can simultaneously run to conserve some time (useful for when ```num_mock``` $\geq 10^6$ or $10^7$).
+Study how Amarel works and go back to notes from Computational Astro to learn how to login to Amarel and how to provide it with executable scripts. There might be a queue time which might extend the time it takes to execute the file. Learn about parallel processing to split the script into several pieces that can simultaneously run to conserve some time (useful for when ```num_mock``` $\geq 10^6$ or $10^7$). Additionally, consider how to describe the system using a "metric" such that when the system undergoes rotation, the key characteristics of the system would be the same. How would a network look like when trained on such data? Might need to research more on Tensors and how they work computationally. 
 
 ##### tag: #MockLens #MockLensGeneration #TrainingData
