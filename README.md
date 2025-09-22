@@ -28,7 +28,7 @@ This code generates three types of mock gravitational lens systems:
 
 1. Clone this repository:
 ```bash
-git clone [your-repository-url]
+git clone https://github.com/satyajitlion/GravLensing.git
 cd gravitational-lens-generator
 ```
 
@@ -38,6 +38,7 @@ cd gravitational-lens-generator
 ```
 
 # File Structure
+```
 project/
 ├── generateMockLens.py     # Main generation script
 ├── constants.py           # Configuration parameters
@@ -45,5 +46,5 @@ project/
 ├── valShear.npy          # Output: shear-only lenses
 ├── valEllip.npy          # Output: ellipticity-only lenses
 └── valBoth.npy           # Output: combined lenses
-
+```
 3. 
