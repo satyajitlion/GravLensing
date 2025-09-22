@@ -1,50 +1,72 @@
-# Gravitational Lens Mock Data Generator
+# Application of Machine Learning in Grav Lens Modeling
 
-A Python tool for generating mock gravitational lensing data using pygravlens.
+A pipeline for generating mock gravitational lens data and training neural networks to constrain the Hubble Constant ($H_0$).
 
 ## Project Overview
 
-This code generates three types of mock gravitational lens systems:
-- **Shear-only lenses**: External shear only, no ellipticity
-- **Ellipticity-only lenses**: Intrinsic ellipticity only, no external shear  
-- **Combined lenses**: Both ellipticity and external shear
+This project develops a machine learning approach to gravitational lens modeling, with the ultimate goal of determining the Hubble Constant. The workflow consists of three main phases:
+
+1. **Mock Lens Generation**: Create realistic training data using gravitational lensing physics
+2. **Neural Network Training**: Train models to predict lens parameters from observable features
+3. **Hubble Constant Estimation**: Apply trained models to real lens systems to constrain H₀
+
+## Scientific Motivation
+
+Gravitational lens time delays provide one of the most direct methods for measuring $H_0$, but traditional modeling approaches are computationally inefficient. This project explores machine learning as a faster, more scalable alternative for extracting cosmological parameters from lensed systems.
+
+## File Structure
+```
+project/
+├── pygravlens.py # Dr. Keeton's gravlens software
+├── generateMockLenses.py # Main generation script
+├── constants.py # Configuration parameters and constants
+├── analysis.ipynb # Jupyter notebook for analyzing mock lenses
+├── MockLensTests.ipynb # Testing dictionary structure and functionality
+├── lensingBasics.ipynb # Educational notebook for lensing basics
+├── timedelays.ipynb # Educational notebook for learning about time delays 
+├── Honors in Astronomy Project Outline.pdf # Project proposal/documentation
+├── valShear.npy # Output: shear-only lenses
+├── valEllip.npy # Output: ellipticity-only lenses
+├── valBoth.npy # Output: combined lenses
+└── README.md # This file
+```
+
+## Project Pipeline
+
+### Phase 1: Data Generation (Current)
+- **Input**: Cosmological parameters, lens/source redshifts, mass distributions
+- **Process**: Physical lens modeling using `pygravlens.py`
+- **Output**: Mock lens systems with known parameters (→ training data)
+
+### Phase 2: Machine Learning Training (Future)
+- **Input**: Mock lens data (image positions, magnifications, time delays)
+- **Process**: Neural network training to learn parameter → observables mapping
+- **Output**: Trained models that can predict parameters from observables
+
+### Phase 3: Hubble Constant Application (Future)
+- **Input**: Real lens systems (e.g., from H0LiCOW, TDCOSMO)
+- **Process**: Apply trained ML models to infer H₀
+- **Output**: Hubble Constant constraints with uncertainty estimates
 
 ## Requirements
 
-### Python Packages
+### Core Dependencies
 - Python 3.7+
-- numpy
-- matplotlib
-- pygravlens
-- astropy
-- scipy (optional)
+- numpy, matplotlib, astropy
+- jupyter (for analysis notebooks)
 
-### System Requirements
-- Minimum: 8GB RAM for small datasets (≤1,000 lenses)
-- Recommended: 16GB+ RAM for large datasets (10,000+ lenses)
-- Storage: ~100MB per 10,000 lenses generated
+### ML Dependencies (Future Phase)
+- tensorflow/pytorch
+- scikit-learn
+- pandas
 
-## Installation
+### Custom Implementation
+- `pygravlens.py` - Custom gravitational lensing simulation library
 
-1. Clone this repository:
+## Quick Start
+
+### 1. Generate Training Data
 ```bash
-git clone https://github.com/satyajitlion/GravLensing.git
-cd gravitational-lens-generator
+# Generate mock lenses for ML training
+python generateMockLenses.py
 ```
-
-2. Clone this repository:
-```pip install numpy matplotlib astropy
-# Install pygravlens according to its documentation
-```
-
-# File Structure
-```
-project/
-├── generateMockLens.py     # Main generation script
-├── constants.py           # Configuration parameters
-├── README.md             # This file
-├── valShear.npy          # Output: shear-only lenses
-├── valEllip.npy          # Output: ellipticity-only lenses
-└── valBoth.npy           # Output: combined lenses
-```
-3. 
