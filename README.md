@@ -94,13 +94,13 @@ jupyter notebook MockLensTests.ipynb
 ## Labels (Network Targets)
 ```
 {
-    'ellipc': float,       # Ellipticity component 1 (cosine)
-    'ellips': float,       # Ellipticity component 2 (sine)  
+    'ellipc': float,       # Ellipticity component 1
+    'ellips': float,       # Ellipticity component 2  
     'gammc': float,        # External shear component 1
     'gamms': float,        # External shear component 2
     'einrad': float,       # Einstein radius
-    'zLens': float,        # Lens redshift (known from spectroscopy)
-    'zSrc': float,         # Source redshift (known from spectroscopy)
+    'zLens': float,        # Lens redshift
+    'zSrc': float,         # Source redshift
     # H₀ is derived from these parameters + time delays
 }
 ```
