@@ -1,4 +1,4 @@
-# Application of Machine Learning in Grav Lens Modeling
+# Application of Machine Learning in Gravitational Lens Modeling
 
 A pipeline for generating mock gravitational lens data and training neural networks to constrain the Hubble Constant ($H_0$).
 
