@@ -106,4 +106,4 @@ jupyter notebook MockLensTests.ipynb
 ```
 
 ## Research Context
-This work contributes to the Hubble tension - the discrepancy between early-universe (CMB) and late-universe (supernovae, lenses) measurements of $H_0$. Machine learning approaches could help resolve systematic uncertainties in lens modeling.
+This work contributes to the Hubble tension. Machine learning approaches could help resolve systematic uncertainties in lens modeling.
