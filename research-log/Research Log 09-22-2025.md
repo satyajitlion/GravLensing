@@ -5,7 +5,7 @@ Create a GitHub repository for the research. Convert the mock lens generation co
 
 ### What I was able to accomplish
 
-I was able to create a GitHub repository containing the research from May. I then worked toward creating the python files named ```constants.py``` and ```generateMockLens.py``` which I used to   
+I was able to create a GitHub repository containing the research from May. I then worked toward creating the python files named ```constants.py``` and ```generateMockLens.py```. The former contained the constants from the original jupyter notebook file while the latter contained the function used to generate the mock lenses given the constants. Thus far, after testing, the code was successfully able to run   
 
 ### Results
 
