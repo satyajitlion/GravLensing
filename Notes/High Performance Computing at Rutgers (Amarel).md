@@ -125,9 +125,21 @@ sleep 10
 sacct --units=G --format=MaxRSS,MaxDiskRead,MaxDiskWrite,Elapsed,NodeList -j $SLURM_JOBID | sed -n -e 1,2p -e 5p
 ```
 
+- ##### Defaults and Limits
+	```
+	--ntasks=1
+	--cpus-per-task=1
+	--mem-per-cpu=4G
+	--time=00-00:2:00
+	```
+
+	- Limits / Upper Bounds:
+		- Max # CPUs in-use per user for 'main' partition jobs = 504
+		- Max # of jobs a user can submit = 500 (this also applies to job arrays), owners have a 2000 job limit for each partition
+
 - ##### Amarel Cluster Website
 	- https://sites.google.com/view/cluster-user-guide
 
 
 
-##### tag: #Amarel, #High-PerformanceComputing, #Terminal 
+##### tag: #Amarel #High-PerformanceComputing #Terminal 

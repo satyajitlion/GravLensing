@@ -28,4 +28,4 @@
 - The '**-i**' flag tells the terminal to ask you before doing anything destructive (if you accidentally try to rename a file that already exists)
 - You can output aliases in a special file called ```.bash_profile``` so that the aliases will automatically be activated when the terminal is opened.
 
-##### tag: #Terminal, #High-PerformanceComputing, #Amarel
+##### tag: #Terminal #High-PerformanceComputing #Amarel
