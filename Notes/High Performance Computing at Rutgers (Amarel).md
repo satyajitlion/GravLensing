@@ -51,13 +51,20 @@
 	
 - ##### Basic SLURM commands
 	```
-	# Commands                                     # Description
-	sinfo -a                                    | Views Nodes
-	sbatch job-script [options]                 |
-	srun [options] program_name                 |
-	squeue -u NetID                             |
-	sstat -u jobID                              |
-	sacct --format [options] -j jobID           |
+	# Commands                                    # Description
+	_____________________________________________________________________________
+	sinfo -a                                    | Views Nodes and partition info
+	_____________________________________________________________________________
+	sbatch job-script [options]                 | Submit/setup a batch job
+	_____________________________________________________________________________
+	srun [options] program_name                 | Run a program (exe, application)
+	_____________________________________________________________________________
+	squeue -u NetID                             | Check status of job submissions
+	_____________________________________________________________________________
+	sstat -u jobID                              | Check status of a running job
+	_____________________________________________________________________________
+	sacct --format [options] -j jobID           | See accounting details of current                                                  | and completed jobs 
+	_____________________________________________________________________________
 	```
 	- All commands: https://slurm.schedmd.com/pdfs/summary.pdf
 
