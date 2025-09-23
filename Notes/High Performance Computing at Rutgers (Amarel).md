@@ -63,7 +63,7 @@
 	_____________________________________________________________________________
 	sstat -u jobID                              | Check status of a running job
 	_____________________________________________________________________________
-	sacct --format [options] -j jobID           | See accounting details of current                                                  | and completed jobs 
+	sacct --format [options] -j jobID           | See accounting details of current and completed jobs 
 	_____________________________________________________________________________
 	```
 	- All commands: https://slurm.schedmd.com/pdfs/summary.pdf
