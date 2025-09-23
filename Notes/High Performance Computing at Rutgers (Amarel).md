@@ -85,6 +85,9 @@
 #SBATCH --mail-user=[NetID]@rutgers.edu  
 #SBATCH --mail-type=BEGIN,END,FAIL  
 #SBATCH --export=ALL
+
+srun my-exe –t 16 input > output  
+sacct --format MaxRSS,Elapsed -j $SLURM_JOBID  
 ```
 - note that here, "--mem=0" means "use all available RAM" but here, that's only the RAM that's not allocated to other jobs.
 
@@ -95,6 +98,36 @@ cp -r /projects/oarc/users/training/intro.amarel .
 cd intro.amarel  
 ls
 ```
+
+- ##### Example Job Script
+```
+#!/bin/bash  
+#SBATCH --clusters=amarel # Select which system(s) to use  
+#SBATCH --partition=main # Partition (job queue)  
+#SBATCH --requeue # Return job to the queue if preempted  
+#SBATCH --job-name=LAMMPSX # Assign a short name to your job  
+#SBATCH --nodes=1 # Number of nodes you require  
+#SBATCH --ntasks=8 # Total # of tasks across all nodes  
+#SBATCH --cpus-per-task=1 # Cores per task (>1 if multithread tasks)  
+#SBATCH --mem=1G # Real memory (RAM) required per node  
+#SBATCH --time=10:00:00 # Total run time limit (DD-HH:MM:SS)  
+#SBATCH --output=slurm.%N.%j.out # STDOUT file for SLURM output  
+
+## Environment settings needed for this job  
+module purge  
+module load intel/17.0.4 mvapich2/2.2
+
+## Run the job  
+srun --mpi=pmi2 lammps_intel_cpu_mpi < in.binary  
+
+## Capture job accounting info (OPTIONAL)  
+sleep 10  
+sacct --units=G --format=MaxRSS,MaxDiskRead,MaxDiskWrite,Elapsed,NodeList -j $SLURM_JOBID | sed -n -e 1,2p -e 5p
+```
+
+- ##### Amarel Cluster Website
+	- https://sites.google.com/view/cluster-user-guide
+
 
 
 ##### tag: #Amarel, #High-PerformanceComputing, #Terminal 
