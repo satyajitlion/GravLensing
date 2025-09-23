@@ -20,4 +20,6 @@ Will I be able to get access to the Rutgers VPN to connect to Rutgers or would I
 ***
 ### Next Steps
 
+The next steps are to figure out a way to gain access to a VPN or find an access key to room 330/undergrad lounge on campus so that I can access Amarel directly. I should reconfirm if I still have access to Amarel and try to gain access if I don't have access. Following this, and after connecting to Amarel, I need to 
+
 ##### Tags: #Amarel #High-PerformanceComputing #Terminal 
