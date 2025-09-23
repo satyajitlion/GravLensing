@@ -136,6 +136,8 @@ sacct --units=G --format=MaxRSS,MaxDiskRead,MaxDiskWrite,Elapsed,NodeList -j $SL
 	- Limits / Upper Bounds:
 		- Max # CPUs in-use per user for 'main' partition jobs = 504
 		- Max # of jobs a user can submit = 500 (this also applies to job arrays), owners have a 2000 job limit for each partition
+	
+	- Consider memory request boundaries (ask for about 8 GB less than the max)
 
 - ##### Amarel Cluster Website
 	- https://sites.google.com/view/cluster-user-guide
