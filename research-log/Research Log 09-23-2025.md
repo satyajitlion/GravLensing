@@ -10,6 +10,7 @@ Learn how Amarel and the Rutgers Cluster works. Try downloading PuTTy, SCP, and 
 ***
 ### Problems
 
+Rutgers doesn't allow me to download its VPN. In order to connect to Amarel, I need a VPN. Need to either be connected to Rutgers network then and need access to the rooms at Serin or gain access to VPN. Edit: it's either you need to be connected to a VPN OR you need to download PuTTy.
 ***
 ### Questions
 
