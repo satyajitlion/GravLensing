@@ -50,22 +50,14 @@
 	- SLURM ensures fair sharing of cluster resources (policy enforcement)
 	
 - ##### Basic SLURM commands
-	```
-	# Commands                                    # Description
-	_____________________________________________________________________________
-	sinfo -a                                    | Views Nodes and partition info
-	_____________________________________________________________________________
-	sbatch job-script [options]                 | Submit/setup a batch job
-	_____________________________________________________________________________
-	srun [options] program_name                 | Run a program (exe, application)
-	_____________________________________________________________________________
-	squeue -u NetID                             | Check status of job submissions
-	_____________________________________________________________________________
-	sstat -u jobID                              | Check status of a running job
-	_____________________________________________________________________________
-	sacct --format [options] -j jobID           | See accounting details of current and completed jobs 
-	_____________________________________________________________________________
-	```
+| # Commands                        | # Description                                        |
+|-----------------------------------|------------------------------------------------------|
+| sinfo -a                          | Views Nodes and partition info                       |
+| sbatch job-script [options]       | Submit/setup a batch job                             |
+| srun [options] program_name       | Run a program (exe, application)                     |
+| squeue -u NetID                   | Check status of job submissions                      |
+| sstat -u jobID                    | Check status of a running job                        |
+| sacct --format [options] -j jobID | See accounting details of current and completed jobs |
 	- All commands: https://slurm.schedmd.com/pdfs/summary.pdf
 
 
