@@ -17,4 +17,4 @@ Learn how Amarel and the Rutgers Cluster works. Try downloading PuTTy, SCP, and 
 ***
 ### Next Steps
 
-##### tag: #Amarel #High-PerformanceComputing #Terminal 
+##### Tags: #Amarel #High-PerformanceComputing #Terminal 
