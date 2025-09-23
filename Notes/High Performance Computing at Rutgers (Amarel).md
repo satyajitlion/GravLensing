@@ -43,7 +43,7 @@
 	- Non-backed up and subjected to purge (files older than 90 days).
 	
 - ##### Resource Management
-- 
+	- 
 
 
 ##### tag: #Amarel, #High-PerformanceComputing, #Terminal 

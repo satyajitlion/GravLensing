@@ -28,6 +28,9 @@ project/
 ├── valShear.npy # Output: shear-only lenses
 ├── valEllip.npy # Output: ellipticity-only lenses
 ├── valBoth.npy # Output: combined lenses
+├── Meeting-Notes # Folder of my notes from research meetings  
+├── Research Log # Folder documenting my work. 
+├── Notes # Folder of notes I took for this research
 └── README.md # This file
 ```
 
