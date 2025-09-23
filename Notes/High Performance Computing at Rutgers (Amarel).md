@@ -50,6 +50,8 @@
 	- SLURM ensures fair sharing of cluster resources (policy enforcement)
 	
 - ##### Basic SLURM commands
+	- All commands: https://slurm.schedmd.com/pdfs/summary.pdf
+
 | # Commands                        | # Description                                        |
 |-----------------------------------|------------------------------------------------------|
 | sinfo -a                          | Views Nodes and partition info                       |
@@ -58,7 +60,41 @@
 | squeue -u NetID                   | Check status of job submissions                      |
 | sstat -u jobID                    | Check status of a running job                        |
 | sacct --format [options] -j jobID | See accounting details of current and completed jobs |
-	- All commands: https://slurm.schedmd.com/pdfs/summary.pdf
+
+- ##### Difference between ***batch job*** and ***interactive job*** 	
+| # Batch Job                                                                                                                                                 | # Interactive Job                                                                |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| **sbatch** *job-script*                                                                                                                                     | **srun** [required resources] *your.exe*                                         |
+| Starts when requested resources are available                                                                                                               | Starts when requested resources are available                                    |
+| Runs "in the background" (Use **srun** to launch tasks inside your script).                                                                                 | You are actively logged-in (running a shell) on a compute node.                  |
+| Terminate batch jobs using **scancel** jobID                                                                                                                | Terminate interactive jobs by simply logging-out (using **exit** or **CNTRL+D**) |
+| Useful for jobs that will run for a long time (essentially my case for the research I'm doing), and for jobs that don't require interaction or supervision. | Useful for testing, compiling code, computational steering, etc.                 |
+- ##### Batch Job Script
+```
+#!/bin/bash
+#SBATCH --partition=main  
+#SBATCH --job-name=Efexa  
+#SBATCH --nodes=1  
+#SBATCH --ntasks=1  
+#SBATCH --cpus-per-task=16  
+#SBATCH --exclusive  
+#SBATCH --mem=118G  
+#SBATCH --time=5:00:00  
+#SBATCH --output=slurm.%N.%j.out  
+#SBATCH --error=slurm.%N.%j.err  
+#SBATCH --mail-user=[NetID]@rutgers.edu  
+#SBATCH --mail-type=BEGIN,END,FAIL  
+#SBATCH --export=ALL
+```
+- note that here, "--mem=0" means "use all available RAM" but here, that's only the RAM that's not allocated to other jobs.
+
+- ##### Copying Example Files
+```
+cd /scratch/[NetID]
+cp -r /projects/oarc/users/training/intro.amarel .  
+cd intro.amarel  
+ls
+```
 
 
 ##### tag: #Amarel, #High-PerformanceComputing, #Terminal 
