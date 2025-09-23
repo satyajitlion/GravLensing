@@ -139,8 +139,10 @@ sacct --units=G --format=MaxRSS,MaxDiskRead,MaxDiskWrite,Elapsed,NodeList -j $SL
 	
 	- Consider memory request boundaries (ask for about 8 GB less than the max)
 
-- ##### Amarel Cluster Website
-	- https://sites.google.com/view/cluster-user-guide
+- ##### Amarel Cluster Website & Additional Links
+	- Website: https://sites.google.com/view/cluster-user-guide
+	- Intro To Amarel, Installation of Software: https://rutgers.mediaspace.kaltura.com/media/Introduction+to+Amarel%3A+Installation+and+Tuning+Basics+for+LAMMPS/1_mss2nngi/171772901
+	- Intro to Amarel, Connecting to Cluster: https://rutgers.mediaspace.kaltura.com/media/Introduction+to+Amarel%3A+Connecting+to+the+Cluster/1_2v2d4o7p/171772901
 
 
 
