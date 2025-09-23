@@ -43,7 +43,23 @@
 	- Non-backed up and subjected to purge (files older than 90 days).
 	
 - ##### Resource Management
-	- 
+	- SLURM = resource manager / job scheduler
+	- Enables scripting of computational tasks
+	- Slurm runs these tasks on compute nodes and returns the results (output files)
+	- If the cluster is full, SLURM holds tasks and runs them when the resources are available
+	- SLURM ensures fair sharing of cluster resources (policy enforcement)
+	
+- ##### Basic SLURM commands
+	```
+	# Commands                                     # Description
+	sinfo -a                                    | Views Nodes
+	sbatch job-script [options]                 |
+	srun [options] program_name                 |
+	squeue -u NetID                             |
+	sstat -u jobID                              |
+	sacct --format [options] -j jobID           |
+	```
+	- All commands: https://slurm.schedmd.com/pdfs/summary.pdf
 
 
 ##### tag: #Amarel, #High-PerformanceComputing, #Terminal 
