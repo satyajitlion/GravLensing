@@ -16,7 +16,7 @@ Rutgers doesn't allow me to download its VPN. In order to connect to Amarel, I n
 ***
 ### Questions & Ideas
 
-Will I be able to get access to the Rutgers VPN to connect to Rutgers or would I need an external VPN? Cisco Anyconnect also costs money and is offered for free at Rutgers. Would it be possible to use some other, free version of the VPN to connect to Rutgers and would that work?
+Will I be able to get access to the Rutgers VPN to connect to Rutgers or would I need an external VPN? Cisco Anyconnect also costs money and is offered for free at Rutgers. Would it be possible to use some other, free version of the VPN to connect to Rutgers and would that work? Additionally, is PuTTy really necessary for connecting to Amarel?
 ***
 ### Next Steps
 
