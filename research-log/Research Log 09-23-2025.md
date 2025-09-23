@@ -8,7 +8,7 @@ I spent a couple hours going back to the Computational Astrophysics modules and 
 ***
 ### Results
 
-No results so far, today was more so focused on downloading + reading up on how to use terminal commands in order to work with Amarel. 
+No results so far, today was more so focused on downloading appropriate software and reading up on how to use terminal commands in order to work with Amarel. I was able to compile a list of terminal commands/read up on how to use emacs to more efficiently navigate through the terminal. Additionally, I also went through the OARC documentation on Amarel. 
 ***
 ### Problems
 
