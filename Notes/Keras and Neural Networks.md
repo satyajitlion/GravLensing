@@ -59,12 +59,20 @@ Note, that whenever $y = 1$, $L(a^{[2]},1) = -\log(a^{[2]})$, and when $y = 0$, 
 Here is how one would visualize the above errors:
 
 ```
-Input → [Layer 1 Neurons] → [Layer 2 Neurons] → Output `a^[2]` → Loss `L`
+Single Input x^(i) → [Layer 1] → [Layer 2] → Output a^[2](i) → Loss L(i)
 ```
 
 ```
-[Batch of m samples: X] → [Network] → [Outputs A^[2]] → [Vectorized L] → Average → J
-     (m examples)                            (m predictions)    (m losses)
+TRAINING SET (m samples)
+│
+├─ Sample 1: x^(1) → [Layer 1] → [Layer 2] → a^[2](1) → L(1)
+├─ Sample 2: x^(2) → [Layer 1] → [Layer 2] → a^[2](2) → L(2) 
+├─ Sample 3: x^(3) → [Layer 1] → [Layer 2] → a^[2](3) → L(3)
+└─ ...
+└─ Sample m: x^(m) → [Layer 1] → [Layer 2] → a^[2](m) → L(m)
+│
+↓
+J = (L(1) + L(2) + L(3) + ... + L(m)) / m
 ```
 ### Backward Propagation (fixing weights and biases using loss function)
 
