@@ -1,7 +1,6 @@
 ### Today's Focus
 
-Todays' focus was different from yesterday as I did not have access key to the rooms. Therefore, with the VPN aspect keeping mock lens generation on hold, I focused on the neural network side and on studying how mathematically the layers are structured in a standard neural network that is hand coded. 
-
+Learn/study the the neural network side of the research. Focus on how mathematically the layers are structured in a standard neural network that is hand coded (no Keras). Work towards deriving some of the equations yourself to better understand how each layer connects to the next. 
 ***
 ### What I was able to accomplish
 
