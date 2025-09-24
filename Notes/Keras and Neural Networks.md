@@ -147,8 +147,75 @@ b^{[2]} = b^{[2]} - \alpha \cdot db^{[2]}
 			- L1 Regularization
 			- Dropout
 			- Early stopping
-		- 
 
+### Example (No Keras) Implementation
 
+```python
+# In [1]:
+# Import required packages
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+np.random.seed(2)
+``` 
+
+```python
+# In [2]:
+# Read the data
+df = pd.read_csv("dataset.csv")
+df.shape 
+
+# Out[2]: (200, 3)
+```
+
+```python
+# In [3]:
+df.head()
+
+# Out[3]:
+'''
+         x1        x2  target
+0  1.065701  1.645795     1.0
+1  0.112153  1.005711     1.0
+2 -1.469113  0.598036     1.0
+3 -1.554499  1.034249     1.0
+4 -0.097040 -0.146800     0.0
+'''
+```
+
+```python
+# In [4]:
+# Let's print the distribution of the target variable in class 0 & 1
+df['target'].value_counts()
+
+# Out[4]:
+'''
+0.0    103
+1.0     97
+Name: target, dtype: int64
+'''
+```
+
+```python
+# In [5]:
+# Let's plot the distribution of the target variable**
+plt.scatter(df['x1'], df['x2'], c=df['target'].values.reshape(200,), s=40, cmap=plt.cm.Spectral)
+plt.title('Distribution of the target variable')
+
+# Out[5]: a scatter graph with most red points in a circular shape in the middle and purple points outside of that circle forming a concentric ring shape with a few outliers.
+```
+
+```python
+# In [6]:
+# Let's prepare the data for model training**
+X = df[['x1','x2']].values.T
+Y = df['target'].values.reshape(1,-1)
+X.shape,Y.shape
+
+# Out[6]:
+'''
+((2, 200), (1, 200))
+'''
+```
 
 ##### Tags: #NeuralNetworks #Keras
