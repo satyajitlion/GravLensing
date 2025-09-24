@@ -51,7 +51,7 @@ Note, that whenever $y = 1$, $L(a^{[2]},1) = -\log(a^{[2]})$, and when $y = 0$, 
 da^{[2]} = \frac{\partial L}{\partial a^{[2]}} = \frac{\partial}{\partial a^{[2]}}\left(-y\log(a^{[2]})-1(1-y\log(1-a^{[2]}))\right) = \boxed{\frac{-y}{a^{[2]}} + \frac{(1-y)}{1-a^{[2]}}} 
 ```
 ```math
-dZ^{[2]} = \frac{\partial L}{\partial y^{[2]}} = \frac{\partial L}{\partial a^{[2]}}\cdot\frac{\partial a^{[2]}}{\partial Z^{[2]}} = \left[\frac{-y}{a^{[2]}} + \frac{(1-y)}{1-a^{[2]}} \right]\cdot \frac{\partial \sigma(Z^{[2]})}{\partial Z^{[2]}} =\boxed{A^{[2]} - Y}
+dZ^{[2]} = \frac{\partial L}{\partial Z^{[2]}} = \frac{\partial L}{\partial a^{[2]}}\cdot\frac{\partial a^{[2]}}{\partial Z^{[2]}} = \left[\frac{-y}{a^{[2]}} + \frac{(1-y)}{1-a^{[2]}} \right]\cdot \frac{\partial \sigma(Z^{[2]})}{\partial Z^{[2]}} = \left[\frac{-y(1-a^{[2]}) + (1-y)a^{[2]}}{a^{[2]}(1-a^{[2]})}\right]\cdot \left[a^{[2]}(1-a^{[2]})\right] = -y + ya^{[2]} + a^{[2]} - ya^{[2]} = \boxed{A^{[2]} - Y}
 ```
 ```math
 dW^{[2]} = \frac{1}{m}dZ^{[2]}A^{[1]T}
