@@ -80,27 +80,27 @@ dz^{[2]} = \frac{\partial L}{\partial z^{[2]}} = \frac{\partial L}{\partial a^{[
 ```
 
 ```math
-dW^{[2]} = \frac{\partial L}{\partial W^{[2]}} = \frac{\partial L}{\partial z^{[2]}}\times\frac{\partial z^{[2]}}{\partial W^{[2]}} = dz^{[2]} \times \frac{\partial(W^{[2]}a^{[1]}+b^{[2]})}{\partial W^{[2]}} = \boxed{dz^{2}\times a^{[1]}}. 
+dW^{[2]} = \frac{\partial L}{\partial W^{[2]}} = \frac{\partial L}{\partial z^{[2]}}\times\frac{\partial z^{[2]}}{\partial W^{[2]}} = dz^{[2]} \times \frac{\partial(W^{[2]}a^{[1]}+b^{[2]})}{\partial W^{[2]}} = \boxed{dz^{2}\times a^{[1]} = (a^{[2]} - y) \times a^{[1]}}. 
 ```
 
 ```math
-db^{[2]} = \frac{\partial L}{\partial b^{[2]}} = \frac{\partial L}{\partial z^{[2]}}\times\frac{\partial z^{[2]}}{\partial b^{[2]}} = dz^{[2]} \times \frac{\partial(W^{[2]}a^{[1]}+b^{[2]})}{\partial b^{[2]}} = \boxed{dz^{2}}.
+db^{[2]} = \frac{\partial L}{\partial b^{[2]}} = \frac{\partial L}{\partial z^{[2]}}\times\frac{\partial z^{[2]}}{\partial b^{[2]}} = dz^{[2]} \times \frac{\partial(W^{[2]}a^{[1]}+b^{[2]})}{\partial b^{[2]}} = \boxed{dz^{2} = a^{[2]} - y}.
 ```
 
 ```math
-da^{[1]} = \frac{\partial L}{\partial a^{[1]}} = \frac{\partial L}{\partial z^{[2]}} \times \frac{\partial z^{[2]}}{\partial a^{[1]}} = dz^{[2]} \times \frac{\partial(W^{[2]}a^{[1]}+b^{[2]})}{\partial a^{[1]}} = \boxed{dz^{[2]}\times W^{[2]}}. 
+da^{[1]} = \frac{\partial L}{\partial a^{[1]}} = \frac{\partial L}{\partial z^{[2]}} \times \frac{\partial z^{[2]}}{\partial a^{[1]}} = dz^{[2]} \times \frac{\partial(W^{[2]}a^{[1]}+b^{[2]})}{\partial a^{[1]}} = \boxed{dz^{[2]}\times W^{[2]} = (a^{[2]} - y)\times W^{[2]}}. 
 ```
 
 ```math
-dz^{[1]} = \frac{\partial L}{\partial z^{[1]}} = \frac{\partial L}{\partial a^{[1]}}\times\frac{\partial a^{[1]}}{\partial z^{[1]}} = \left(dz^{[2]}\times W^{[2]}\right)\times \frac{\partial\sigma(z^{[1]})}{\partial z^{[1]}} = \boxed{\left(dz^{[2]}\times W^{[2]}\right)\times\sigma^\prime(z^{[1]})}.
+dz^{[1]} = \frac{\partial L}{\partial z^{[1]}} = \frac{\partial L}{\partial a^{[1]}}\times\frac{\partial a^{[1]}}{\partial z^{[1]}} = \left(dz^{[2]}\times W^{[2]}\right)\times \frac{\partial\sigma(z^{[1]})}{\partial z^{[1]}} = \boxed{\left(dz^{[2]}\times W^{[2]}\right)\times\sigma^\prime(z^{[1]}) = \left[(a^{[2]} - y)\times W^{[2]}\right]\times\left(\sigma(z^{[1]})\left[1-\sigma(z^{[1]})\right])\right)}.
 ```
 
 ```math
-dW^{[1]} = \frac{\partial L}{\partial W^{[1]}} = \frac{\partial L}{\partial z^{[1]}}\times\frac{\partial z^{[1]}}{\partial W^{[1]}} = dz^{[1]}\times \frac{\partial(W^{[1]}X+b^{[1]})}{\partial W^{[1]}} = \boxed{dz^{[1]}\times X}.
+dW^{[1]} = \frac{\partial L}{\partial W^{[1]}} = \frac{\partial L}{\partial z^{[1]}}\times\frac{\partial z^{[1]}}{\partial W^{[1]}} = dz^{[1]}\times \frac{\partial(W^{[1]}X+b^{[1]})}{\partial W^{[1]}} = \boxed{dz^{[1]}\times X = \left\{\left[(a^{[2]} - y)\times W^{[2]}\right]\times\left(\sigma(z^{[1]})\left[1-\sigma(z^{[1]})\right])\right)\right\}\times X}.
 ```
 
 ```math
-db^{[1]} = \frac{\partial L}{\partial b^{[1]}} = \frac{\partial L}{\partial z^{[1]}}\times \frac{\partial z^{[1]}}{\partial b^{[1]}} = dz^{[1]}\times \frac{\partial(W^{[1]}X+b^{[1]})}{\partial b^{[1]}} = \boxed{dz^{[1]}}.
+db^{[1]} = \frac{\partial L}{\partial b^{[1]}} = \frac{\partial L}{\partial z^{[1]}}\times \frac{\partial z^{[1]}}{\partial b^{[1]}} = dz^{[1]}\times \frac{\partial(W^{[1]}X+b^{[1]})}{\partial b^{[1]}} = \boxed{dz^{[1]} = \left(dz^{[2]}\times W^{[2]}\right)\times\sigma^\prime(z^{[1]}) = \left[(a^{[2]} - y)\times W^{[2]}\right]\times\left(\sigma(z^{[1]})\left[1-\sigma(z^{[1]})\right])\right)}.
 ```
 
 ### Gradient Descent & Updating Weights and Biases
