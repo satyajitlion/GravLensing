@@ -65,10 +65,13 @@ J = -\frac{1}{m}\sum_{i=1}^{m}[y^{(i)}\log(\hat{y}^{(i)}) + (1-y^{(i)})\log(1-\h
 ##### 2. **Backward Pass**: Calculate gradients layer by layer
 
 ```math
-dZ^{[2]} = A^{[2]} - Y \\
-dW^{[2]} = \frac{1}{m}dZ^{[2]}A^{[1]T}\\
+dZ^{[2]} = A^{[2]} - Y
+```
+```math
+dW^{[2]} = \frac{1}{m}dZ^{[2]}A^{[1]T}
+```
+```math
 db^{[2]} = \frac{1}{m}\sum_{i=1}^{m}dZ^{[2](i)}
 ```
-
 
 ##### Tags: #NeuralNetworks #Keras
