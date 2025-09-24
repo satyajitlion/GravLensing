@@ -43,4 +43,6 @@ L(a^{[2]},y) = -y\log(a^{[2]}) - (1-y)\log(1-a^{[2]})
 
 Note, that whenever $y = 1$, $L(a^{[2]},1) = -\log(a^{[2]})$, and when $y = 0$, $L(a^{[2]},0) = -\log(1-a^{[2]})$.
 
+
+
 ##### Tags: #NeuralNetworks #Keras
