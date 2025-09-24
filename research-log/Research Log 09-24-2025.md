@@ -14,7 +14,7 @@ My questions at the moment are, how does a standard ANN differ from a CNN or an 
 ***
 ### Next Steps
 
-Watch the following video (hi)[https://www.youtube.com/watch?v=qFJeN9V1ZsI&t=423s] and continue taking notes on Neural Networks if it's not possible to access the room 330/undergrad lounge on campus tomorrow. If I can access either room 330 or the undergrad lounge, work on mock lens generation instead. 
+Watch the following video [Keras With TensorFlow](https://www.youtube.com/watch?v=qFJeN9V1ZsI&t=423s) and continue taking notes on Neural Networks if it's not possible to access the room 330/undergrad lounge on campus tomorrow. If I can access either room 330 or the undergrad lounge, work on mock lens generation instead. 
 
 
 ##### Tags: #Keras #NeuralNetworks #TrainingData
