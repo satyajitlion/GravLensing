@@ -138,6 +138,17 @@ b^{[2]} = b^{[2]} - \alpha \cdot db^{[2]}
 - **Overfit Model –** The model has learned the relationship between training dataset’s input features and target output variable very well. It performs best on train dataset but works poor on test data.
 - **Bestfit Model –** The model outperforms on both training dataset as well as test dataset.
 
+- Why isn't overfitting good?
+	- The overfitted model memorizes the learning patterns between input features and output for the training dataset. Hence, it works best for train dataset but works poor on test unseen dataset.
+	- The solution for this problem is to force the network to keep the weight parameters small and prepare the model more generalized. This can be achieved by __regularization__ techniques.
+		- There are several regularization methods are used to avoid the overfitting. The regularization techniques make smaller changes to the learning algorithm and prepare model more generalized that even work best on test data.
+		- Regularization Examples:
+			- L2 Regularization
+			- L1 Regularization
+			- Dropout
+			- Early stopping
+		- 
+
 
 
 ##### Tags: #NeuralNetworks #Keras
