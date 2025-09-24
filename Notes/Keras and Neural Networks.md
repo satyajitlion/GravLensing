@@ -27,6 +27,19 @@
 ```
 
 - The activation function used here, $\sigma$, is the sigmoid function. We also need to compute the loss per layer (or error) via the loss function.
+
+### Sigmoid Activation Function
+
+```math
+\sigma(x) = \frac{1}{1+e^{-x}} = (1+e^{-x})^{-1}
+```
+
+Note here that
+
+```math
+\sigma^{\prime}(x) = \left[-1\cdot(1+e^{-x})^{-1-1}\right]\cdot (-e^{-x}) = (1+e^{-x})^{-2}\cdot e^{-x} = \frac{e^{-x}}{(1+e^{-x})^{2}} = \frac{1}{(1+e^{-x})}\cdot\left[\frac{1+e^{-x}-1}{(1+e^{-x})}\right] = \frac{1}{(1+e^{-x})}\cdot\left[1- \frac{1}{1+e^{-x}}\right] = \boxed{\sigma(x)\left[1-\sigma(x)\right]} 
+```
+
 ### Loss Function
 
 The loss function is given as
