@@ -42,7 +42,7 @@ Note here that
 
 ### Loss Function
 
-The cost function is given as
+The cost function (loss function for the entire model) is given as
 
 ```math
 J = -\frac{1}{m}\sum_{i=1}^{m}L(a^{[2](i)},y^{(i)})
