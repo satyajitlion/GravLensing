@@ -42,13 +42,13 @@ Note here that
 
 ### Loss Function
 
-The loss function is given as
+The cost function is given as
 
 ```math
 J = -\frac{1}{m}\sum_{i=1}^{m}L(a^{[2](i)},y^{(i)})
 ```
 
-where,
+where the loss function $L$ (used to find the cost function $J$) is given as follows:
 
 ```math
 L(a^{[2]},y) = -y\log(a^{[2]}) - (1-y)\log(1-a^{[2]})
