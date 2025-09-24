@@ -192,7 +192,12 @@ Name: target, dtype: int64
 # Let's plot the distribution of the target variable**
 plt.scatter(df['x1'], df['x2'], c=df['target'].values.reshape(200,), s=40, cmap=plt.cm.Spectral)
 plt.title('Distribution of the target variable')
-# Out[5]: a scatter graph with most red points in a circular shape in the middle and purple points outside of that circle forming a concentric ring shape with a few outliers.
+
+# Out[5]: 
+```
+![Alt text](https://studymachinelearning.com/wp-content/uploads/2019/12/plot_target.jpg "Distribution of target var")
+
+```python
 
 # In [6]:
 # Let's prepare the data for model training**
@@ -378,7 +383,27 @@ def plot_decision_boundary(model, X, y):
 # Plot the decision boundary**
 plot_decision_boundary(lambda x: predict(trained_parameters, x.T), X, Y)
 
-
+# Out[18]:
 ```
+
+![Alt text](https://studymachinelearning.com/wp-content/uploads/2019/12/plot_decision_boundary.png "Decision Boundary Graph")
+
+
+```python
+# In [19]:
+# Let's see how our Neural Network work with different hidden layer sizes**
+plt.figure(figsize=(15, 10))
+hidden_layer_sizes = [1, 2, 3, 5, 10,20]
+for i, n_h in enumerate(hidden_layer_sizes):
+    plt.subplot(2, 3, i+1)
+    plt.title('Hidden Layer of size %d' % n_h)
+    
+    parameters = model(X, Y, n_x, n_h, n_y, num_of_iters, learning_rate)
+    plot_decision_boundary(lambda x: predict(parameters, x.T), X, Y)
+    
+# Out[19]:
+```
+
+![Alt text](https://studymachinelearning.com/wp-content/uploads/2019/12/different_neuron_sizes.png "Different Hidden Layer Sizes")
 
 ##### Tags: #NeuralNetworks #Keras
