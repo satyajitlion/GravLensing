@@ -52,20 +52,11 @@ Note, that whenever $y = 1$, $L(a^{[2]},1) = -\log(a^{[2]})$, and when $y = 0$, 
 \frac{\partial J}{\partial W^{[2]}} = \frac{\partial J}{\partial A^{[2]}} \cdot \frac{\partial A^{[2]}}{\partial Z^{[2]}} \cdot \frac{\partial Z^{[2]}}{\partial W^{[2]}}
 ```
 
-##### 1. **Forward Pass**: Calculate predictions and loss
-
 ```math
-\hat{y} = A^{[2]} = \sigma(Z^{[2]}) = \sigma(W^{[2]}A^{[1]} + b^{[2]})
+da^{[2]} = \frac{\partial L}{\partial a^{[2]}} = \frac{\partial}{\partial a^{[2]}}\left(-y\log(a^{[2]})-1(1-y\log(1-a^{[2]}))\right) = \boxed{\frac{-y}{a^{[2]}} + \frac{(1-y)}{1-a^{[2]}}} 
 ```
-
 ```math
-J = -\frac{1}{m}\sum_{i=1}^{m}[y^{(i)}\log(\hat{y}^{(i)}) + (1-y^{(i)})\log(1-\hat{y}^{(i)})]
-```
-
-##### 2. **Backward Pass**: Calculate gradients layer by layer
-
-```math
-dZ^{[2]} = A^{[2]} - Y
+dZ^{[2]} = \frac{\partial L}{\partial y^{[2]}} = \frac{\partial L}{\partial a^{[2]}}\cdot\frac{\partial a^{[2]}}{\partial z^{[2]}} = \boxed{A^{[2]} - Y}
 ```
 ```math
 dW^{[2]} = \frac{1}{m}dZ^{[2]}A^{[1]T}
@@ -73,5 +64,17 @@ dW^{[2]} = \frac{1}{m}dZ^{[2]}A^{[1]T}
 ```math
 db^{[2]} = \frac{1}{m}\sum_{i=1}^{m}dZ^{[2](i)}
 ```
+```math
+dZ^{[1]} = W^{[2]T}dZ^{[2]} \cdot \sigma'(Z^{[1]})
+```
+```math
+dW^{[1]} = \frac{1}{m}dZ^{[1]}X^T
+```
+```math
+db^{[1]} = \frac{1}{m}\sum_{i=1}^{m}dZ^{[1](i)}
+```
 
+### Gradient Descent & Updating Weights and Biases
+
+Using 
 ##### Tags: #NeuralNetworks #Keras
