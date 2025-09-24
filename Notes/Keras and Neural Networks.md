@@ -195,6 +195,7 @@ plt.title('Distribution of the target variable')
 
 # Out[5]: 
 ```
+
 ![Alt text](https://studymachinelearning.com/wp-content/uploads/2019/12/plot_target.jpg "Distribution of target var")
 
 ```python
