@@ -63,16 +63,9 @@ Single Input x^(i) → [Layer 1] → [Layer 2] → Output a^[2](i) → Loss L(i)
 ```
 
 ```
-TRAINING SET (m samples)
-│
-├─ Sample 1: x^(1) → [Layer 1] → [Layer 2] → a^[2](1) → L(1)
-├─ Sample 2: x^(2) → [Layer 1] → [Layer 2] → a^[2](2) → L(2) 
-├─ Sample 3: x^(3) → [Layer 1] → [Layer 2] → a^[2](3) → L(3)
-└─ ...
-└─ Sample m: x^(m) → [Layer 1] → [Layer 2] → a^[2](m) → L(m)
-│
-↓
-J = (L(1) + L(2) + L(3) + ... + L(m)) / m
+x^(1) → [Layer 1] → [Layer 2] → a^[2](1) → L(1) ┐
+x^(2) → [Layer 1] → [Layer 2] → a^[2](2) → L(2) │ → J = average(L(1), L(2), L(3))
+x^(3) → [Layer 1] → [Layer 2] → a^[2](3) → L(3) ┘
 ```
 ### Backward Propagation (fixing weights and biases using loss function)
 
