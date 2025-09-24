@@ -100,10 +100,32 @@ dW^{[1]} = \frac{\partial L}{\partial W^{[1]}} = \frac{\partial L}{\partial z^{[
 ```
 
 ```math
-db^{[1]} = 
+db^{[1]} = \frac{\partial L}{\partial b^{[1]}} = \frac{\partial L}{\partial z^{[1]}}\times \frac{\partial z^{[1]}}{\partial b^{[1]}} = dz^{[1]}\times \frac{\partial(W^{[1]}X+b^{[1]})}{\partial b^{[1]}} = \boxed{dz^{[1]}}.
 ```
 
 ### Gradient Descent & Updating Weights and Biases
 
-Using 
+- The weight and bias parameters are updated by subtracting the partial derivation of the loss function with respect to those parameters.
+- Here α is the learning rate that represents the step size. It controls how much to update the parameter. The value of $\alpha$ is between $0$ to $1$.
+
+```math
+W^{[1]} = W^{[1]} - \alpha \cdot dW^{[1]}
+```
+
+```math
+W^{[2]} = W^{[2]} - \alpha \cdot dW^{[2]}
+```
+
+```math
+b^{[1]} = b^{[1]} - \alpha \cdot db^{[1]}
+```
+
+```math
+b^{[2]} = b^{[2]} - \alpha \cdot db^{[2]}
+```
+
+
+### Finding the Optimal Learning Rate $\alpha$
+
+
 ##### Tags: #NeuralNetworks #Keras
