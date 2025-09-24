@@ -48,7 +48,7 @@ The cost function (loss function for the entire model) is given as
 J = -\frac{1}{m}\sum_{i=1}^{m}L(a^{[2](i)},y^{(i)})
 ```
 
-where the loss function $L$ (used to find the cost function $J$) is given as follows:
+where the loss function $L$ (for a single training sample) is given as follows:
 
 ```math
 L(a^{[2]},y) = -y\log(a^{[2]}) - (1-y)\log(1-a^{[2]})
@@ -56,6 +56,16 @@ L(a^{[2]},y) = -y\log(a^{[2]}) - (1-y)\log(1-a^{[2]})
 
 Note, that whenever $y = 1$, $L(a^{[2]},1) = -\log(a^{[2]})$, and when $y = 0$, $L(a^{[2]},0) = -\log(1-a^{[2]})$.
 
+Here is how one would visualize the above errors:
+
+```
+Input → [Layer 1 Neurons] → [Layer 2 Neurons] → Output `a^[2]` → Loss `L`
+```
+
+```
+[Batch of m samples: X] → [Network] → [Outputs A^[2]] → [Vectorized L] → Average → J
+     (m examples)                            (m predictions)    (m losses)
+```
 ### Backward Propagation (fixing weights and biases using loss function)
 
 - Backpropagation is the algorithm used to train neural networks by calculating the gradient of the loss function with respect to each weight. The process works backwards from the output layer to the input layer.
