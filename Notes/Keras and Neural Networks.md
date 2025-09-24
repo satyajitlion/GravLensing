@@ -52,4 +52,23 @@ Note, that whenever $y = 1$, $L(a^{[2]},1) = -\log(a^{[2]})$, and when $y = 0$, 
 \frac{\partial J}{\partial W^{[2]}} = \frac{\partial J}{\partial A^{[2]}} \cdot \frac{\partial A^{[2]}}{\partial Z^{[2]}} \cdot \frac{\partial Z^{[2]}}{\partial W^{[2]}}
 ```
 
+##### 1. **Forward Pass**: Calculate predictions and loss
+
+```math
+\hat{y} = A^{[2]} = \sigma(Z^{[2]}) = \sigma(W^{[2]}A^{[1]} + b^{[2]})
+```
+
+```math
+J = -\frac{1}{m}\sum_{i=1}^{m}[y^{(i)}\log(\hat{y}^{(i)}) + (1-y^{(i)})\log(1-\hat{y}^{(i)})]
+```
+
+##### 2. **Backward Pass**: Calculate gradients layer by layer
+
+```math
+dZ^{[2]} = A^{[2]} - Y \\
+dW^{[2]} = \frac{1}{m}dZ^{[2]}A^{[1]T}\\
+db^{[2]} = \frac{1}{m}\sum_{i=1}^{m}dZ^{[2](i)}
+```
+
+
 ##### Tags: #NeuralNetworks #Keras
