@@ -4,6 +4,7 @@ Get access to room 330 and try to log into Amarel using the Bash terminal. If ab
 ***
 ### What I was able to accomplish
 
+I was able to get into room 330 and access Amarel. I logged in 
 ***
 ### Results
 
