@@ -14,12 +14,11 @@ Accessed room 330 in Serin Physics Building. Logged onto Amarel. Copied required
 
 Problems with installing appropriate libraries via the terminal on Amarel. The job isn't able to run as it fails when trying to access the specific libraries I imported within my python script such as NumPy, Matplotlib, etc. I also had issues using the right python version (there were 2, the 2.7.5 version and the 3.8.2 version). My directory kept on defaulting to the 2.7.5 version and I had to find the path of the 3.8.2 python version to properly load it via the ```Module Load``` command.
 ***
-### Questions & Ideas
-
-***
 ### Next Steps
 
-##### Tags:
+Figure out a way to load the libraries properly into Amarel. Consult Dr. Burkhart or OARC on this? Make sure to not use the login node to install anything as that can lead to fatal errors from what the OARC stated on their website. Following this, temporarily work on the neural networks/keras aspect of the project while waiting for the mock lenses to be generated  (studying how a Neural Network is implemented using Keras this type). Find the differences between ANN, RNN, CNN and analyze which one would be more suitable for this research.
+
+##### Tags: #Amarel #High-PerformanceComputing #MockLens #MockLensGeneration #Terminal 
 
 
 
