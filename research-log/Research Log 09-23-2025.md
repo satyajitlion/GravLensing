@@ -34,4 +34,4 @@ The primary obstacle is **network connectivity**. To access Amarel from off-camp
 3. **Confirm Amarel Access:** Verify that my Amarel account is active and in good standing. If not, I will contact Dr. Keeton for sponsorship.
 4. **Execute File Transfer Plan:** Once connected, the immediate technical steps are to create the `GravLensing` subdirectory in my Amarel home directory, transfer the Python scripts via WinSCP, and begin composing the SLURM job script.
 
-##### Tags: #Amarel #High-PerformanceComputing #Terminal
+##### Tags: #Amarel #HPC #Terminal

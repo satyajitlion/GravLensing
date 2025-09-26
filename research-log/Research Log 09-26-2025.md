@@ -35,7 +35,7 @@ Took notes on several key operational aspects of the Amarel cluster:
 4. **Submit a Test Job:** Run a short, small-scale test job with the revised script to verify everything works.
 5. **Monitor and Analyze:** Use `squeue` to monitor the job and `sacct` after completion to check resource usage (like MaxRSS) for efficiency.
 
-##### Tags:
+##### Tags: #Amarel #HPC #Terminal 
 
 
 
