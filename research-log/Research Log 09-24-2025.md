@@ -1,23 +1,27 @@
 ### Today's Focus
 
-Learn/study the the neural network side of the research. Focus on how mathematically the layers are structured in a standard neural network that is hand coded (no Keras). Work towards deriving some of the equations yourself to better understand how each layer connects to the next. 
+Dedicate time to the theoretical foundations of neural networks, moving beyond high-level APIs like Keras. The goal was to understand the underlying mathematics by deriving the core equations for a standard, hand-coded Artificial Neural Network (ANN), focusing on forward propagation, loss functions, and the principles of backpropagation.
 ***
 ### What I was able to accomplish
 
-I created a document called [Keras and Neural Networks](https://github.com/satyajitlion/GravLensing/blob/72f7b39408a4cbb90cab4cf252d79171e64333a4/Notes/Keras%20and%20Neural%20Networks.md) to serve as notes as I learn more about Neural Networks and the mathematics behind the layers. In particular, I spent today analyzing how the inputs and the hidden layers are transformed by the inclusion of weights and biases to get a desired output. This, I analyzed for a standard ANN and I worked out the math accordingly. This involved starting from the input layers, multiplying them by weight matrices and adding biase matrices. Then, through back propagation and gradient descent, one can also adjust the weights and biases again to find their desired output. However, this process produces something called loss, which is a measure of how poorly the model's predictions align with the true, desired outcomes for a given input. Following this, I then documented the structure of the Network including how loss function's work (singular input sample vs multiple input samples). I additionally learned about why finding the optimal value for $\alpha$, or the learning rate hyperparameter, is important. In the document I linked above, I went over Keras's built in options for yielding the optimal value for the learning rate and went over underfitting, overfitting, and best-fit models. Their importance was also discussed, in addition to why overfitting should not be overlooked and the regularization methods one can use to circumvent overfitting. Finally, I went through a sample implementation of a neural network using these principles and numpy alone (using the studymachinelearning.com website). The process proved to be quite tedious in terms of model creation, hinting at how simple an implementation via Keras might be.
-***
+I made significant progress in building a fundamental understanding of neural network mechanics. The primary output was the creation of detailed notes in the document [Keras and Neural Networks](https://github.com/satyajitlion/GravLensing/blob/72f7b39408a4cbb90cab4cf252d79171e64333a4/Notes/Keras%20and%20Neural%20Networks.md) My work involved:
+- **Mathematical Derivation:** I systematically worked through the mathematical transformations that occur in an ANN, starting from the input layer through to the hidden layers. This involved deriving how input data is transformed via weight matrices and bias vectors to produce an output.
+- **Core Concepts Documented:** I documented key concepts including the role of loss functions for both individual samples and batches, the critical importance of the learning rate (α) as a hyperparameter, and the challenges of model fitting (underfitting, overfitting, and the ideal best-fit).    
+- **Practical Implementation:** To solidify my understanding, I followed a tutorial to implement a basic neural network using only NumPy, without the abstraction of a high-level framework like Keras. This hands-on exercise highlighted the complexity involved in manual implementation and underscored the utility of libraries like Keras for streamlining the process.
 
+This deep dive provided a strong conceptual foundation that will be crucial for effectively designing and troubleshooting neural networks later in the project.
+***
 ### Questions & Ideas
 
-My questions at the moment are, how does a standard ANN differ from a CNN or an RNN and in the context of my project, which one might be most beneficial to code? I also should consider Dr. Keeton's suggestion on how to implement a model such that rotations will not change my answer for said model... meaning that as input, the x and y directions I currently have for the sources need to be tweaked in order to form sort of a metric such that when a transformation such as a rotation acts on the system, the system isn't changed. For instance, if I were to rotate or move the gravitational lens, the Network should be able to see that a simple transformation took place that didnt' change the gravitational lens itself but only its position/orientation.
+- **Architectural Difference:** How do Convolutional Neural Networks (CNNs) and Recurrent Neural Networks (RNNs) fundamentally differ from the standard ANN I studied today? Which architecture is most suitable for analyzing 2D gravitational lensing images?
+- **Invariance in the Model:** As suggested by Dr. Keeton, a major consideration is how to design the network's input or structure to be invariant to rotations and translations. The model should recognize that a rotated lens is the same underlying system. What is the best way to engineer this? Should the input data be pre-processed into a rotation-invariant metric, or should the network architecture itself (perhaps using a CNN) inherently handle these symmetries?
 ***
 ### Next Steps
 
-Watch the following video [Keras With TensorFlow](https://www.youtube.com/watch?v=qFJeN9V1ZsI&t=423s) and continue taking notes on Neural Networks if it's not possible to access the room 330/undergrad lounge on campus tomorrow. If I can access either room 330 or the undergrad lounge, work on mock lens generation instead. 
-
-
+1. **Continue Keras/TensorFlow Learning:** If physical access to campus workstations is not possible, the next step is to watch the tutorial video ["Keras With TensorFlow"](https://www.youtube.com/watch?v=qFJeN9V1ZsI&t=423s) to transition from theoretical math to practical implementation.
+2. **Prioritize Mock Lens Generation:** If I can access Room 330 or the undergraduate lounge, the immediate priority is to resolve the Python dependency issues on Amarel and begin the large-scale generation of mock lenses, as this data is a prerequisite for training any neural network.
+    
 ##### Tags: #Keras #NeuralNetworks #TrainingData
-
 
 
 
