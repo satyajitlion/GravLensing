@@ -22,10 +22,24 @@ shape of arr2 : (3, 1)
 '''
 ```
 
-- As can be seen above, the shape is given as (row, column) where an array $[1,2,3]$ has a shape of (1,3) for 1 row and 3 columns. Comparing this to the array `math \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}`, which has a shape of (3,1). This is the same as the python script above which is why the shape indicated above yields (1,3) and (3,1) respectively and is vital to understand for the latter parts of the math required for the NN.
+- As can be seen above, the shape is given as (row, column) where an array $[1,2,3]$ has a shape of (1,3) for 1 row and 3 columns. Comparing this to the following array: 
+```math
+\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}
+```
+   which has a shape of (3,1). This is the same as the python script above which is why the shape indicated above yields (1,3) and (3,1) respectively and is vital to understand for the latter parts of the math required for the NN.
 ### Quick Gradient Note:
 
-Recall that for a derivative with respect to any specific variable, let's say we take the derivative of y with respect to x such that we have $\frac{dy}{dx}$, then 
+Recall that for a derivative with respect to any specific variable, let's say we take the derivative of $y$ with respect to $x$ such that we have $\frac{dy}{dx}$, then this accounts for the change along the $x$ direction for the $y$ function. Extending this to 3 dimensions, recall that we take the gradient of a function with respect to it's multiple variables to find the **change** in that direction for the function. 
+
+For example, f(x,y,z) can have three partials as such:
+
+```math
+\begin{aligned}
+\frac{\partial f}{\partial x} \\ 
+\frac{\partial f}{\partial y} \\
+\frac{\partial f}{\partial z}
+\end{aligned}
+```
 
 ### Forward Propagation (Mathematical structure behind NN layers)
 
