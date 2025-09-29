@@ -41,6 +41,20 @@ For example, f(x,y,z) can have three partials as such:
 \end{aligned}
 ```
 
+which yield to the following gradient:
+
+```math
+\begin{aligned}
+\nabla f(x,y,z) = 
+	\begin{bmatrix}
+	   \frac{\partial}{\partial x} \\
+	   \frac{\partial}{\partial y} \\
+	   \frac{\partial}{\partial z}
+	\end{bmatrix}
+\end{aligned}
+```
+
+Therefore, like the one dimensional example, the gradient gives a vector that encodes the change in the $x$, $y$, and $z$ directions for a function.
 ### Forward Propagation (Mathematical structure behind NN layers)
 
 ```math
