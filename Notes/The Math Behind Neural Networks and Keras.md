@@ -81,6 +81,31 @@ The cost function finds the **best** optimized value for the weight coefficients
  
 ##### 4. Grad. Descent
 
+Gradient Descent is a method of updating the weight and bias coefficients iteratively in order to minimize the MSE by calculating the gradient of the cost function. Recall that taking the gradient of a function returns a vector output that encodes it's changes in x, y, z and etc directions. By taking the gradient of the cost function, we are trying to learn how it changes in the directions of it's inputs such that we can minimize those changes to effectively minimize the error output given by the cost function. This will help us alter the weights and biases accordingly to perform such a minimization for the cost function. In more general terms, it will lead to the algorithm learning the nuanced relationships between input and output parameters. 
+
+Example:
+
+```python
+import numpy as np
+
+pred_y = m * x + b
+cost_function = (y - pred_y)**2
+
+# Cost function as f(m, b)
+def f(m, b):
+    return (y - (m*x + b))**2
+
+# Partial derivatives 
+def df_dm(m, b):
+    return -2 * x * (y - (m*x + b))
+
+def df_db(m, b):
+    return -2 * (y - (m*x + b))
+
+# Gradient vector
+gradient = np.array([df_dm(m, b), df_db(m, b)])
+```
+
 ### Intro to Keras and how Neural Networks work: 
 
 - Keras is integrated with TensorFlow
