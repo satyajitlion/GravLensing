@@ -21,8 +21,9 @@ Output:
 shape of arr1 : (1, 3)
 shape of arr2 : (3, 1)
 '''
-
 ```
+
+- As can be seen above, the shape is given as (row, column) where an array $[1,2,3]$ has a shape of (1,3) and an array $$
 ### Forward Propagation (Mathematical structure behind NN layers)
 
 ```math
