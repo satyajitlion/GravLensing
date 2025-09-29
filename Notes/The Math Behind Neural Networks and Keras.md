@@ -53,6 +53,20 @@ Therefore, like the one dimensional example, the gradient gives a vector that en
 
 The linear regression model learns to understand the relationship between input variables and the output variable. This is the backbone of Machine Learning as a whole.  
 
+##### 1. Simple Regression
+
+```math
+y = mx+b
+```
+
+- Single input and single output 
+- Here, the input parameter ($x$) is scaled by some scalar coefficient ($m$) and added to by some intercept or *bias* coefficient ($b$) to produce the output ($y$).
+##### 2. Multivariable Regression
+
+##### 3. Cost Function
+
+##### 4. Grad. Descent
+
 ### Intro to Keras and how Neural Networks work: 
 
 - Keras is integrated with TensorFlow
