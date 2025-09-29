@@ -76,6 +76,7 @@ The cost function finds the **best** optimized value for the weight coefficients
 ```math 
 \text{MSE} = \frac{1}{n}\sum_{i=1}^{n} (\text{pred}_i - y_i)^2
 ```
+	- h
 ##### 4. Grad. Descent
 
 ### Intro to Keras and how Neural Networks work: 
