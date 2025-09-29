@@ -5,6 +5,24 @@
 - Standard NN structure:
 	Input Layer $\rightarrow$ Hidden Layer $\rightarrow$ Output Layer
 
+### Quick Matrix Note:
+
+```python
+
+# Input
+from numpy import array
+arr1 = array([[10,25,15]])
+arr2 = array([[10],[25],[15]])
+print("shape of arr1 :",arr1.shape)
+print("shape of arr2 :",arr2.shape)
+
+'''
+Output:
+shape of arr1 : (1, 3)
+shape of arr2 : (3, 1)
+'''
+
+```
 ### Forward Propagation (Mathematical structure behind NN layers)
 
 ```math
