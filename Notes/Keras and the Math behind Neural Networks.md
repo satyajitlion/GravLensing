@@ -55,6 +55,8 @@ which yield to the following gradient:
 ```
 
 Therefore, like the one dimensional example, the gradient gives a vector that encodes the change in the $x$, $y$, and $z$ directions for a function.
+
+### Linear Regression Review
 ### Forward Propagation (Mathematical structure behind NN layers)
 
 ```math
