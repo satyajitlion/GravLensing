@@ -35,9 +35,9 @@ For example, f(x,y,z) can have three partials as such:
 
 ```math
 \begin{aligned}
-\frac{\partial f}{\partial x} \\ 
-\frac{\partial f}{\partial y} \\
-\frac{\partial f}{\partial z}
+\frac{\partial}{\partial x}\left[f(x,y,z)\right] \\ 
+\frac{\partial}{\partial y}\left[f(x,y,z)\right] \\
+\frac{\partial}{\partial z}\left[f(x,y,z)\right]
 \end{aligned}
 ```
 
