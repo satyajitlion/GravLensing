@@ -60,11 +60,22 @@ y = mx+b
 ```
 
 - Single input and single output 
-- Here, the input parameter ($x$) is scaled by some scalar coefficient ($m$) and added to by some intercept or *bias* coefficient ($b$) to produce the output ($y$).
+- Here, the input parameter ($x$) is scaled by some scalar coefficient ($m$) and added to by some intercept or <u>bias</u> coefficient ($b$) to produce the output ($y$), which is our prediction.
 ##### 2. Multivariable Regression
 
+```math
+f(x,y,z) = w_{1}x + w_{2}y + w_{3}z
+```
+
+- When there are multiple input variables, we need multiple scalar coefficients called <u>weights</u> such that they may produced our desired output or prediction.  
 ##### 3. Cost Function
 
+The cost function finds the **best** optimized value for the weight coefficients which helps in finding the line of best fit for the data points we have. This function is the <u>error rate between the observation's actual target value and the predicted target value</u>. The difference between the actual target value and predicted one is called <u>error</u>.
+
+- **MEAN SQUARED ERROR (MSE)**
+```math 
+\text{MSE} = 1/n \sum_{i=1}^{n} (\text{pred}_i - y_i)^2
+```
 ##### 4. Grad. Descent
 
 ### Intro to Keras and how Neural Networks work: 
