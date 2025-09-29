@@ -106,6 +106,9 @@ def df_db(m, b):
 gradient = np.array([df_dm(m, b), df_db(m, b)])
 ```
 
+### Logistic Regression Review
+
+
 ### Intro to Keras and how Neural Networks work: 
 
 - Keras is integrated with TensorFlow
