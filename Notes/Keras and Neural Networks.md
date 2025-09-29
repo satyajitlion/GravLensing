@@ -23,7 +23,7 @@ shape of arr2 : (3, 1)
 '''
 ```
 
-- As can be seen above, the shape is given as (row, column) where an array $[1,2,3]$ has a shape of (1,3) and an array $\pm$
+- As can be seen above, the shape is given as (row, column) where an array $[1,2,3]$ has a shape of (1,3) for 1 row and 3 columns. Comparing this to the array $\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}$, which has a shape of (3,1). This is the same as the python script above which is why the shape indicated above yields (1,3) and (3,1) respectively and is vital to understand for the latter parts of the math required for the NN.
 ### Forward Propagation (Mathematical structure behind NN layers)
 
 ```math
