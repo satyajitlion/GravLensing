@@ -47,9 +47,9 @@ which yield to the following gradient:
 \begin{aligned}
 \nabla f(x,y,z) = 
 	\begin{bmatrix}
-	   \frac{\partial}{\partial x} \\
-	   \frac{\partial}{\partial y} \\
-	   \frac{\partial}{\partial z}
+	   \partial_{x}f \\
+	   \partial_{y}f \\
+	   \partial_{z}f
 	\end{bmatrix}
 \end{aligned}
 ```
