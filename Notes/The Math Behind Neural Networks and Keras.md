@@ -74,7 +74,7 @@ The cost function finds the **best** optimized value for the weight coefficients
 
 - **MEAN SQUARED ERROR (MSE)**
 ```math 
-\text{MSE} = 1/n \sum_{i=1}^{n} (\text{pred}_i - y_i)^2
+\text{MSE} = \frac{1}{n}\sum_{i=1}^{n} (\text{pred}_i - y_i)^2
 ```
 ##### 4. Grad. Descent
 
