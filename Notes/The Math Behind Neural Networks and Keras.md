@@ -73,10 +73,12 @@ f(x,y,z) = w_{1}x + w_{2}y + w_{3}z
 The cost function finds the **best** optimized value for the weight coefficients which helps in finding the line of best fit for the data points we have. This function is the <u>error rate between the observation's actual target value and the predicted target value</u>. The difference between the actual target value and predicted one is called <u>error</u>.
 
 - **MEAN SQUARED ERROR (MSE)**
+	- This is a type of cost function that measures the averaged difference between the actual target values and the predicted target values. The main goal here is to minimize the error in order to improve the accuracy of the model. 
+
 ```math 
 \text{MSE} = \frac{1}{n}\sum_{i=1}^{n} (\text{pred}_i - y_i)^2
 ```
-	- h
+ 
 ##### 4. Grad. Descent
 
 ### Intro to Keras and how Neural Networks work: 
