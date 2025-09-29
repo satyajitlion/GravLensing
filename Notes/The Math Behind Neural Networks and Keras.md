@@ -1,10 +1,3 @@
-### Intro to Keras and how Neural Networks work: 
-
-- Keras is integrated with TensorFlow
-- Numerical data $\rightarrow$ Artificial Neural Network (ANN)
-- Standard NN structure:
-	Input Layer $\rightarrow$ Hidden Layer $\rightarrow$ Output Layer
-
 ### Quick Matrix Note:
 
 ```python
@@ -57,6 +50,15 @@ which yield to the following gradient:
 Therefore, like the one dimensional example, the gradient gives a vector that encodes the change in the $x$, $y$, and $z$ directions for a function.
 
 ### Linear Regression Review
+
+The linear regression model learns to understand the relationship between input variables and the output variable. This is the backbone of Machine Learning as a whole.  
+
+### Intro to Keras and how Neural Networks work: 
+
+- Keras is integrated with TensorFlow
+- Numerical data $\rightarrow$ Artificial Neural Network (ANN)
+- Standard NN structure:
+	Input Layer $\rightarrow$ Hidden Layer $\rightarrow$ Output Layer
 ### Forward Propagation (Mathematical structure behind NN layers)
 
 ```math
