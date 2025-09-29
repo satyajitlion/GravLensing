@@ -8,7 +8,6 @@
 ### Quick Matrix Note:
 
 ```python
-
 # Input
 from numpy import array
 arr1 = array([[10,25,15]])
