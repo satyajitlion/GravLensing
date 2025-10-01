@@ -21,12 +21,14 @@ Resolve the critical Python dependency issues on the Amarel cluster, specificall
 - Required significant troubleshooting to clean up mixed installations and ensure consistency between interactive sessions and batch job environments.
 - Shapely is still failing for the `py-data-science-stack` module which is why I am still unable to run my batch job without errors.
 ***
-### Questions & Ideas
-
-***
 ### Next Steps
 
-##### Tags:
+- Reach out the Amarel support and explain the persisting error or leave this on pause for a bit?
+- Immediately resubmit the mock lens generation batch job to begin producing the 100,000 lenses after installation related errors get fixed.
+- Use `squeue` and `sacct` to track the job's status and resource usage.
+- Start investigating ANN, RNN, and CNN architectures for the next phase while the batch job runs.
+- Record the successful environment setup process for future reference and reproducibility.
+##### Tags: #Amarel #HPC #Python #Dependencies #Troubleshooting #SLURM
 
 
 
