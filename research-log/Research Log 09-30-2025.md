@@ -17,7 +17,8 @@ Resolve the critical Python dependency issues on the Amarel cluster, specificall
 
 ***
 ### Problems
-
+- The system's Python 3.8.2 installation is missing critical components (`_ctypes` module), making it impossible to use scientific packages like SciPy. This explains why initial dependency installations failed.
+- When switching to the working `py-data-sci` module, there were conflicts with previously installed packages that had broken library links.
 ***
 ### Questions & Ideas
 
