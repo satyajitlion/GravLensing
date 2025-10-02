@@ -164,6 +164,26 @@ And so, the above can be composed into one function as such:
 ```math
 J(\theta) = \frac{1}{m}\sum\left[y^{(i)}\log(h_{\theta}(x(i))) + \left(1-y^{(i)}\right)\log(1 - h_{\theta}(x(i)))\right]
 ```
+
+Note that here, if $y = 0$, the first part of the summation naturally cancels out.. If $y = 1$, the second part of the summation naturally cancels out.
+
+##### Revisiting grad descent again for logistic regression:
+- Gradient descent is a method of updating the weight coefficient iteratively in order to minimize the cost function by calculating the gradient of it.
+- Gradient descent in Logistic Regression works similarly as Linear Regression, the difference is only the hypothesis function. However, the derivative of the Logistic regression is complicated. To minimize the cost function, we need to apply gradient descent function on each parameter.
+
+##### Mapping probabilities to classes
+
+- Logistic Regression returns the probabilities between 0 and 1. Therefore, we need to select a specific threshold value to map probability to discrete class.
+- For instance, let us select the threshold value as 0.5. Then, the probability being greater than or equal to 0.5 leads to class 1 and the probability being less than 0.5 lead to class 0. In other words, if P represents the probability, then $P \geq 0.5$ means it's in class 1 and $P < 0.5$ means it's in class 0.
+- Example:
+	Suppose that our logistic model returned 0.2 probability for predicting cancer. We would then classify this observation as a negative class..
+```math
+\text{Probability Map to Discrete Class} = 
+\begin{cases}
+p \geq 0.5  & \text{, class = 1}  \\
+p < 0.5  & \text{, class = 0} 
+\end{cases}
+```
 ### Intro to Keras and how Neural Networks work: 
 
 - Keras is integrated with TensorFlow
