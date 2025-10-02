@@ -600,7 +600,6 @@ for i, n_h in enumerate(hidden_layer_sizes):
 ##### Types of Activation Functions:
 
 1. Sigmoid - covered already; **This is generally used for the output layer in binary classification problem.**
-
 	Problems with using the Sigmoid Function:
 	- “vanishing gradients” problem occur
 	- Slow convergence
