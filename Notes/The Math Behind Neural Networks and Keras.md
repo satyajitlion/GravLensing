@@ -108,7 +108,34 @@ gradient = np.array([df_dm(m, b), df_db(m, b)])
 
 ### Logistic Regression Review
 
-Logistic regression is used when the target variable is categorical. It is a classification algorithm used to assign a sample to a specific class. The main difference between linear regression and logistic regression is that linear regression predicts the continuous value where Logistic regression apply the sigmoid function to its output and return a probability value and later it mapped to discrete class.
+- Logistic regression is used when the target variable is categorical. It is a classification algorithm used to assign a sample to a specific class. 
+- The main difference between linear regression and logistic regression is that linear regression predicts the continuous value where Logistic regression apply the sigmoid function to its output and return a probability value and later it mapped to discrete class.
+
+To more concretely explain this, consider an example for linear vs. logistic regression:
+
+1. Linear Regression:
+	- Predict the sale price of the house
+	- Predict student’s exam score
+	- Predict share market’s movements
+2. Logistic Regression:
+	- Classify ticket type such as first-class, second class, etc.
+	- Predict the sentiment of the text.
+	- Classify season such as winter, summer, monsoon.
+
+The "activation function" called Sigmoid is used to map predicted value to probabilities between 0 and 1 in logistic regression. This function looks like a s shape as such:
+
+![Alt text](https://studymachinelearning.com/wp-content/uploads/2019/09/sigmoid_graph.png)
+
+where $\sigma(z) = \left(1+e^{-z}\right)^{-1}$ and $\sigma(z)$ is the output from 0 to 1 (probability estimate) and $z$ is the <u>input function</u> (i.e z = mx+b).
+
+##### Predicting a Target Variable
+- Logistic regression returns the probability of the test samples being positive
+- If probability is close to 1, the model is more confident that the test sample is in class 1.
+- Ex: Suppose that we have a patient's thyroid test report. If the model returns 0.85 as an output, that means that the patient is thyroid positive with an 85% chance. If it returns 0.3, that means the patient only has 30% chance of being thyroid positive.
+
+##### Hypothesis representation of Linear Regression
+
+
 ### Intro to Keras and how Neural Networks work: 
 
 - Keras is integrated with TensorFlow
