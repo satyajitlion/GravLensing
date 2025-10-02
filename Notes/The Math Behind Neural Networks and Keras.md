@@ -135,7 +135,35 @@ where $\sigma(z) = \left(1+e^{-z}\right)^{-1}$ and $\sigma(z)$ is the output fro
 
 ##### Hypothesis representation of Linear Regression
 
+```math
+h_{\theta}(x) = mx + b
+```
 
+##### Hypothesis representation of Logistic Regression
+
+```math
+h_{\theta}(x) = \sigma(mx+b) = \frac{1}{1+e^{mx+b}}
+```
+
+##### Cost Function in Logistic Regression:
+
+- The cost function represents optimization objective. 
+- The Cross-Entropy function is used as a cost function in Logistic Regression (also known as the Log Loss Function).
+- The cross-entropy cost function can be divided into two separate cost function for class 1 and class 0.
+
+```math
+\text{Cost}(h\Theta(x),y) = 
+\begin{cases}
+-\log(h_{\theta}(x)) & \text{if $y = 1$} \\
+-\log(1-h_{\theta}(x)) & \text{if $y = 0$}
+\end{cases}
+```
+
+And so, the above can be composed into one function as such:
+
+```math
+J(\theta) = \frac{1}{m}\sum\left[y^{(i)}\log(h_{\theta}(x(i))) + \left(1-y^{(i)}\right)\log(1 - h_{\theta}(x(i)))\right]
+```
 ### Intro to Keras and how Neural Networks work: 
 
 - Keras is integrated with TensorFlow
