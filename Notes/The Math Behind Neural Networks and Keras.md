@@ -607,7 +607,7 @@ for i, n_h in enumerate(hidden_layer_sizes):
 	- Its output isn’t zero centred. It makes the gradient updates go too far in different directions. 0 < output < 1, and it makes optimization harder.
 
 2. Tanh - hyperbolic tangent
-3. ReLU - rectified linear unit
+3. ReLU - rectified linear unit [finish next time] 
 
 
 
