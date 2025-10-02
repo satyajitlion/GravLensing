@@ -598,7 +598,8 @@ for i, n_h in enumerate(hidden_layer_sizes):
 - A neural network without an activation function is just like a linear regression model which is not able to learn the complex non-linear pattern. Therefore, the activation function is a key part of the neural network. 
 
 ##### Types of Activation Functions:
-1. Sigmoid - covered already
+
+1. Sigmoid - covered already; **This is generally used for the output layer in binary classification problem.**
 
 	Problems with using the Sigmoid Function:
 	- “vanishing gradients” problem occur
