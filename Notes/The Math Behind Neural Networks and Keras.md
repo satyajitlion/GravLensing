@@ -154,8 +154,8 @@ h_{\theta}(x) = \sigma(mx+b) = \frac{1}{1+e^{mx+b}}
 ```math
 \text{Cost}(h\Theta(x),y) = 
 \begin{cases}
--\log(h_{\theta}(x)) & \text{if $y = 1$} \\
--\log(1-h_{\theta}(x)) & \text{if $y = 0$}
+-\log(h_{\theta}(x)) & \text{if } y = 1 \\
+-\log(1-h_{\theta}(x)) & \text{if } y = 0
 \end{cases}
 ```
 
