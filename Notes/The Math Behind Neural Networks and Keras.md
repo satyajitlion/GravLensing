@@ -180,8 +180,8 @@ Note that here, if $y = 0$, the first part of the summation naturally cancels ou
 ```math
 \text{Probability Map to Discrete Class} = 
 \begin{cases}
-p \geq 0.5  & \text{, class = 1}  \\
-p < 0.5  & \text{, class = 0} 
+p \geq 0.5,  & \text{class = 1}  \\
+p < 0.5,  & \text{class = 0} 
 \end{cases}
 ```
 ### Intro to Keras and how Neural Networks work: 
