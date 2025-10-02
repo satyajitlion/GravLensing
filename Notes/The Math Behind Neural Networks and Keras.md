@@ -212,7 +212,6 @@ p < 0.5,  & \text{class = 0}
 ```
 
 - The activation function used here, $\sigma$, is the sigmoid function. We also need to compute the loss per layer (or error) via the loss function.
-
 ### Sigmoid Activation Function
 
 ```math
@@ -591,5 +590,11 @@ for i, n_h in enumerate(hidden_layer_sizes):
 ```
 
 ![Alt text](https://studymachinelearning.com/wp-content/uploads/2019/12/different_neuron_sizes.png "Different Hidden Layer Sizes")
+
+### Various types of Activation Functions:
+
+1. Sigmoid
+2. Tanh
+3. ReLU
 
 ##### Tags: #NeuralNetworks #Keras
