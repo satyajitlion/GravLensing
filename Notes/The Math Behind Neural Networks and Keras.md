@@ -108,7 +108,7 @@ gradient = np.array([df_dm(m, b), df_db(m, b)])
 
 ### Logistic Regression Review
 
-
+Logistic regression is used when the target variable is categorical. It is a classification algorithm used to assign a sample to a specific class. The main difference between linear regression and logistic regression is that linear regression predicts the continuous value where Logistic regression apply the sigmoid function to its output and return a probability value and later it mapped to discrete class.
 ### Intro to Keras and how Neural Networks work: 
 
 - Keras is integrated with TensorFlow
