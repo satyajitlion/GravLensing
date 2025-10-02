@@ -591,10 +591,24 @@ for i, n_h in enumerate(hidden_layer_sizes):
 
 ![Alt text](https://studymachinelearning.com/wp-content/uploads/2019/12/different_neuron_sizes.png "Different Hidden Layer Sizes")
 
-### Various types of Activation Functions:
+### Activation Functions and Different types:
 
-1. Sigmoid
-2. Tanh
-3. ReLU
+- The activation function of a node defines the output of that node given an input or set of inputs in the neural network. 
+- The activation function allows the neural network to learn a non-linear pattern between inputs and target output variable.
+- A neural network without an activation function is just like a linear regression model which is not able to learn the complex non-linear pattern. Therefore, the activation function is a key part of the neural network. 
+
+##### Types of Activation Functions:
+1. Sigmoid - covered already
+
+	Problems with using the Sigmoid Function:
+	- “vanishing gradients” problem occur
+	- Slow convergence
+	- Sigmoids saturate and kill gradients.
+	- Its output isn’t zero centred. It makes the gradient updates go too far in different directions. 0 < output < 1, and it makes optimization harder.
+
+2. Tanh - hyperbolic tangent
+3. ReLU - rectified linear unit
+
+
 
 ##### Tags: #NeuralNetworks #Keras
