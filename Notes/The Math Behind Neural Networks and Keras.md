@@ -189,9 +189,8 @@ p < 0.5,  & \text{class = 0}
 ```
 
 ***
-### Intro to Keras and how Neural Networks work: 
+### Intro to how Neural Networks work: 
 
-- Keras is integrated with TensorFlow
 - Numerical data $\rightarrow$ Artificial Neural Network (ANN)
 - Standard NN structure:
 	Input Layer $\rightarrow$ Hidden Layer $\rightarrow$ Output Layer
@@ -625,7 +624,7 @@ for i, n_h in enumerate(hidden_layer_sizes):
 2. Tanh - hyperbolic tangent
 
 	```math
-		\tanh(z) = f(z) = \frac{e^z - e^{-z}}{e^z + e^{-z}}
+		\tanh(y) = f(y) = \frac{e^y - e^{-y}}{e^y + e^{-y}}
 	```
 
 	Similar (in terms of the graph) to the Sigmoid function with the difference that the Tanh function is zero-centered instead of being centered at some constant value. Therefore, the Tanh non-linearity is always preferred to the sigmoid nonlinearity. The range of output value is between -1 to 1. 
@@ -639,6 +638,15 @@ for i, n_h in enumerate(hidden_layer_sizes):
 
 
 3. ReLU - rectified linear unit 
+	```math
+	\text{ReLU}(z) = f(z) = \max{0,z} 
+	```
+
+	The ReLU function stands for Rectified Linear Unit. This activation function is used as ReLu is less computationally expensive than Tanh and Sigmoid because it involves simpler mathematical operations.
+
+<p align="center">
+  <img src="https://studymachinelearning.com/wp-content/uploads/2019/10/relu.png" />
+</p>
 
 
 #### Vanishing Gradient Problem explained:
