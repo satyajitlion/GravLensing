@@ -642,7 +642,7 @@ for i, n_h in enumerate(hidden_layer_sizes):
 	\text{ReLU}(z) = f(z) = \max(0,z) 
 	```
 
-	The ReLU function stands for Rectified Linear Unit. This activation function is used as ReLu is less computationally expensive than Tanh and Sigmoid because it involves simpler mathematical operations.
+	The ReLU function stands for Rectified Linear Unit. This activation function is used as ReLu is less computationally expensive than Tanh and Sigmoid because it involves simpler mathematical operations. ==IMPORTANT NOTE: ReLU avoids and rectifies the vanishing gradient problem==
 
 <p align="center">
   <img src="https://studymachinelearning.com/wp-content/uploads/2019/10/relu.png" />
