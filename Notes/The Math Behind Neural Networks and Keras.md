@@ -623,12 +623,15 @@ for i, n_h in enumerate(hidden_layer_sizes):
 </p>
 
 2. Tanh - hyperbolic tangent
+
 	```math
 		\tanh(z) = f(z) = \frac{e^z - e^{-z}}{e^z + e^{-z}}
 	```
 
-	Similar (in terms of the graph) to the Sigmoid function with the difference that the Tanh function is zero-centered instead of being centered at some constant value.
-	
+	Similar (in terms of the graph) to the Sigmoid function with the difference that the Tanh function is zero-centered instead of being centered at some constant value. Therefore, the Tanh non-linearity is always preferred to the sigmoid nonlinearity. The range of output value is between -1 to 1. 
+
+	Problems with using the Tanh Function:
+	- same “vanishing gradients” problem occurs
 <p align="center">
   <img src="https://studymachinelearning.com/wp-content/uploads/2019/10/tanh_plot.jpg" />
 </p>
@@ -637,6 +640,18 @@ for i, n_h in enumerate(hidden_layer_sizes):
 
 3. ReLU - rectified linear unit 
 
+
+#### Vanishing Gradient Problem explained:
+
+Let us look at an example of a ball on top of a mountain. If you put a ball on the top of a mountain, it will roll downhill. This is the case until it hits a valley. In optimization, this concept is called "gradient descent" as discussed earlier. You pick a point and then move in the direction of the steepest slope (gradient) until you find a valley. The valley is, ideally, the best way to do something.
+
+Another example would be if your goal is to train an image recognition algorithm, you then change a bunch of parameters and calculate the accuracy of recognizing some example images (loss function). Then you select the change that gives you the best result (the gradient), discard the rest and do this again, until you can no longer get any better results.
+
+The <u>vanishing gradient problem</u> means that tweaking the parameters doesn't change anything. In the example of the ball rolling down a hill, it would be the ball getting stuck on a frozen lake instead of a valley. This is problematic because you don't know if there's a hole somewhere in the frozen lake, or if it's really as good as it's ever going to be.
+
+This is problem is related to another problem with gradient descent: **the local optimum**. This is what happens if the ball comes to a stop in a valley on top of the mountain, rather than getting all the way to the lowest point.
+
+For example if you have an image recognition algorithm, it corresponds to a "model" (meaning: a bunch of numbers that are used to recognize things in images) which gives you the most accurate image recognition.
 
 ***
 ### Tags: #NeuralNetworks #Keras
