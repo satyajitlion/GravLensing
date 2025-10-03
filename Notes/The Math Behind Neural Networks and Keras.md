@@ -620,7 +620,7 @@ for i, n_h in enumerate(hidden_layer_sizes):
 
 2. Tanh - hyperbolic tangent
 	```math
-		\Tanh(z) = f(z) = \frac{e^z - e^{-z}}{e^z + e^{-z}}
+		\tanh(z) = f(z) = \frac{e^z - e^{-z}}{e^z + e^{-z}}
 	```
 
 	Similar (in terms of the graph) to the Sigmoid function with the difference that the Tanh function is zero-centered instead of being centered at some constant value.
