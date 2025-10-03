@@ -49,6 +49,7 @@ which yield to the following gradient:
 
 Therefore, like the one dimensional example, the gradient gives a vector that encodes the change in the $x$, $y$, and $z$ directions for a function.
 
+***
 ### Linear Regression Review
 
 The linear regression model learns to understand the relationship between input variables and the output variable. This is the backbone of Machine Learning as a whole.  
@@ -106,6 +107,7 @@ def df_db(m, b):
 gradient = np.array([df_dm(m, b), df_db(m, b)])
 ```
 
+***
 ### Logistic Regression Review
 
 - Logistic regression is used when the target variable is categorical. It is a classification algorithm used to assign a sample to a specific class. 
@@ -185,13 +187,15 @@ p \geq 0.5,  & \text{class = 1}  \\
 p < 0.5,  & \text{class = 0} 
 \end{cases}
 ```
+
+***
 ### Intro to Keras and how Neural Networks work: 
 
 - Keras is integrated with TensorFlow
 - Numerical data $\rightarrow$ Artificial Neural Network (ANN)
 - Standard NN structure:
 	Input Layer $\rightarrow$ Hidden Layer $\rightarrow$ Output Layer
-### Forward Propagation (Mathematical structure behind NN layers)
+#### Forward Propagation (Mathematical structure behind NN layers)
 
 ```math
 \begin{bmatrix} z_{1}\\ z_{2}  \\z_{3} \\ \vdots \\ z_{n}\end{bmatrix} = \begin{bmatrix} w_{11} & w_{12} & \cdots  & w_{1n}\\ w_{21} & w_{22} & \cdots  & w_{2n}\\ w_{31} & w_{32} & \cdots & w_{3n} \\ \vdots & \vdots & \ddots  & \vdots  \end{bmatrix} \cdot \begin{bmatrix} x_{1}\\ x_{2} \\ \vdots \\ x_{n}\end{bmatrix} + \begin{bmatrix} b_{1}\\ b_{2}  \\b_{3} \\ \vdots \\ b_{n}\end{bmatrix} \implies z^{[1]} = W^{[1]}X + b^{[1]}
@@ -213,7 +217,7 @@ p < 0.5,  & \text{class = 0}
 ```
 
 - The activation function used here, $\sigma$, is the sigmoid function. We also need to compute the loss per layer (or error) via the loss function.
-### Sigmoid Activation Function
+#### Sigmoid Activation Function
 
 ```math
 \sigma(x) = \frac{1}{1+e^{-x}} = (1+e^{-x})^{-1}
@@ -225,7 +229,7 @@ Note here that
 \sigma^{\prime}(x) = \left[-1\cdot(1+e^{-x})^{-1-1}\right]\cdot (-e^{-x}) = (1+e^{-x})^{-2}\cdot e^{-x} = \frac{e^{-x}}{(1+e^{-x})^{2}} = \frac{1}{(1+e^{-x})}\cdot\left[\frac{1+e^{-x}-1}{(1+e^{-x})}\right] = \frac{1}{(1+e^{-x})}\cdot\left[1- \frac{1}{1+e^{-x}}\right] = \boxed{\sigma(x)\left[1-\sigma(x)\right]}. 
 ```
 
-### Loss Function
+#### Loss Function
 
 The cost function (loss function for the entire model) is given as
 
@@ -252,7 +256,7 @@ x^(1) → [Layer 1] → [Layer 2] → a^[2](1) → L(1) ┐
 x^(2) → [Layer 1] → [Layer 2] → a^[2](2) → L(2) │ → J = average(L(1), L(2), L(3))
 x^(3) → [Layer 1] → [Layer 2] → a^[2](3) → L(3) ┘
 ```
-### Backward Propagation (fixing weights and biases using loss function)
+#### Backward Propagation (fixing weights and biases using loss function)
 
 - Backpropagation is the algorithm used to train neural networks by calculating the gradient of the loss function with respect to each weight. The process works backwards from the output layer to the input layer.
 
@@ -288,7 +292,7 @@ dW^{[1]} = \frac{\partial L}{\partial W^{[1]}} = \frac{\partial L}{\partial z^{[
 db^{[1]} = \frac{\partial L}{\partial b^{[1]}} = \frac{\partial L}{\partial z^{[1]}}\times \frac{\partial z^{[1]}}{\partial b^{[1]}} = dz^{[1]}\times \frac{\partial(W^{[1]}X+b^{[1]})}{\partial b^{[1]}} = \boxed{dz^{[1]} = \left(dz^{[2]}\times W^{[2]}\right)\times\sigma^\prime(z^{[1]}) = \left[(a^{[2]} - y)\times W^{[2]}\right]\times\left(\sigma(z^{[1]})\left[1-\sigma(z^{[1]})\right])\right)}.
 ```
 
-### Gradient Descent & Updating Weights and Biases
+#### Gradient Descent & Updating Weights and Biases
 
 - The weight and bias parameters are updated by subtracting the partial derivation of the loss function with respect to those parameters.
 - Here α is the learning rate that represents the step size. It controls how much to update the parameter. The value of $\alpha$ is between $0$ to $1$.
@@ -310,14 +314,14 @@ b^{[2]} = b^{[2]} - \alpha \cdot db^{[2]}
 ```
 
 
-### Finding the Optimal Learning Rate $\alpha$
+#### Finding the Optimal Learning Rate $\alpha$
 - Learning Rate is one of the most important hyperparameter to tune for Neural network to achieve better performance.  Learning Rate determines the step size at each training iteration while moving toward an optimum of a loss function.
 - Keras has a built-in adaptive learning rate that makes it so that the learning rate isn't too small (causing the network to take a long while to converge), and not too big (such that the network doesn't learn at all). 
 - It provides the extension of the classical stochastic gradient descent that support adaptive learning rates such as  **Adagrad**, **Adadelta**, **RMSprop** and **Adam**.
 	- Adagrad is an optimizer with parameter-specific learning rates, which are adapted relative to how frequently a parameter gets updated during training. The more updates a parameter receives, the smaller the learning rate.
 	- Adadelta is a more robust extension of Adagrad that adapts learning rates based on a moving window of gradient updates, instead of accumulating all past gradients.
 
-### Underfitting, Overfitting, Best-fit
+#### Underfitting, Overfitting, Best-fit
 
 - **Underfit Model** – The model unable to learn the relationship between the input features and target output variable. It works badly on training data and also performs worst on a test dataset. 
 - **Overfit Model –** The model has learned the relationship between training dataset’s input features and target output variable very well. It performs best on train dataset but works poor on test data.
@@ -333,7 +337,7 @@ b^{[2]} = b^{[2]} - \alpha \cdot db^{[2]}
 			- Dropout
 			- Early stopping
 
-### Example (No Keras) Implementation
+#### Example (No Keras) Implementation
 
 ```python
 
@@ -595,7 +599,7 @@ for i, n_h in enumerate(hidden_layer_sizes):
   <img src="https://studymachinelearning.com/wp-content/uploads/2019/12/different_neuron_sizes.png" />
 </p>
 
-### Activation Functions and Different types:
+#### Activation Functions and Different types:
 
 - The activation function of a node defines the output of that node given an input or set of inputs in the neural network. 
 - The activation function allows the neural network to learn a non-linear pattern between inputs and target output variable.
@@ -615,15 +619,20 @@ for i, n_h in enumerate(hidden_layer_sizes):
 </p>
 
 2. Tanh - hyperbolic tangent
-	
+	```math
+		\Tanh(z) = f(z) = \frac{e^z - e^{-z}}{e^z + e^{-z}}
+	```
+
 	Similar (in terms of the graph) to the Sigmoid function with the difference that the Tanh function is zero-centered instead of being centered at some constant value.
 	
-	
+<p align="center">
+  <img src="https://studymachinelearning.com/wp-content/uploads/2019/10/tanh_plot.jpg" />
+</p>
 
 
 
 3. ReLU - rectified linear unit 
 
 
-
-##### Tags: #NeuralNetworks #Keras
+***
+### Tags: #NeuralNetworks #Keras
