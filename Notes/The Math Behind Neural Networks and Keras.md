@@ -123,8 +123,9 @@ To more concretely explain this, consider an example for linear vs. logistic reg
 	- Classify season such as winter, summer, monsoon.
 
 The "activation function" called Sigmoid is used to map predicted value to probabilities between 0 and 1 in logistic regression. This function looks like a s shape as such:
-
-![Alt text](https://studymachinelearning.com/wp-content/uploads/2019/09/sigmoid_graph.png)
+<p align="center">
+  <img src="https://studymachinelearning.com/wp-content/uploads/2019/09/sigmoid_graph.png" />
+</p>
 
 where $\sigma(z) = \left(1+e^{-z}\right)^{-1}$ and $\sigma(z)$ is the output from 0 to 1 (probability estimate) and $z$ is the <u>input function</u> (i.e z = mx+b).
 
@@ -380,7 +381,9 @@ plt.title('Distribution of the target variable')
 # Out[5]: 
 ```
 
-![Alt text](https://studymachinelearning.com/wp-content/uploads/2019/12/plot_target.jpg "Distribution of target var")
+<p align="center">
+  <img src="https://studymachinelearning.com/wp-content/uploads/2019/12/plot_target.jpg" />
+</p>
 
 ```python
 
@@ -570,9 +573,9 @@ plot_decision_boundary(lambda x: predict(trained_parameters, x.T), X, Y)
 
 # Out[18]:
 ```
-
-![Alt text](https://studymachinelearning.com/wp-content/uploads/2019/12/plot_decision_boundary.png "Decision Boundary Graph")
-
+<p align="center">
+  <img src="https://studymachinelearning.com/wp-content/uploads/2019/12/plot_decision_boundary.png" />
+</p>
 
 ```python
 # In [19]:
@@ -588,8 +591,9 @@ for i, n_h in enumerate(hidden_layer_sizes):
     
 # Out[19]:
 ```
-
-![Alt text](https://studymachinelearning.com/wp-content/uploads/2019/12/different_neuron_sizes.png "Different Hidden Layer Sizes")
+<p align="center">
+  <img src="https://studymachinelearning.com/wp-content/uploads/2019/12/different_neuron_sizes.png" />
+</p>
 
 ### Activation Functions and Different types:
 
@@ -606,8 +610,19 @@ for i, n_h in enumerate(hidden_layer_sizes):
 	- Sigmoids saturate and kill gradients.
 	- Its output isn’t zero centred. It makes the gradient updates go too far in different directions. 0 < output < 1, and it makes optimization harder.
 
+<p align="center">
+  <img src="https://studymachinelearning.com/wp-content/uploads/2019/10/sigoid_plot.png" />
+</p>
+
 2. Tanh - hyperbolic tangent
-3. ReLU - rectified linear unit [finish next time] 
+	
+	Similar (in terms of the graph) to the Sigmoid function with the difference that the Tanh function is zero-centered instead of being centered at some constant value.
+	
+	
+
+
+
+3. ReLU - rectified linear unit 
 
 
 
