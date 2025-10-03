@@ -639,7 +639,7 @@ for i, n_h in enumerate(hidden_layer_sizes):
 
 3. ReLU - rectified linear unit 
 	```math
-	\text{ReLU}(z) = f(z) = \max{0,z} 
+	\text{ReLU}(z) = f(z) = \max(0,z) 
 	```
 
 	The ReLU function stands for Rectified Linear Unit. This activation function is used as ReLu is less computationally expensive than Tanh and Sigmoid because it involves simpler mathematical operations.
