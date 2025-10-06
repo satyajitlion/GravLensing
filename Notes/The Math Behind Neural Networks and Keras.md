@@ -757,6 +757,14 @@ f(\alpha, x) = \lambda
 x,  &  \text{for } x \geq 0
 \end{cases}
 ```
+
+Summary of when to use which activation function:
+- Activation Functions are used to introduce non-linearity to a network because most patterns between inputs and outputs and their relationships are nonlinear in reality
+- A neural network will always have the same activation function in all hidden layers and the activation function should be differentiable such that the parameters of the network are learned via back propagation
+- ReLU is most commonly used
+- Selecting an activation function needs consideration of vanishing and exploding gradients
+- Regarding the output layer, we must always consider the expected value range of the predictions. If it can be any numeric value, then a linear activation or ReLU should be sufficient.
+- Use softmax or sigmoid activation function for classification problems.
 #### Regularization Techniques Revisited
 
 Types of Regularization:
