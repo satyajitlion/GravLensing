@@ -666,6 +666,16 @@ For example if you have an image recognition algorithm, it corresponds to a "mod
 - <u>What is the dying ReLU problem</u>?
 	- The dying ReLU problem is when ReLU activated neurons become inactive and only output 0 for any input. This happens when of the input ranges are negative or when the derivative of ReLU is 0. What this does is it causses the weights to not be updated and halts training entirely as when weights aren't updated using gradient descent, then the network stops learning. 
 
+	```math
+	ReLU(x) = \max\left(0,x\right) \implies \frac{d}{dx}\left(ReLU(x)\right) = 
+	f^\prime(x) = 
+	
+	\begin{cases}
+		1, & x\geq 0
+		0, & x < 0
+	\end{cases}
+	```
+
 - <u>What causes this problem</u>? 
 	- The caused for the dying ReLU problem is if the (1) if you have high learning rates and (2) having a large negative bias leads to same problem. 
 
@@ -697,6 +707,10 @@ Cons:
 Potential Solution to Activation Function Usage:
 - Use ReLU with a low-learning rate and positive bias to ensure things works properly.
 
+#### Other Activation Functions
+
+- Binary step function
+- 
 #### Regularization Techniques Revisited
 
 Types of Regularization:
@@ -705,11 +719,6 @@ Types of Regularization:
 2. L1 Regularization
 3. Dropout
 4. Early stopping
-
-#### Other Activation Functions
-
-#### Regularization 
-
 
 ***
 ### Tags: #NeuralNetworks #Keras
