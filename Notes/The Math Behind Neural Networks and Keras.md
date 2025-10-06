@@ -667,8 +667,8 @@ For example if you have an image recognition algorithm, it corresponds to a "mod
 	- The dying ReLU problem is when ReLU activated neurons become inactive and only output 0 for any input. This happens when of the input ranges are negative or when the derivative of ReLU is 0. What this does is it causses the weights to not be updated and halts training entirely as when weights aren't updated using gradient descent, then the network stops learning. 
 
 	```math
-	\text{ReLU}(x) = \max\left(0,x\right) \implies \frac{d}{dx}\left(ReLU(x)\right) 
-	= f^\prime(x) = 
+	\text{ReLU}(x) = \max\left(0,x\right) \implies 
+	\frac{d}{dx}\left(\text{ReLU(x)\right) = f^\prime(x) = 
 	
 	\begin{cases}
 		1, & x\geq 0\\
