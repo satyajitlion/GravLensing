@@ -22,7 +22,7 @@ Revisit the foundational mathematical groundwork for understanding neural networ
 
 - The notes are now better structured for quick recall, which will be essential when implementing backpropagation in Neural Networks.
 ***
-### Problems
+### Challenges & Pause Points
 
 - The derivation of the gradient for the MSE cost function, while understood conceptually, can still be a bit tricky to manually execute without error. Need to practice this more.
 

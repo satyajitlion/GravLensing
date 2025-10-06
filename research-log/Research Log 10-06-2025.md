@@ -20,8 +20,11 @@ Contact Amarel support at [help@oarc.rutgers.edu](https://mailto:help@oarc.rutge
     
 - **L1/L2 Regularization:** Confirmed that these techniques work by adding a penalty on the model's weights directly to the loss function, encouraging simpler models to reduce overfitting. L2 (weight decay) is more commonly used.
 ***
-### Problems
+### Challenges & Pause Points
 
+- The `shapely` package installation on Amarel is currently blocked, pending a response from OARC support.
+    
+- The research on regularization techniques is incomplete; notes on Dropout and Early Stopping need to be finished.
 ***
 ### Questions & Ideas
 

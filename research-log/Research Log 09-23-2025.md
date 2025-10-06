@@ -17,7 +17,7 @@ This day was dedicated to preparation, building the knowledge base and local too
 
 The day's work resulted in a prepared local machine with the correct software and a refreshed understanding of HPC concepts and SLURM commands. However, the critical step of establishing a connection to Amarel was blocked by a network access issue.
 ***
-### Problems
+### Challenges & Pause Points
 
 The primary obstacle is **network connectivity**. To access Amarel from off-campus, a VPN connection to the Rutgers network is required. The recommended software, Cisco AnyConnect, cannot be installed due to a permission error. This prevents the use of both WinSCP and PuTTy, halting progress on file transfer and cluster login.
 ***

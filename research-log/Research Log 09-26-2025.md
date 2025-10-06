@@ -18,7 +18,7 @@ Took notes on several key operational aspects of the Amarel cluster:
 
 - **File Management:** Picked up a useful command (`rm -f *.out *.err *.pyc`) for cleaning up output files from failed jobs.
 ***
-### Problems
+### Challenges & Pause Points
 
 - Yesterday's problems are now clearly identified as a combination of:
 

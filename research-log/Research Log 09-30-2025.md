@@ -19,7 +19,7 @@ Resolve the critical Python dependency issues on the Amarel cluster, specificall
 
 - After cleaning up installation conflicts, most required packages were able to be imported (besides SciPy for Python 3.8.2 and Shapely for the built in python version given by the `py-data-science-stack` module).
 ***
-### Problems
+### Challenges & Pause Points
 
 - The system's Python 3.8.2 installation is missing critical components (`_ctypes` module), making it impossible to use scientific packages like SciPy. This explains why initial dependency installations failed. Additionally, my directory was using python version 2.7.5 or defaulting to it whenever I used to the `python [file_name]` command. 
 

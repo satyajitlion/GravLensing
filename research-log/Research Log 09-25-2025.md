@@ -20,7 +20,7 @@ This process involved significant troubleshooting and independent learning to un
 
 - Identified a critical roadblock: the job failed immediately due to missing Python dependencies, halting progress on the primary objective.
 ***
-### Problems
+### Challenges & Pause Points
 
 The main obstacle encountered was a **dependency management issue**. The batch job failed because the required Python libraries (NumPy, Astropy, SciPy, Shapely, Matplotlib) were not installed in my Amarel environment.
 
