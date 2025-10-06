@@ -663,8 +663,48 @@ For example if you have an image recognition algorithm, it corresponds to a "mod
 
 #### Dying ReLU problem and its solutions 
 
-The dying ReLU problem is when ReLU activated neurons become inactive and only output 0 for any input. This happens as the [depth approaches infinity](https://arxiv.org/pdf/1903.06733). Lu et al proposed a new initialization procedure to alleviate   
+- <u>What is the dying ReLU problem</u>?
+	- The dying ReLU problem is when ReLU activated neurons become inactive and only output 0 for any input. This happens when of the input ranges are negative or when the derivative of ReLU is 0. What this does is it causses the weights to not be updated and halts training entirely as when weights aren't updated using gradient descent, then the network stops learning. 
 
+- <u>What causes this problem</u>? 
+	- The caused for the dying ReLU problem is if the (1) if you have high learning rates and (2) having a large negative bias leads to same problem. 
+
+- <u>How do you fix the dying ReLU problem</u>?
+	- Ensure all inputs push ReLU to nonnegative segments. i.e,
+		- Ensure that the learning rate is low and use a positive bias to alleviate dying ReLU neuron related issues
+		- Use leaky ReLU instead to ensure that the gradients are non-zero
+
+
+##### A bit about "<u>Leaky ReLU</u>"
+
+```math
+\text{Leaky ReLU} = f(x) = \max\left(0.01x, x\right)
+```
+
+<p align="center">
+  <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*1rQMH7HtiqxSplzQapZ7Rg.png" />
+</p>
+
+Pros:
+- Non-zero gradient
+- Solves the vanishing gradient problem
+- Converges fast
+- Solves the dying ReLU problem
+Cons:
+- introduces a hyper parameter (small slope for negative inputs) that needs to be tuned.
+	- This adds complexity to the training process and doesn't **fully** solve the vanishing gradient problem.
+
+Potential Solution to Activation Function Usage:
+- Use ReLU with a low-learning rate and positive bias to ensure things works properly.
+
+#### Regularization Techniques Revisited
+
+Types of Regularization:
+
+1. L2 Regularization
+2. L1 Regularization
+3. Dropout
+4. Early stopping
 
 #### Other Activation Functions
 
