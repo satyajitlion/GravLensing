@@ -718,11 +718,13 @@ f(x) =
 1,  & \text{for } x \geq 0
 \end{cases}
 ```
+
 - Parametric ReLU
 ```math
 f(x) = \max(ax, x)
 ```
-- ELU
+
+- ELU (Exponential Linear Units)
 ```math
 f(x) = 
 \begin{cases}
@@ -730,11 +732,26 @@ x,  & \text{for } x \geq 0 \\
 a(e^{x}-1),  & \text{for } x < 0
 \end{cases}
 ```
+
 - Softmax Function
+
+```math
+\text{softmax}(z_{i}) = \frac{\exp(z_{i})}{\sum_{j}\exp(z_{i})}
+```
+
 - Swish Function
-- GELU
-- SELU
-- 
+```math
+f(x) = x\cdot\sigma(x) = \frac{x}{1+e^{-x}}
+```
+
+- GELU (Gaussian Error Linear Unit)
+```math
+f(x) = xP(X \leq x) = x\Phi(x) = 0.5x \left(1+\tanh\left[ \sqrt{\frac{2}{\pi}}\left(x + 0.044715x^{3}\right)\right]\right)
+```
+
+- SELU 
+```math
+```
 #### Regularization Techniques Revisited
 
 Types of Regularization:
