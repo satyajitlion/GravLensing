@@ -775,15 +775,55 @@ Types of Regularization:
 2. L1 Regularization
 3. Dropout
 4. Early stopping
-
-
 ##### L2 Regularization
 
-This is known as **weight decay** as it forces the weight parameters to decay. This regularization method adds a regularization term to the loss function as such:
+This is known as **weight decay** as it forces the weight parameters to decay. This regularization method adds a regularization term to the loss function (shown below). The regularization term is the squared magnitude of the **weight parameter** (L2 norm) which is taken as a penalty term.
+
+Revised cost function after regularization:
 
 ```math
 J = \frac{1}{m}\sum_{i=1}^{m}L\left(\hat{y}^{i}, y^{i}\right) + \frac{\lambda}{2m}\|w\|_{2}^{2}
 ```
+
+Here, $\lambda$ is the regularization term that needs to be tuned. This value is in the range between $0.0$ and $1.0$. 
+
+Note, 
+- if $\lambda$ is too large, then the training model underestimates the weight parameters and models will underfit the training dataset.
+- if $\lambda$ is too small, then the regularization term has very little effect and it allows the model to overfit. 
+
+Finding the right parameter to do this for you is much easier done in Keras via the following:
+
+```python
+from keras import regularizers
+model.add(Dense(64, input_dim=64, W_regularizer=regularizers.l2(0.01)))
+
+# note that its reguarlizers.l2 as in L2 regularization
+```
+
+##### L1 Regularization
+
+This is the same as L2 regularization, with the key difference that L1 adds the absolute value of the weight parameter (L1 norm) to the cost function as the penalty term or regularization term.
+
+For this regularization, the new cost function then is:
+
+```math
+J = \frac{1}{m}\sum_{i=1}^{m}L\left(\hat{y}^{i}, y^{i}\right) + \frac{\lambda}{2m}\|w\|_{1}
+```
+
+with the following Keras implementation:
+
+```python
+from keras import regularizers
+model.add(Dense(64, input_dim=64, W_regularizer=regularizers.l1(0.01)))
+
+# note that its reguarlizers.l1 as in L1 regularization
+```
+
+Additionally note that L2 regularization is used more than L1 regularization.
+
+##### Dropout 
+
+Dropout is the regularization technique where 
 
 ***
 ### Tags: #NeuralNetworks #Keras
