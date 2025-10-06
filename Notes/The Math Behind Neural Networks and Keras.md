@@ -24,7 +24,7 @@ shape of arr2 : (3, 1)
 
 Recall that for a derivative with respect to any specific variable, let's say we take the derivative of $y$ with respect to $x$ such that we have $\frac{dy}{dx}$, then this accounts for the change along the $x$ direction for the $y$ function. Extending this to 3 dimensions, recall that we take the gradient of a function with respect to it's multiple variables to find the **change** in that direction for the function. 
 
-For example, f(x,y,z) can have three partials as such:
+For example, $f(x,y,z)$ can have three partials as such:
 
 ```math
 \begin{aligned}
@@ -660,6 +660,16 @@ The <u>vanishing gradient problem</u> means that tweaking the parameters doesn't
 This is problem is related to another problem with gradient descent: **the local optimum**. This is what happens if the ball comes to a stop in a valley on top of the mountain, rather than getting all the way to the lowest point.
 
 For example if you have an image recognition algorithm, it corresponds to a "model" (meaning: a bunch of numbers that are used to recognize things in images) which gives you the most accurate image recognition.
+
+#### Dying ReLU problem and its solutions 
+
+The dying ReLU problem is when ReLU activated neurons become inactive and only output 0 for any input. This happens as the [depth approaches infinity](https://arxiv.org/pdf/1903.06733).  
+
+
+#### Other Activation Functions
+
+#### Regularization 
+
 
 ***
 ### Tags: #NeuralNetworks #Keras
