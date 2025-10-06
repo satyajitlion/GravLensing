@@ -28,10 +28,23 @@ Contact Amarel support at [help@oarc.rutgers.edu](https://mailto:help@oarc.rutge
 ***
 ### Questions & Ideas
 
+- What is the specific Keras syntax for implementing Dropout layers?
+    
+- In practice, is it better to use a single regularization technique or to combine them (e.g., L2 + Dropout)?
+    
+- When building the initial neural network model for this project, it might be good to start with ReLU activation in hidden layers (monitoring for signs of "dying" units) and use L2 regularization as a first step to combat overfitting. Also, I should use Softmax on the output layer for classification. I wonder if the Mock Lens data requires classification, however, as it's pretty clear that the data seems to be purely numerical. However, with regard to rotation of the gravitational lens system, I don't want a network that changes the output values simply as a result of rotation or translation of the system. It might be good to think about this for a while.
 ***
 ### Next Steps
 
-##### Tags:
+1. Follow up on the OARC support ticket if no response is received within 1-2 business days.
+    
+2. Complete the research on regularization by finishing the notes on **Dropout** and **Early Stopping.**
+
+3. Draft the initial architecture of the neural network using Keras, incorporating the insights on activation functions and L2 regularization.
+    
+4. Implement and test the model on a small subset of data to verify the environment and basic functionality.
+
+##### Tags: #Amarel #Keras #Regularization #ActivationFunctions #NeuralNetworks #Troubleshooting 
 
 
 
