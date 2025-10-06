@@ -767,12 +767,23 @@ Summary of when to use which activation function:
 - Use softmax or sigmoid activation function for classification problems.
 #### Regularization Techniques Revisited
 
+Recall that regularization is used to avoid overfitting and allow the network to truly learn the relationship between the inputs and outputs for all data sets instead of just the training data set. The network should be used to extend a network to multiple datasets. 
+
 Types of Regularization:
 
 1. L2 Regularization
 2. L1 Regularization
 3. Dropout
 4. Early stopping
+
+
+##### L2 Regularization
+
+This is known as **weight decay** as it forces the weight parameters to decay. This regularization method adds a regularization term to the loss function as such:
+
+```math
+J = \frac{1}{m}\sum_{i=1}^{m}L\left(\hat{y}^{i}, y^{i}\right) + \frac{\lambda}{2m}\abs{w}_{2}^{2}
+```
 
 ***
 ### Tags: #NeuralNetworks #Keras
