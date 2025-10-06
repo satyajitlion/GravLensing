@@ -782,7 +782,7 @@ Types of Regularization:
 This is known as **weight decay** as it forces the weight parameters to decay. This regularization method adds a regularization term to the loss function as such:
 
 ```math
-J = \frac{1}{m}\sum_{i=1}^{m}L\left(\hat{y}^{i}, y^{i}\right) + \frac{\lambda}{2m}\abs{w}_{2}^{2}
+J = \frac{1}{m}\sum_{i=1}^{m}L\left(\hat{y}^{i}, y^{i}\right) + \frac{\lambda}{2m}\|w\|_{2}^{2}
 ```
 
 ***
