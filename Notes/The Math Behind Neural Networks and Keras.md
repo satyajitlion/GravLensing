@@ -668,7 +668,7 @@ For example if you have an image recognition algorithm, it corresponds to a "mod
 
 	```math
 	\text{ReLU}(x) = \max\left(0,x\right) \implies 
-	\frac{d}{dx}\left(\text{ReLU(x)\right) = f^\prime(x) = 
+	\frac{d}{dx}\left(\text{ReLU}(x)\right) = f^\prime(x) = 
 	
 	\begin{cases}
 		1, & x\geq 0\\
