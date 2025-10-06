@@ -749,8 +749,13 @@ f(x) = x\cdot\sigma(x) = \frac{x}{1+e^{-x}}
 f(x) = xP(X \leq x) = x\Phi(x) = 0.5x \left(1+\tanh\left[ \sqrt{\frac{2}{\pi}}\left(x + 0.044715x^{3}\right)\right]\right)
 ```
 
-- SELU 
+- SELU (Scaled Exponential Linear Unit)
 ```math
+f(\alpha, x) = \lambda
+\begin{cases}
+\alpha(e^{x}-1), & \text{for } x < 0 \\
+x,  &  \text{for } x \geq 0
+\end{cases}
 ```
 #### Regularization Techniques Revisited
 
