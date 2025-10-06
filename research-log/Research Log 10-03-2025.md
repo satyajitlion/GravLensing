@@ -5,9 +5,13 @@ Understanding different types of activation functions in neural networks, their 
 ### What I was able to accomplish
 
 - Studied and documented three main activation functions: Sigmoid, Tanh, and ReLU
+
 - Compiled mathematical formulas for each activation function
+
 - Understood the graphical representations and output ranges of each function
+
 - Analyzed the specific problems associated with each activation function
+
 - Gained a comprehensive understanding of the vanishing gradient problem through analogies
 ***
 ### Results
@@ -25,16 +29,23 @@ Understanding different types of activation functions in neural networks, their 
 ### Questions & Ideas
 
 - Why exactly does ReLU avoid the vanishing gradient problem while sigmoid and tanh don't?
+
 - Are there situations where sigmoid or tanh might still be preferable to ReLU?
+
 - What about the "dying ReLU" problem I've heard mentioned?
+
 - How do other activation functions (Leaky ReLU, ELU, Swish) compare to these three?
 ***
 ### Next Steps
 
 1. Research and understand the "dying ReLU" problem and its solutions
+
 2. Explore other modern activation functions beyond these three basic types
+
 3. Get Started on Keras and learn how models are implemented through Keras
+
 4. Fix Mock Lens Generation issues with Amarel (contact Amarel Support, touch up on this issue with Dr. Keeton)
+
 5. Try to implement a small-scale example neural network model with Keras to test how model implementation works.
 
 ##### Tags: #NeuralNetworks #ActivationFunctions #Foundations 
