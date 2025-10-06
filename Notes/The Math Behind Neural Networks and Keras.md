@@ -663,7 +663,7 @@ For example if you have an image recognition algorithm, it corresponds to a "mod
 
 #### Dying ReLU problem and its solutions 
 
-The dying ReLU problem is when ReLU activated neurons become inactive and only output 0 for any input. This happens as the [depth approaches infinity](https://arxiv.org/pdf/1903.06733).  
+The dying ReLU problem is when ReLU activated neurons become inactive and only output 0 for any input. This happens as the [depth approaches infinity](https://arxiv.org/pdf/1903.06733). Lu et al proposed a new initialization procedure to alleviate   
 
 
 #### Other Activation Functions
