@@ -671,7 +671,7 @@ For example if you have an image recognition algorithm, it corresponds to a "mod
 	= f^\prime(x) = 
 	
 	\begin{cases}
-		1, & x\geq 0
+		1, & x\geq 0\\
 		0, & x < 0
 	\end{cases}
 	```
@@ -710,6 +710,30 @@ Potential Solution to Activation Function Usage:
 #### Other Activation Functions
 
 - Binary step function
+```math
+f(x) = 
+
+\begin{cases}
+0,  & \text{for } x < 0 \\
+1,  & \text{for } x \geq 0
+\end{cases}
+```
+- Parametric ReLU
+```math
+f(x) = \max(ax, x)
+```
+- ELU
+```math
+f(x) = 
+\begin{cases}
+x,  & \text{for } x \geq 0 \\
+a(e^{x}-1),  & \text{for } x < 0
+\end{cases}
+```
+- Softmax Function
+- Swish Function
+- GELU
+- SELU
 - 
 #### Regularization Techniques Revisited
 
