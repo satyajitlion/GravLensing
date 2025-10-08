@@ -10,10 +10,7 @@ Continue neural network regularization research. Improve understanding of dropou
 
 - **Documented practical code examples** for implementing both regularization techniques
 
-- 
-***
-### Results
-
+- Learned about the **Early stopping implementation in Keras** with proper validation monitoring and patience parameters
 ***
 ### Challenges & Pause Points
 
