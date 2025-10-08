@@ -835,6 +835,10 @@ This process prevents any single neuron from becoming overly reliant or too sens
 
 The same thing happens in a neural network. We don't want neurons to "laze off." We want to prevent that. Dropout regularization thus helps us prevent neurons which are too sensitive or not sensitive at all. 
 
+
+|                                Neural Network (No Dropout)                                |                        Neural Network (After Applying Dropout)                         |
+| :---------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: |
+| ![No Dropout](https://studymachinelearning.com/wp-content/uploads/2019/12/dropout1-1.png) | ![Dropout](https://studymachinelearning.com/wp-content/uploads/2019/12/dropout2-1.png) |
 ##### Early Stopping Regularization
 
 
