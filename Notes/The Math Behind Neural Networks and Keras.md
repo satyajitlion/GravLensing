@@ -846,5 +846,17 @@ A key challenge in machine learning is determining the optimal training duration
 
 The number of training epochs is a critical hyperparameter. Early stopping automates the process of tuning this value by monitoring the model's performance on a validation set. It halts training as soon as performance on this set stops improving, thereby ensuring the model generalizes well without unnecessary computation.
 
+<u>Early Stopping Keras Implementation </u>:
+
+Keras Callback API provides the implementation of the Early Stopping. Early stopping needs a validation dataset to observe the model’s performance during the training.
+
+There are two ways to specify the validation data to the Keras’ **fit()** function using _**validation_data** and **validation_split** argument._ At the end of each training epoch, the model is evaluated on the validation dataset.
+
+```python
+from keras.callbacks import EarlyStopping
+ES = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=5) 
+model.fit(trainX, trainy, validation_data=(valX, valy), epochs=20,callbacks=[ES])
+```
+
 ***
 ### Tags: #NeuralNetworks #Keras
