@@ -649,7 +649,7 @@ for i, n_h in enumerate(hidden_layer_sizes):
 </p>
 
 
-#### Vanishing Gradient Problem explained:
+##### Vanishing Gradient Problem explained:
 
 Let us look at an example of a ball on top of a mountain. If you put a ball on the top of a mountain, it will roll downhill. This is the case until it hits a valley. In optimization, this concept is called "gradient descent" as discussed earlier. You pick a point and then move in the direction of the steepest slope (gradient) until you find a valley. The valley is, ideally, the best way to do something.
 
@@ -707,7 +707,7 @@ Cons:
 Potential Solution to Activation Function Usage:
 - Use ReLU with a low-learning rate and positive bias to ensure things works properly.
 
-#### Other Activation Functions
+##### Other Activation Functions
 
 - Binary step function
 ```math
