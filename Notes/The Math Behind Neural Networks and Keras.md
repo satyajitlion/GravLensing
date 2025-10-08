@@ -840,7 +840,11 @@ The same thing happens in a neural network. We don't want neurons to "laze off."
 | ![No Dropout](https://studymachinelearning.com/wp-content/uploads/2019/12/dropout1-1.png) | ![Dropout](https://studymachinelearning.com/wp-content/uploads/2019/12/dropout2-1.png) |
 ##### Early Stopping Regularization
 
+Early stopping is a regularization technique that prevents neural networks from overfitting. This commonly occurs when a model is trained for too many epochs.
 
+A key challenge in machine learning is determining the optimal training duration. Insufficient training leads to underfitting, where the model fails to learn the underlying patterns in the data. Conversely, excessive training causes overfitting, where the model performs well on the training data but poorly on unseen test data.
+
+The number of training epochs is a critical hyperparameter. Early stopping automates the process of tuning this value by monitoring the model's performance on a validation set. It halts training as soon as performance on this set stops improving, thereby ensuring the model generalizes well without unnecessary computation.
 
 ***
 ### Tags: #NeuralNetworks #Keras
