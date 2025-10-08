@@ -821,7 +821,7 @@ model.add(Dense(64, input_dim=64, W_regularizer=regularizers.l1(0.01)))
 
 Additionally note that L2 regularization is used more than L1 regularization.
 
-##### Dropout 
+##### Dropout Regularization
 
 Dropout is a regularization technique that helps prevent overfitting. During training, it randomly "drops out" (or temporarily removes) a percentage of neurons in a layer. This means that, on each training step, the network is effectively a different, smaller network.
 
@@ -834,6 +834,10 @@ This process prevents any single neuron from becoming overly reliant or too sens
 **With Dropout (The "Smaller Network" Effect):** Now instead, if every day 3 or 4 members of the group were sent home on paid leave, then **the team that meets is always a smaller, random subset.** This prevents any one person from dominating. It forces everyone in said group to become a better generalist and to learn to collaborate with different people and helps creates a more robust team. Because this group has been trained under chaotic conditions, they are now excellent at weighing all inputs and are not overly sensitive to any single member's quirky opinion.
 
 The same thing happens in a neural network. We don't want neurons to "laze off." We want to prevent that. Dropout regularization thus helps us prevent neurons which are too sensitive or not sensitive at all. 
+
+##### Early Stopping Regularization
+
+
 
 ***
 ### Tags: #NeuralNetworks #Keras
