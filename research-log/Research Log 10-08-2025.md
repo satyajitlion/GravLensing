@@ -36,8 +36,24 @@ Continue neural network regularization research. Improve understanding of dropou
 ***
 ### Next Steps
 
+1. Track the `mock_lens_100k` job and verify successful generation of all three output files
 
-##### Tags:
+2. Start working on building the neural network model for mock lens data, incorporating today's regularization learnings. Temporarily use the 30 mock lenses to create the model and ensure that the model can take in much larger datasets.
+
+3. Investigate tensor methods and geometric deep learning for handling coordinate transformations
+
+4. Develop checks to ensure physical consistency of generated lens data
+
+5. Make sure to create some form of algorithm that is able to take in the dictionary I created and is able to unpack the information within said dictionary containing the mock lenses. Prepare for larger simulation runs ($10^5$ lenses) once initial data quality is confirmed. 
+
+6. Add the right-hand side of the following equation to the data dictionary (maybe rerun the Amarel Batch job post edit to incorporate this change as well when generating the mock lenses?)
+
+	```math
+	\left\{x_{i}, \Delta t_i\right\}, z_{l}, z_{s} \rightarrow \left\{\phi_{i}, 
+	\alpha_{i}\right\}, D_t
+	```
+
+##### Tags: #NeuralNetworks #Regularization #Dropout #EarlyStopping #Keras #DeepLearning #Amarel #MockLensGeneration 
 
 
 
