@@ -858,5 +858,8 @@ ES = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=5)
 model.fit(trainX, trainy, validation_data=(valX, valy), epochs=20,callbacks=[ES])
 ```
 
+
+
+
 ***
 ### Tags: #NeuralNetworks #Keras
