@@ -858,7 +858,36 @@ ES = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=5)
 model.fit(trainX, trainy, validation_data=(valX, valy), epochs=20,callbacks=[ES])
 ```
 
+### Starting with Keras:
 
+- Sequential model 
+	- receives data during training whenever the fit function is called on it.
+	- What type of data format does the fit function expect?
+		- x - input (in the format of a **numpy array**, **list of arrays**, **tensorflow tensor**, or **list of tensorflow tensors**, a **dict mapping**, a **tf.data dataset**, or a **keras generator**)
+		- y - input (needs to match the format of the data for x)
+#### Data Preparation and Processing
+
+```python
+import numpy as np
+from random import randint
+from sklearn.utils import shuffle
+from sklearn.preprocessing import MinMaxScaler
+
+# given my dataset
+
+x = [] # values of dictionary I created
+y = [] # keys of dictionary I created
+
+# then convert arrays into numpy arrays as such
+
+train_labels = np.array(y)
+train_samples = np.array(x)
+train_labels, train_samples = shuffle(train_labels, train_samples) # gets rid of any imposed order during data generation
+
+# normalizing / standardizing data to make training the network more efficient
+scaler = MinMaxScaler(feature_range(0,1))
+scaled_train_samples = scaler.fit_transform(train_samples.reshape(-1,1))
+```
 
 
 ***
