@@ -890,5 +890,17 @@ scaled_train_samples = scaler.fit_transform(train_samples.reshape(-1,1))
 ```
 
 
+#### Simple tf. Keras Sequential Model
+
+```python
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Activation, Dense
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.metrics import categorical_crossentropy
+
+```
+
 ***
 ### Tags: #NeuralNetworks #Keras
