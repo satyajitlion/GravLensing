@@ -944,13 +944,24 @@ Non-trainable Params: 0
 
 ```python
 # setting up the model
-model.compile(optimizer=Adam(learning_rate=0.0001), loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+model.compile(
+	optimizer=Adam(learning_rate=0.0001), 
+	loss='sparse_categorical_crossentropy', 
+	metrics=['accuracy']
+)
 ```
 
 ```python
 # calling the fit function to trian the model:
 
-model.fit(x=scaled_train_samples, y=train_labels, batch_size=10, epochs=30, shuffle=True, verbose=2) 
+model.fit(
+	x=scaled_train_samples, 
+	y=train_labels, 
+	batch_size=10, 
+	epochs=30, 
+	shuffle=True, 
+	verbose=2
+) 
 
 # here, x is the input and y is the target output! FOR MY DATA THIS MEANS THAT I HAVE TO SEPARATE THE DICTIONARY INTO INPUT AND TARGET OUTPUT ARRAYS (most likely).
 
@@ -973,7 +984,33 @@ model.fit(x=scaled_train_samples, y=train_labels, batch_size=10, epochs=30, shuf
 - this is the same thing as a "test dataset". 
 - Note that the model will only be training on the training dataset but will be *tested* on the validation dataset.
 - Helps us see if the model is being overfit or underfit.
-- 
+
+```python
+model.fit(
+	x=scaled_train_samples,
+	y=train_labels,
+	validation_data=valid_set,
+	batch_size=10,
+	epochs=30,
+	verbose=2
+)
+
+# this time we have the parameter "validation_data" to specify the test data for the model.
+
+# alternatively, we can also do this:
+
+model.fit(
+	x=scaled_train_samples,
+	y=train_labels,
+	validation_split=0.1,
+	batch_size=10,
+	epochs=30,
+	verbose=2
+)
+
+# this splits our dataset into 90% training and 10% validation such that only 90% of the data is used to train the model and 10% is used to test the model.
+
+```
 
 ***
 ### Tags: #NeuralNetworks #Keras
