@@ -1015,7 +1015,21 @@ model.fit(
 # validation_split needs to be specified as a number between 0 and 1 to indicate the percentage of the split.
 ```
 
-# 
+IMPORTANT NOTE: 
+- now that we have a way to create the validation dataset using the above method, notice that the validation_split specifies a percentage for the dataset to be split up by into training data and test data. 
+- This percentage takes the end portion of the dataset. 
+	- For example, let's say you have an array of 10 numbers from 1 to 10 as such: 
+		`[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`
+		and you specify 0.1 for validation_data, then the list gets split into the following:
+
+		```math
+		training_data = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+		test_data = [10]
+		```
+
+	This can create problems with the network being too biased as one can clearly  imagine.
+	
+- Therefore, setting `shuffle=True` here is extremely important as it prevents the network from being biased toward the initial dataset and then failing when it's tested on the latter half of the data set or the latter portion. 
 
 
 ***
