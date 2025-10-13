@@ -48,7 +48,7 @@ I now have a clear, practical guide in my notes for implementing model validatio
 
 ### Note to Self:
 
-- Ended the ML video at 42:33, continue from here.
+- Ended the ML video at 42:33, continue from there.
 
 ##### Tags: #Keras #DeepLearning #DataPreprocessing #Foundations #NeuralNetworks #SequentialModel #TrainingData #TestData #Python 
 
