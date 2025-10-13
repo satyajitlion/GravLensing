@@ -1017,7 +1017,7 @@ model.fit(
 ```
 
 IMPORTANT NOTE: 
-- now that we have a way to create the validation dataset using the above method, notice that the validation_split specifies a percentage for the dataset to be split up by into training data and test data. 
+- now that we have a way to create the validation dataset using the above method, notice that the validation_split specifies a percentage for the dataset to be split up by into training data and validation data. 
 - This percentage takes the end portion of the dataset. 
 	- For example, let's say you have an array of 10 numbers from 1 to 10 as such: 
 		`[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`
@@ -1025,7 +1025,7 @@ IMPORTANT NOTE:
 
 		```math
 		training_data = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-		test_data = [10]
+		validation_data = [10]
 		```
 
 	This can create problems with the network being too biased as one can clearly  imagine.
