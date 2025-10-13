@@ -32,7 +32,9 @@ I now have a clear, practical guide in my notes for implementing model validatio
 ***
 ### Next Steps
 
-##### Tags:
+
+
+##### Tags: #Keras #DeepLearning #DataPreprocessing #Foundations #NeuralNetworks #SequentialModel #TrainingData #TestData #Python 
 
 
 
