@@ -976,13 +976,14 @@ model.fit(
 #### Post Training:
 
 - Want as high of accuracy as possible and minimal loss. 
-- Test over the test/validation dataset
+- Test over the validation dataset
+- Test over the test dataset to see if it is able to make an inference.
 
 ####  How to Build a Validation Set using the Keras API
 
 - pick a subset of the training set and relabel it as `validation_dataset` **before** training.
-- this is the same thing as a "test dataset". 
-- Note that the model will only be training on the training dataset but will be *tested* on the validation dataset.
+- this is NOT the same thing as a "test dataset". 
+- Note that the model will only be training on the training dataset but will be further *validated* on the validation dataset.
 - Helps us see if the model is being overfit or underfit.
 
 ```python
@@ -996,7 +997,7 @@ model.fit(
 	verbose=2
 )
 
-# this time we have the parameter "validation_data" to specify the test data for the model.
+# this time we have the parameter "validation_data" to specify the validation data for the model.
 
 # alternatively, we can also do this:
 
@@ -1010,7 +1011,7 @@ model.fit(
 	verbose=2
 )
 
-# this splits our dataset into 90% training and 10% validation such that only 90% of the data is used to train the model and 10% is used to test the model. 
+# this splits our dataset into 90% training and 10% validation such that only 90% of the data is used to train the model and 10% is used to validated the model to see if it is overfitting or underfitting and to account for any training bias from the model. 
 
 # validation_split needs to be specified as a number between 0 and 1 to indicate the percentage of the split.
 ```
@@ -1033,6 +1034,13 @@ IMPORTANT NOTE:
 
 - The validation accuracy must be ~1-2% (or ~0.01-0.02 as a decimal) close to the training dataset accuracy otherwise we have a model that is either underfitting or overfitting.
 
+### Inference and Test Sets (important distinction between test and validation here:)
+
+- Validation datasets stem from the training set itself and help test the network against bits and pieces from the training dataset itself
+
+- Test sets or test datasets are difference training samples that weren't initially in the training sample itself and are used on the neural network to see if it's able to make an accurate inference. For my research purposes, this would refer to using the SIE dataset if the SIS+shear dataset was used to train the network. 
+
+**Test datasets $\neq$ Validation data!!!!!!**
 
 ***
 ### Tags: #NeuralNetworks #Keras
