@@ -962,6 +962,16 @@ model.fit(x=scaled_train_samples, y=train_labels, batch_size=10, epochs=30, shuf
 
 # verbose refers to being able to see the ouptut whenever the .fit() function is ran. This normally ranges from 0, 1, 2 where 2 is the most verbose output. This basically just means you get a more detailed output. 
 ```
+#### Post Training:
+
+- Want as high of accuracy as possible and minimal loss. 
+- Test over the test/validation dataset
+
+####  How to Build a Validation Set using the Keras API
+
+- pick a subset of the training set and relabel it as `validation_dataset` **before** training.
+- this is the same thing as a "test dataset". 
+- Note that the model will only be training on the training dataset but will be *tested* on the validation dataset.
 
 ***
 ### Tags: #NeuralNetworks #Keras
