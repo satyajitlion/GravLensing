@@ -992,6 +992,7 @@ model.fit(
 	validation_data=valid_set,
 	batch_size=10,
 	epochs=30,
+	shuffle=True,
 	verbose=2
 )
 
@@ -1005,6 +1006,7 @@ model.fit(
 	validation_split=0.1,
 	batch_size=10,
 	epochs=30,
+	shuffle=True,
 	verbose=2
 )
 
@@ -1013,7 +1015,7 @@ model.fit(
 # validation_split needs to be specified as a number between 0 and 1 to indicate the percentage of the split.
 ```
 
-
+# 
 
 
 ***
