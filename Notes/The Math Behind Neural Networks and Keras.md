@@ -943,7 +943,24 @@ Non-trainable Params: 0
 ```
 
 ```python
+# setting up the model
+model.compile(optimizer=Adam(learning_rate=0.0001), loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+```
 
+```python
+# calling the fit function to trian the model:
+
+model.fit(x=scaled_train_samples, y=train_labels, batch_size=10, epochs=30, shuffle=True, verbose=2) 
+
+# here, x is the input and y is the target output! FOR MY DATA THIS MEANS THAT I HAVE TO SEPARATE THE DICTIONARY INTO INPUT AND TARGET OUTPUT ARRAYS (most likely).
+
+# batch_size refers to how many samples are included in one batch given a dataset. So if there are 100,000 training samples, then a batch_size of 10 would mean each batch has 10^5/10 = 10,000 training samples. 
+
+# epochs refers to the number of times the model with process or train on the dataset. In this case, the model will train on the dataset 30 times before completion.
+
+# shuffle refers to the data being shuffled (the order of the dataset won't be kept by the model which helps get rid of biases).
+
+# verbose refers to being able to see the ouptut whenever the .fit() function is ran. This normally ranges from 0, 1, 2 where 2 is the most verbose output. This basically just means you get a more detailed output. 
 ```
 
 ***
