@@ -888,8 +888,6 @@ train_labels, train_samples = shuffle(train_labels, train_samples) # gets rid of
 scaler = MinMaxScaler(feature_range(0,1))
 scaled_train_samples = scaler.fit_transform(train_samples.reshape(-1,1))
 ```
-
-
 #### Simple tf. Keras Sequential Model
 
 ```python
@@ -899,6 +897,53 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Activation, Dense
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.metrics import categorical_crossentropy
+```
+
+```python
+# actual model itself
+model = Sequential([
+
+	# note the input_shape here is completely wrong for my dataset, 
+	# this is just an example
+	
+	Dense(units=16, input_shape=(1,), activation='relu'), # first hidden layer
+	Dense(units=32, activation='relu'), # second hidden layer
+	Dense(units=2, activation='softmax') # output layer, recall why softmax is used.
+])
+
+# note the structure that exists here. I will have to design something similar for my dataset. 
+```
+
+```python
+model.summary() 
+
+# this is a very useful tool to help visualize the structure of the neural network and helps in designing / tweaking the network itself by providing a graphic visual for the network.
+
+### output:
+
+'''
+Model: "sequential"
+__________________________________________________________________________________
+Layer (type)                   Output Shape                      Param #
+==================================================================================
+dense (Dense)                  (None, 16)                          32
+__________________________________________________________________________________
+dense_1 (Dense)                (None, 32)                          544
+__________________________________________________________________________________
+dense_2 (Dense)                (None, 2)                           66
+__________________________________________________________________________________
+
+Total Params: 642
+Trainable Params: 642
+Non-trainable Params: 0
+'''
+
+### this output example is for the example data from the intro to Keras video.
+
+```
+
+```python
+
 ```
 
 ***
