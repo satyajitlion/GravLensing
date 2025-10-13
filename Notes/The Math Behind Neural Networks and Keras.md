@@ -1031,6 +1031,8 @@ IMPORTANT NOTE:
 	
 - Therefore, setting `shuffle=True` here is extremely important as it prevents the network from being biased toward the initial dataset and then failing when it's tested on the latter half of the data set or the latter portion. 
 
+- The validation accuracy must be ~1-2% (or ~0.01-0.02 as a decimal) close to the training dataset accuracy otherwise we have a model that is either underfitting or overfitting.
+
 
 ***
 ### Tags: #NeuralNetworks #Keras
