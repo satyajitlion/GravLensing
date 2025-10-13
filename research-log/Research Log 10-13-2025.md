@@ -25,6 +25,10 @@ I now have a clear, practical guide in my notes for implementing model validatio
 ### Questions & Ideas
 
 - For my specific research data (SIS+shear), is it better to use `validation_split` or manually create a `validation_data` set? Would manual creation give me more control, for example, to ensure the validation set is representative of the entire data distribution?
+
+	- When I implement this, I should write a function to plot training accuracy/loss and validation accuracy/loss on the same graph over each epoch. This will make it visually immediate to spot overfitting/underfitting.
+	
+- From what I have learned, I know that validation accuracy should be close to training accuracy. What if my validation accuracy is consistently _higher_ than my training accuracy as was seen in the video? Is this indicative of something? Might need to learn more about this. 
 ***
 ### Next Steps
 
