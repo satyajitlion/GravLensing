@@ -1008,7 +1008,9 @@ model.fit(
 	verbose=2
 )
 
-# this splits our dataset into 90% training and 10% validation such that only 90% of the data is used to train the model and 10% is used to test the model.
+# this splits our dataset into 90% training and 10% validation such that only 90% of the data is used to train the model and 10% is used to test the model. 
+
+# validation_split needs to be specified as a number between 0 and 1 to indicate the percentage of the split.
 
 ```
 
