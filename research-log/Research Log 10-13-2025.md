@@ -46,7 +46,7 @@ I now have a clear, practical guide in my notes for implementing model validatio
 
 7. Use the network for a real gravitational lens system with known parameters to further check for accuracy in the network's ability to make inferences.
 
-#### Note to Self:
+### Note to Self:
 
 - Ended the ML video at 42:33, continue from here.
 
