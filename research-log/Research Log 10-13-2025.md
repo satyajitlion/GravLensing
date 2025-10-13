@@ -32,7 +32,19 @@ I now have a clear, practical guide in my notes for implementing model validatio
 ***
 ### Next Steps
 
+1. Check if Amarel was able to finish producing the mock lens data tomorrow. 
 
+2. Apply the knowledge I gained today by modifying the provided sequential model for my data and draw out a detailed network for the data I have. This will help in determining the input shape and the outputs I want. 
+
+3. Try a different model than the given sequential model? Use Keras' website to learn how different models are implemented and research this.
+    
+4. Also, follow up on the idea from point number 2 and implement the training/validation accuracy & loss plotting function that Keras provides to double check if visually the model is implemented how I drew it once I get there.
+    
+5. Experiment with different validation split sizes (e.g., 0.2, 0.3) to see how it affects model performance and the stability of the validation metrics?
+    
+6. After achieving a model that performs well on the validation set, the final step in network creation will be to run it on the held-out SIE and SIE+shear test sets for the final inference results from the model. 
+
+7. Use the network for a real gravitational lens system with known parameters to further check for accuracy in the network's ability to make inferences.
 
 ##### Tags: #Keras #DeepLearning #DataPreprocessing #Foundations #NeuralNetworks #SequentialModel #TrainingData #TestData #Python 
 
