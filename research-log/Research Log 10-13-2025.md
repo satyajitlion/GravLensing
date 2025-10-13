@@ -18,9 +18,13 @@ I now have a clear, practical guide in my notes for implementing model validatio
 ***
 ### Challenges & Pause Points
 
+- I had to pause to fully grasp why `validation_split` taking the last segment of data was problematic. I worked through the example array `[1, 2, 3, ..., 10]` to visualize the bias that would be introduced if the data was ordered.
+    
+- The distinction between "validation" and "test" was initially subtle. I had to consult multiple sources (video, documentation) to solidify my understanding that validation is for _model development_ and test is for _model assessment_.
 ***
 ### Questions & Ideas
 
+- For my specific research data (SIS+shear), is it better to use `validation_split` or manually create a `validation_data` set? Would manual creation give me more control, for example, to ensure the validation set is representative of the entire data distribution?
 ***
 ### Next Steps
 
