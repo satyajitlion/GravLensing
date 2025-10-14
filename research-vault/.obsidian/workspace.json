@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "remote-research-log/research-log/Research Log 09-23-2025.md",
+                "file": "remote-research-log/Meeting- Notes/Research Meeting Notes 10-14-2025.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Research Log 09-23-2025"
+              "title": "Research Meeting Notes 10-14-2025"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 299.5
   },
   "right": {
     "id": "e3cd71cbfa7389a2",
@@ -140,21 +140,21 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Welcome.md",
+                "file": "remote-research-log/Meeting- Notes/Research Meeting Notes 10-14-2025.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Welcome"
+              "title": "Outline of Research Meeting Notes 10-14-2025"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -171,31 +171,42 @@
   },
   "active": "dc298681487d31fe",
   "lastOpenFiles": [
-    "remote-research-log/research-log/09-23-2025.md",
-    "remote-research-log/research-log/Research Log 09-23-2025.md",
-    "remote-research-log/research-log/Research Log 09-22-2025.md",
-    "Template/Research Log Template.md",
-    "remote-research-log/Notes/High Performance Computing at Rutgers (Amarel).md",
-    "Template/Research Meeting Notes Template.md",
+    "remote-research-log/Meeting- Notes/Research Meeting Notes 09-30-2025.md",
+    "remote-research-log/research-log/Research Log 10-08-2025.md",
+    "remote-research-log/research-log/Research Log 10-09-2025 to 10-10-2025.md",
+    "remote-research-log/Meeting- Notes/Research Meeting Notes 10-14-2025.md",
+    "remote-research-log/Meeting- Notes/Research Meeting Notes 10-07-2025.md",
+    "new note.md",
+    "dropout1-1.png",
+    "remote-research-log/Notes/OARC Amarel Cluster Notes.md",
     "Template/Notes Template.md",
+    "remote-research-log/research-log/Research Log 10-14-2025.md",
+    "remote-research-log/research-log/Research Log 10-13-2025.md",
+    "remote-research-log/Notes/The Math Behind Neural Networks and Keras.md",
     "remote-research-log/Notes/Terminal Commands.md",
-    "remote-research-log/README.md",
-    "remote-research-log/Meeting- Notes/Research Meeting Notes 09-22-2025.md",
+    "remote-research-log/research-log/10-13-2025.md",
+    "remote-research-log/research-log/Research Log 10-01-2025 to 10-02-2025.md",
+    "remote-research-log/research-log/Research Log 10-07-2025.md",
+    "remote-research-log/research-log/Research Log 09-24-2025.md",
+    "remote-research-log/research-log/Research Log 09-25-2025.md",
+    "remote-research-log/research-log/Research Log 10-10-2025.md",
+    "remote-research-log/research-log/Research Log 09-22-2025.md",
+    "remote-research-log/research-log/Research Log 09-26-2025.md",
+    "remote-research-log/research-log/10-09-2025.md",
+    "remote-research-log/research-log/10-08-2025.md",
+    "remote-research-log/research-log/Research Log 10-06-2025.md",
+    "remote-research-log/research-log/10-07-2025.md",
+    "remote-research-log/research-log/10-06-2025.md",
+    "Template/Research Meeting Notes Template.md",
+    "remote-research-log/research-vault/Template",
+    "remote-research-log/research-vault",
     "remote-research-log/Notes",
-    "remote-research-log/research-log/09-22-2025.md",
     "remote-research-log/Honors in Astronomy Project Outline.pdf",
     "remote-research-log/Meeting- Notes",
-    "remote-research-log/research-log/Research Log-09-22-2025.md",
-    "remote-research-log/research-log/Research Log-2025-09-22.md",
-    "remote-research-log/research-log/09-22-25.md",
-    "remote-research-log/research-log/Testing log.md",
     "Template",
     "remote-research-log/research-log",
     "remote-research-log/valShear.npy",
     "remote-research-log/valEllip.npy",
-    "remote-research-log/valBoth.npy",
-    "remote-research-log/timedelays.ipynb",
-    "remote-research-log/pygravlens.py",
-    "Welcome.md"
+    "remote-research-log/valBoth.npy"
   ]
 }

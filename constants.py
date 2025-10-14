@@ -9,7 +9,7 @@ from astropy.cosmology import Planck18 as cosmo
 # constant vals
 
 # number of mock lenses
-num_mock = 30
+num_mock = 10**4
 
 # generates random einstein radii 
 EinsArr = np.random.uniform(1.0, 1.5, num_mock) 
