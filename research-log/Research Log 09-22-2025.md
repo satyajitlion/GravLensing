@@ -13,7 +13,7 @@ I created a GitHub repository containing the research from May and uploaded all 
 Given the time it took to generate the mock lenses, I reduced the number of mock lenses first ```num_mock``` = $10$, which took approximately 5.7766 seconds to run. I then increased the number to ```num_mock``` = $30$ which took approximately $177.29$ seconds to run the code. Given this rate, for $10^5$ mock lenses, this would approximately take 6-7 days to generate all of the mock lenses. 
 
 ***
-### Problems
+### Challenges & Pause Points
 
 The required number of Mock lenses needed to train a network hovers around ```num_mock```$= 10^5$. Given the rate at which my computer generates the lenses, the total time to generate the lenses would then hover around 6-7 days of constant computation. This is troublesome as my cpu power is quite limited and cannot handle that kind of computation 
 
