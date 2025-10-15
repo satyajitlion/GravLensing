@@ -7,7 +7,7 @@
 ### Results
 
 ***
-### Problems
+### Challenges & Pause Points
 
 ***
 ### Questions & Ideas
