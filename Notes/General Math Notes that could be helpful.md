@@ -1,4 +1,3 @@
-
 ### Group Theory
 
 ### Tensor Math
