@@ -44,7 +44,22 @@ Optimizing and executing the large-scale batch job by implementing a parallel pr
 ***
 ### Next Steps
 
-
+1. **Short-term:**
+    - Verify that all 10 jobs in the SLURM array have completed successfully.
+        
+    - Run the `combine_results.py` script to merge the individual output files.
+        
+    - Perform a preliminary data quality check on the combined arrays.
+        
+2. **Medium-term:**
+    - **Remind Dr. Keeton** about the Potential Array for the lensing system.
+        
+    - Begin the planned analysis on the combined dataset.
+        
+3. **Research & Development:**
+    - **Read deeply** into the architectural principles of CNNs, specifically focusing on how convolutional and pooling layers provide translation invariance.
+        
+    - Investigate how these principles (e.g., using convolutional layers in a regression network) can be applied to our specific problem to make our model robust to rotations and translations in the input data.
 
 ##### Tags:
 
