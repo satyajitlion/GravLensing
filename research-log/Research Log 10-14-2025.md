@@ -61,7 +61,7 @@ Optimizing and executing the large-scale batch job by implementing a parallel pr
         
     - Investigate how these principles (e.g., using convolutional layers in a regression network) can be applied to our specific problem to make our model robust to rotations and translations in the input data.
 
-##### Tags:
+##### Tags: #SLURM #HPC #ParallelProcessing #JobArrays #Python #Transformation-Invariance
 
 
 
