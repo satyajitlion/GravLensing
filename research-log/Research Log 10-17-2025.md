@@ -1,5 +1,6 @@
 ### Today's Focus
 
+
 ***
 ### What I was able to accomplish
 

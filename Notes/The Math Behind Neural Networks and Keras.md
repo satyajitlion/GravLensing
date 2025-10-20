@@ -1043,7 +1043,18 @@ IMPORTANT NOTE:
 **Test datasets $\neq$ Validation data!!!!!!**
 
 
+### Equivariance NNs
 
+```math
+f(t(x)) = t^\prime(f(x))
+```
+
+- When pattern in input changes by some $t(x)$, then the output changes equivalently by some $t^\prime(x)$.
+### Invariance NNs
+
+```math
+f(t(x)) = f(x)
+```
 
 ***
 ### Tags: #NeuralNetworks #Keras
