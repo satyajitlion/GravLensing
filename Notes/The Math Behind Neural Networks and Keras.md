@@ -1051,6 +1051,7 @@ f(t(x)) = t^\prime(f(x))
 
 - When pattern in input changes by some $t(x)$, then the output changes equivalently by some $t^\prime(x)$.
 	- CNNs are translationally equivariant (note that they aren't great for handling rotations).
+		- Why? $\rightarrow$ The learn filters in CNNs do not respond well to rotated versions of objects as long as they weren't part of the training data. This is because the convolutional networks are translated in the pixel space but always kept at the same rotation degree. 
 ### Invariance NNs
 
 ```math
