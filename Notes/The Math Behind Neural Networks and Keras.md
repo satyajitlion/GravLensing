@@ -1075,7 +1075,13 @@ f(t(x)) = f(x)
 
 ### Group Convolutional Neural Networks
 
-- **Recall**: Classical CNNs map pixels to feature maps which are stacked based on the number of filters 
+- **Recall**: Classical CNNs map pixels to feature maps which are stacked based on the number of filters that are used. These models perform template matching, meaning they use the small learnable filters to search for similar patterns on the image. They are translation equivariant as when there is a translation in the pixels, there is an equivalent translation that takes place in the feature maps.
+
+Recall that a convolution is:
+
+```math
+[f * k](x) = \sum_{y\in\mathbb{Z}^2}\sum^{l}_{i=1} f_{i}(y)k_{i}(x-y)
+```
 
 ***
 ### Tags: #NeuralNetworks #Keras
