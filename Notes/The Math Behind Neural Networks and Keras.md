@@ -1080,8 +1080,10 @@ f(t(x)) = f(x)
 Recall that a convolution is:
 
 ```math
-[f * k](x) = \sum_{y\in\mathbb{Z}^2}\sum^{l}_{i=1} f_{i}(y)k_{i}(x-y)
+[f * k](x) = \sum_{y\in\mathbb{Z}^2}\sum^{I}_{i=1} f_{i}(y)k_{i}(x-y)
 ```
+
+Here, a convolution is the inner product of a signal or image $f$ and kernel $k$. Since there can exist multiple kernels, then there is an added sum for the number of channels ($I$)
 
 ***
 ### Tags: #NeuralNetworks #Keras
