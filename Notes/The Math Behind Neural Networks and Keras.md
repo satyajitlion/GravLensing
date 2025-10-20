@@ -1056,5 +1056,7 @@ f(t(x)) = t^\prime(f(x))
 f(t(x)) = f(x)
 ```
 
+- For an invariant neural network, the output doesn't change at all (no matter the type of transformation acting on the input).
+
 ***
 ### Tags: #NeuralNetworks #Keras
