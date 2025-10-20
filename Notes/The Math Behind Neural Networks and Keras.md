@@ -1050,6 +1050,7 @@ f(t(x)) = t^\prime(f(x))
 ```
 
 - When pattern in input changes by some $t(x)$, then the output changes equivalently by some $t^\prime(x)$.
+	- CNNs are translationally equivariant (note that they aren't great for handling rotations).
 ### Invariance NNs
 
 ```math
@@ -1057,7 +1058,8 @@ f(t(x)) = f(x)
 ```
 
 - For an invariant neural network, the output doesn't change at all (no matter the type of transformation acting on the input).
-- Invariance is generally applied through something called "pooling."
+- Invariance is generally applied through something called "pooling." 
+	- $\text{max}(x), \text{mean}(x), \text{sum}(x)$, etc.
 
 ***
 ### Tags: #NeuralNetworks #Keras
