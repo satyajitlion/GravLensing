@@ -1088,7 +1088,7 @@ Here, a convolution is the inner product of a signal or image $f$ and kernel $k$
 For a group convolution, it then is as follows:
 
 ```math
-[f * k](g) = \sum_{y\in\mathbb{Z}^2}\sum_{i=1} f_{i}(y)k_{i}(x-y)
+[f * k](g) = \sum_{y\in\mathbb{Z}^2}\sum_{i=1} f_{i}(y)k_{i}(g^{-1}y)
 ```
 
 ***
