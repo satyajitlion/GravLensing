@@ -1114,7 +1114,7 @@ x = Variable(torch.randn(10, 3, 9, 9))
 
 # fprop
 y = C2(C1(x))
-print y.data.shape # output --> (10, 64, 9, 9)
+print y.data.shape # output --> (10, 64, 4, 9, 9)
 ```
 
 ***
