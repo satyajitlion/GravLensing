@@ -1085,5 +1085,11 @@ Recall that a convolution is:
 
 Here, a convolution is the inner product of a signal or image $f$ and kernel $k$. Since there can exist multiple kernels, then there is an added sum for the number of channels ($I$). This basically means that the input signal is evaluated as some position $y$ and multiplied with the Kernel which is translated by different amounts in the pixel space.
 
+For a group convolution, it then is as follows:
+
+```math
+[f * k](g) = \sum_{y\in\mathbb{Z}^2}\sum_{i=1} f_{i}(y)k_{i}(x-y)
+```
+
 ***
 ### Tags: #NeuralNetworks #Keras
