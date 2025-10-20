@@ -13,6 +13,15 @@
 ```math
 \Rightarrow G \times G \rightarrow G
 ```
+
+Note:
+A group needs to fulfill all of the following 4 properties to be considered as a group.
+1. Closure - Output never "leaves" the group
+2. Associativity - Operation assigned to group is associative
+3. Identity - Group contains an identity element which keeps all elements inside the group
+4. Inverse - An inverse element exists inside of a group that maps to the identity.
+
+
 ### Tensor Math
 
 ##### Tags: 
