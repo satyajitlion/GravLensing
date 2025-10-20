@@ -1079,7 +1079,7 @@ f(t(x)) = f(x)
 Recall that a convolution is:
 
 ```math
-\mathbb{Z}^2 \rightarrow \mathbb{R}^{n}: [f * k](x) = \sum_{y\in\mathbb{Z}^2}\sum^{I}_{i=1} f_{i}(y)k_{i}(x-y)
+\mathbb{Z}^2 \rightarrow \mathbb{R}^{n}: \ [f * k](x) = \sum_{y\in\mathbb{Z}^2}\sum^{I}_{i=1} f_{i}(y)k_{i}(x-y)
 ```
 
 Here, a convolution is the inner product of a signal or image $f$ and kernel $k$. Since there can exist multiple kernels, then there is an added sum for the number of channels ($I$). This basically means that the input signal is evaluated as some position $y$ and multiplied with the Kernel which is translated by different amounts in the pixel space.
@@ -1095,7 +1095,7 @@ A way to think about group convolutions is to say that they are data augmentatio
 NOTE, the notation of group convolution changes after the first layer as the group action is slightly different when acting in group space:
 
 ```math
-G\rightarrow \mathbb{R}: [f * k](g) = \sum_{h\in\mathbb{G}}\sum_{i=1} f_{i}(h)k_{i}(g^{-1}h)
+G\rightarrow \mathbb{R}: \ [f * k](g) = \sum_{h\in\mathbb{G}}\sum_{i=1} f_{i}(h)k_{i}(g^{-1}h)
 ```
 
 ***
