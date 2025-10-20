@@ -1,4 +1,4 @@
-### Quick Matrix Note:
+### Quick Matrix Note: 
 
 ```python
 # Input
