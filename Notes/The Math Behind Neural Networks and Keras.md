@@ -1042,7 +1042,6 @@ IMPORTANT NOTE:
 
 **Test datasets $\neq$ Validation data!!!!!!**
 
-
 ### Equivariance NNs
 
 ```math
@@ -1090,6 +1089,8 @@ For a group convolution, it then is as follows:
 ```math
 [f * k](g) = \sum_{y\in\mathbb{Z}^2}\sum_{i=1} f_{i}(y)k_{i}(g^{-1}y)
 ```
+
+A way to think about group convolutions is to say that they are data augmentations on the filters.
 
 ***
 ### Tags: #NeuralNetworks #Keras
