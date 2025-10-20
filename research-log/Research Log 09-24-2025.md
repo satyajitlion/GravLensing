@@ -4,7 +4,7 @@ Dedicate time to understanding the theoretical foundations of neural networks an
 ***
 ### What I was able to accomplish
 
-I made significant progress in building a fundamental understanding of neural network mechanics. The primary output was the creation of detailed notes in the document [The Math Behind Neural Networks and Keras](https://github.com/satyajitlion/GravLensing/blob/8133860737e765a5e4a30088e2a7ca523b55c9d8/Notes/The%20Math%20Behind%20Neural%20Networks%20and%20Keras.md) My work involved:
+I made significant progress in building a fundamental understanding of neural network mechanics. The primary output was the creation of detailed notes in the document [Neural Networks and Keras Notes](https://github.com/satyajitlion/GravLensing/blob/8133860737e765a5e4a30088e2a7ca523b55c9d8/Notes/The%20Math%20Behind%20Neural%20Networks%20and%20Keras.md) My work involved:
 
 - **Mathematical Derivation:** I systematically worked through the mathematical transformations that occur in an ANN, starting from the input layer through to the hidden layers. This involved deriving how input data is transformed via weight matrices and bias vectors to produce an output.
 
