@@ -1092,5 +1092,11 @@ For a group convolution, it then is as follows:
 
 A way to think about group convolutions is to say that they are data augmentations on the filters.
 
+NOTE, the notation of group convolution changes after the first layer as the group action is slightly different when acting in group space:
+
+```math
+[f * k](g) = \sum_{h\in\mathbb{G}}\sum_{i=1} f_{i}(h)k_{i}(g^{-1}h)
+```
+
 ***
 ### Tags: #NeuralNetworks #Keras
