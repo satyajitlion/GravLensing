@@ -1072,7 +1072,10 @@ f(t(x)) = f(x)
 - For an invariant neural network, the output doesn't change at all (no matter the type of transformation acting on the input).
 - Invariance is generally applied through something called "pooling." 
 	- $\text{max}(x), \text{mean}(x), \text{sum}(x)$, etc.
-- 
+
+### Group Convolutional Neural Networks
+
+- **Recall**: Classical CNNs map pixels to feature maps which are stacked based on the number of filters 
 
 ***
 ### Tags: #NeuralNetworks #Keras
