@@ -10,7 +10,7 @@ Bridging the gap between the theoretical concepts of group theory and their prac
     
 - Identified the change in domain for feature maps after the first layer: from the pixel grid ($\mathbb{Z}$) to the group space ($G$).
     
-- Discovered and explored a practical Python library (`groupy.gconv`) for implementing G-CNNs in PyTorch, specifically for the p4 (rotation) group.
+- Discovered a practical Python library (`groupy.gconv`) for implementing G-CNNs in PyTorch, specifically for the p4 (rotation) group.
     
 - Successfully ran a simple code example
 ***
