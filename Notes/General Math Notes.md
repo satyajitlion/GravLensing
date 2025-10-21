@@ -63,9 +63,24 @@ But, from lemma 1.2.1, we saw that $a\*b = e$. Therefore, we have (1). Now, supp
 a*e = a*(b*a) = (a*b)*a = e*a = a, \ \forall a\in G.
 ```
  
-Therefore, we have (2). Now we want to show uniqueness. 
+Therefore, we have (2). Now we want to show uniqueness. Suppose that $a\*e = a$ and $a\*f = a$ for all $a\in G$. Then, 
 
+```math
+(e*f)*(e*f) = e * (f*e) * f = e*f*e = e*f. 
+```
 
+From lemma 1.2.1, we know that $e\*f = e$. Consequently,
+```math
+f*f = (f*e)*(f*e) = f*(e*f)*e = f*e*e = f*e = f.
+```
+
+Therefore, by lemma 1.2.1, $f=e$. 
+
+Now, finally suppose that $b_1\*a =e$ and $b_2\*a = e$. Then, by (1) and (2), we see the following:
+
+```math
+b_{1} = b_{1}*e = b_{1}*(a*b_{2}) = (b_{1}*a)*b_{2} = e*b_{2}=b_{2}.
+```
 ### Tensor Math
 
 ##### Tags: #GroupTheory #Math
