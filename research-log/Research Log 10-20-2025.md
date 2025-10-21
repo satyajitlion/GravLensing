@@ -36,17 +36,20 @@ Bridging the gap between the theoretical concepts of group theory and their prac
 
 - How computationally expensive are G-CNNs compared to standard CNNs? The output tensors have an extra group dimension—does this lead to a linear increase in parameters and memory?
 
-- For gravitational lensing, which specific symmetry group is most relevant? Is it the p4 group (90° rotations), a continuous rotation group, or perhaps a group that includes flips (p4m)? How can I use a group that can work both for rotations and translations? Do I need to explore tensor neural networks for this?
+- For gravitational lensing, which specific symmetry group is most relevant? Is it the p4 group (90° rotations), a continuous rotation group, or perhaps a group that includes flips (p4m)? 
+	- How can I use a group that can work both for rotations and translations as I also need to account for translational invariance? Do I need to explore tensor neural networks for this?
 ***
 ### Next Steps
 
-1. Explicitly map out the pathway from an equivariant G-CNN to an invariant network. The next learning goal is to understand how to add a final invariant layer (e.g., group pooling) to produce a single, transformation-invariant output for lensing parameter prediction.
+1. The next learning goal is to understand how pooling works and if I could "map" out the pathway from an equivariant G-CNN to an invariant network. 
 
 2. Plan a small-scale experiment to train a G-CNN with an invariant output on a toy problem (e.g., rotated MNIST) and compare it against a baseline.
 
 3. Investigate more modern or well-supported libraries for equivariant deep learning (`escnn`) as potential alternatives to `groupy`. 
 
 4. Formally define the symmetry group for our gravitational lensing data to ensure the chosen G-CNN architecture is appropriate. 
+
+5. Go through my data architecture and identify the "shape" of the data I have created. I a dictionary and arrays to encode all of my data. How would I unpack this data and make it suitable for a network (need to pre-process the data before using it in the neural network).
 
 ##### Tags: #NeuralNetworks #ENNs #GroupTheory #Transformation-Invariance #GroupEquivariantCNNs #GravitationalLensing 
 
