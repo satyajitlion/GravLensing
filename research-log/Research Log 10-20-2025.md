@@ -12,7 +12,7 @@ Bridging the gap between the theoretical concepts of group theory and their prac
     
 - Discovered a practical Python library (`groupy.gconv`) for implementing G-CNNs in PyTorch, specifically for the p4 (rotation) group.
     
-- Successfully ran a simple code example
+- Checked the pytorch code example implementation for GCNNs by Taco Cohen.
 ***
 ### Results
 
