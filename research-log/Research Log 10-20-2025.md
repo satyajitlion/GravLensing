@@ -28,8 +28,6 @@ Bridging the gap between the theoretical concepts of group theory and their prac
 
 - Translating the compact notation $[f * k](g) = ... k_i(g^{-1}y)$ into an intuitive, visual understanding of how the filter is being transformed and applied.
 
-- The `groupy` library seems to be a research-oriented project. Its documentation, maintenance, and compatibility with modern PyTorch versions are potential concerns for a long-term project.
-
 - Fully grasping the implication that after the first layer, the feature maps themselves are functions on the group $G$, not just on the spatial grid. What does it mean to "convolve on a group"? 
 ***
 ### Questions & Ideas
