@@ -32,7 +32,8 @@ Understanding the mathematical fundamentals of group theory and its application 
 ***
 ### Questions & Ideas
 
-- For a real-world problem like medical imaging (e.g., MRI scans), what are the most relevant symmetry groups? Is it just rotations, or do we need to consider more complex transformations?
+- For a problem involving gravitational lensing, what are the most relevant symmetry groups? Is it just rotations and translations, or do we need to consider more complex transformations? How would a lensed image be permutationally altered in reality if at all? Can lensing images just be rotated and translated from our perspective? 
+	- Mathematically, there is little reason to believe that the lensing images can be permutationally different based on what reference frame you observe them from.
 
 - How is the output transformation `t'` determined in an equivariant network? Is it always the same as the input transformation `t`, or can it be different?
 ***
