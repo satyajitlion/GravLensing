@@ -1082,7 +1082,7 @@ Recall that a convolution is:
 \mathbb{Z}^2 \rightarrow \mathbb{R}^{n}: \ [f * k](x) = \sum_{y\in\mathbb{Z}^2}\sum^{I}_{i=1} f_{i}(y)k_{i}(x-y)
 ```
 
-Here, a convolution is the inner product of a signal or image $f$ and kernel $k$. Since there can exist multiple kernels, then there is an added sum for the number of channels ($I$). This basically means that the input signal is evaluated as some position $y$ and multiplied with the Kernel which is translated by different amounts in the pixel space.
+Here, a convolution is the inner product of a signal or image $f$ and kernel (kernel = filter) $k$. Since there can exist multiple kernels, then there is an added sum for the number of channels ($I$). Note that channels refers to different types of information or features within the input data, such as red, green, and blue "layers" of an image. This basically means that the input signal is evaluated as some position $y$ and multiplied with the Kernel which is translated by different amounts in the pixel space.
 
 For a group convolution, it then is as follows:
 
