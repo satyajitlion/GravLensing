@@ -42,8 +42,15 @@ Bridging the gap between the theoretical concepts of group theory and their prac
 ***
 ### Next Steps
 
+1. Explicitly map out the pathway from an equivariant G-CNN to an invariant network. The next learning goal is to understand how to add a final invariant layer (e.g., group pooling) to produce a single, transformation-invariant output for lensing parameter prediction.
 
-##### Tags: #NeuralNetworks #ENNs #GroupTheory #Transformation-Invariance 
+2. Plan a small-scale experiment to train a G-CNN with an invariant output on a toy problem (e.g., rotated MNIST) and compare it against a baseline.
+
+3. Investigate more modern or well-supported libraries for equivariant deep learning (`escnn`) as potential alternatives to `groupy`. 
+
+4. Formally define the symmetry group for our gravitational lensing data to ensure the chosen G-CNN architecture is appropriate. 
+
+##### Tags: #NeuralNetworks #ENNs #GroupTheory #Transformation-Invariance #GroupEquivariantCNNs #GravitationalLensing 
 
 
 
