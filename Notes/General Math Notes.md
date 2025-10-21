@@ -25,7 +25,7 @@ A group needs to fulfill all of the following 4 properties to be considered as a
 
 Formally speaking, instead of writing $+(3,5) = 8$, we write $3+5 = 8$ to denote addition of two numbers. The binary operation $\mu$ is thought of as multiplication and instead of $\mu(a,b)$, we utilize notation such as $ab$, $a + b$, $a \circ b$, and $a*b$. 
 
-Let $G$ be a finite set of $n$ elements. Then, we can present a binary operation, for example $*$, by an $n$ by $n$ array called the multiplication table. If $(a,b) \in G$, then the $(a,b)$ entry of this table is $a*b$.
+Let $G$ be a finite set of $n$ elements. Then, we can present a binary operation, for example $\*$, by an $n$ by $n$ array called the multiplication table. If $(a,b) \in G$, then the $(a,b)$ entry of this table is $a\*b$.
 
 Let a set, $G = \{a,b,c,d\}$ with the binary operation $*$ acting on it.
 Then, we have the following table:
