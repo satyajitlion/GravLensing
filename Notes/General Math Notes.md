@@ -55,12 +55,12 @@ Furthermore, there is one and only one element $e$ in $G$ which satisfies $a\*e 
 
 <u>Proof</u>: Suppose $b\*a = e$, then we have 
 ```math
-(a\*b)\*(a\*b) = a\* (b\*a)\*b = a\*e\*b = a\*b.
+(a*b)\*(a*b) = a*(b*a)*b = a*e*b = a*b.
 ```
 
 But, from lemma 1.2.1, we saw that $a\*b = e$. Therefore, we have (1). Now, suppose that $a\in G$ and let $b\in G$ such that $b\*a = e$. Then, by (1), we see that 
 ```math
-a\*e = a\*(b\*a) = (a\*b)\*a = e\*a = a, \ \forall a\in G.
+a*e = a*(b*a) = (a*b)*a = e*a = a, \ \forall a\in G.
 ```
  
 Therefore, we have (2). Now we want to show uniqueness. 
