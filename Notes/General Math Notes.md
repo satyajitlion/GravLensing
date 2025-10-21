@@ -44,7 +44,7 @@ For this table, note here that $(a\*b)\*c = b\*c = d$, but $a\*(b\*c) = a\*d = a
 #### **Lemma 1.2.1**: 
 If $(G, \*)$ is a **group** and $a \in G$, then for $a\* a = a$ implies that $a = e$ where $e$ is the identity element. 
 
-<u>Proof</u>: Suppose $a\in G$, then $a\*a = a$ like given. Now suppose $\exists \ b\in G$ such that $b\*a = e$, then it follows that $b\*(a\*a) = b\*a = e$. Therefore, if we have $a$, this is the same thing as an identity element times $a$. Therefore, $a = e\*a = (b\*a)\*a = b\*(a\*a) = b\*a = e$. Therefore, we see that $a = e$.
+**Proof**. Suppose $a\in G$, then $a\*a = a$ like given. Now suppose $\exists \ b\in G$ such that $b\*a = e$, then it follows that $b\*(a\*a) = b\*a = e$. Therefore, if we have $a$, this is the same thing as an identity element times $a$. Therefore, $a = e\*a = (b\*a)\*a = b\*(a\*a) = b\*a = e$. Therefore, we see that $a = e$.
 		
 #### **Lemma 1.2.2**:
 In a  group, $(G,\*)$, 
@@ -53,7 +53,7 @@ In a  group, $(G,\*)$,
 
 Furthermore, there is one and only one element $e$ in $G$ which satisfies $a\*e = a$. Also, for all $a\in G$, there is only one $b\in G$ which satisfies $b\*a = e$. 
 
-<u>Proof</u>: Suppose $b\*a = e$, then we have 
+**Proof**. Suppose $b\*a = e$, then we have 
 ```math
 (a*b)*(a*b) = a*(b*a)*b = a*e*b = a*b.
 ```
