@@ -3,11 +3,14 @@
 ***
 ### What I was able to accomplish
 
+
 ***
 ### Results
 
+
 ***
 ### Challenges & Pause Points
+
 
 ***
 ### Questions & Ideas
@@ -15,7 +18,8 @@
 ***
 ### Next Steps
 
-##### Tags:
+
+##### Tags: #NeuralNetworks #ENNs #GroupTheory #Transformation-Invariance 
 
 
 
