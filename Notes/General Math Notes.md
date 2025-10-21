@@ -44,11 +44,13 @@ For this table, note here that $(a\*b)\*c = b\*c = d$, but $a\*(b\*c) = a\*d = a
 
 Fun proofs:
 
-<u>Lemma 1.2.1</u>: If $(G, \*)$ is a **group** and $a \in G$, then for $a\* a = a$ implies that $a = e$ where $e$ is the identity element. 
+##### **Lemma 1.2.1**: 
+If $(G, \*)$ is a **group** and $a \in G$, then for $a\* a = a$ implies that $a = e$ where $e$ is the identity element. 
 
-<u>Proof</u>: Suppose $a\in G$, then $a\*a = a$ like given. Now suppose $\exists \ b\in G$ such that $b\*a = e$, then it follows that $b\*(a\*a) = b\*a = e$. Therefore, if we have $a$, this is the same thing as an identity element times $a$. Therefore, $a = e\*a = (b\*a)\*a = b\*(a\*a) = b\*a = e$. Therefore, we see that $a = e$.
+**<u>Proof</u>: Suppose $a\in G$, then $a\*a = a$ like given. Now suppose $\exists \ b\in G$ such that $b\*a = e$, then it follows that $b\*(a\*a) = b\*a = e$. Therefore, if we have $a$, this is the same thing as an identity element times $a$. Therefore, $a = e\*a = (b\*a)\*a = b\*(a\*a) = b\*a = e$. Therefore, we see that $a = e$.
 		
-<u>Lemma 1.2.2</u>: In a  group, $(G,\*)$, 
+##### **Lemma 1.2.2**:
+In a  group, $(G,\*)$, 
 	 (i) if $(b\*a) = e$, then $a\*b = e$ and
 	 (ii) $a\*e = a$ for all $a\in G$.
 
