@@ -46,8 +46,7 @@ Fun proofs:
 
 1. <u>Lemma 1.2.1</u>: If $(G, \*)$ is a **group** and $a \in G$, then for $a\* a = a$ implies that $a = e$ where $e$ is the identity element. 
 
-	<u>Proof</u>:
-		Suppose $a\in G$, then $a\*a = a$ like given. Now suppose $\exists \ b\in G$ such that $b\*a = e$, then it follows that $b\*(a\*a) = b\*a = e$. Therefore, if we have $a$, this is the same thing as an identity element times $a$. Therefore, $a = e\*a = (b\*a)\*a = b\*(a\*a) = b\*a = e$. Therefore, we see that $a = e$.
+	<u>Proof</u>: Suppose $a\in G$, then $a\*a = a$ like given. Now suppose $\exists \ b\in G$ such that $b\*a = e$, then it follows that $b\*(a\*a) = b\*a = e$. Therefore, if we have $a$, this is the same thing as an identity element times $a$. Therefore, $a = e\*a = (b\*a)\*a = b\*(a\*a) = b\*a = e$. Therefore, we see that $a = e$.
 		
 2. <u>Lemma 1.2.2</u>: In a  group, $(G,\*)$, 
 	 (i) if $(b\*a) = e$, then $a\*b = e$ and
@@ -55,10 +54,15 @@ Fun proofs:
 	
 	Furthermore, there is one and only one element $e$ in $G$ which satisfies $a\*e = a$. Also, for all $a\in G$, there is only one $b\in G$ which satisfies $b\*a = e$. 
 
-	<u>Proof</u>:
-		- Suppose $b\*a = e$, then we have $(a\*b)\*(a\*b) = a\* (b\*a)\*b = a\*e\*b = a\*b$. But, from lemma 1.2.1, we saw that $a\*b = e$. Therefore, we have (i).
-		- Now, suppose that $a\in G$ and let $b\in G$ such that $b\*a = e$. Then, by (i), we see that $a\*e = a\*(b\*a) = (a\*b)\*a = e\*a = a$ for all $a\in G$ Therefore, we have (ii).
-		- Now
+	<u>Proof</u>: Suppose $b\*a = e$, then we have 
+	$$
+	(a\*b)\*(a\*b) = a\* (b\*a)\*b = a\*e\*b = a\*b.
+	$$
+	But, from lemma 1.2.1, we saw that $a\*b = e$. Therefore, we have (i). Now, suppose that $a\in G$ and let $b\in G$ such that $b\*a = e$. Then, by (i), we see that 
+	$$
+	a\*e = a\*(b\*a) = (a\*b)\*a = e\*a = a, \ \forall a\in G.
+	$$ 
+	Therefore, we have (ii). Now we want to show uniqueness. 
 
 3. 
 
