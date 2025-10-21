@@ -23,7 +23,7 @@ A group needs to fulfill all of the following 4 properties to be considered as a
 3. Identity - Group contains an identity element which keeps all elements inside the group
 4. Inverse - An inverse element exists inside of a group that maps to the identity.
 
-Formally speaking, instead of writing $+(3,5) = 8$, we write $3+5 = 8$ to denote addition of two numbers. The binary operation $\mu$ is thought of as multiplication and instead of $\mu(a,b)$, we utilize notation such as $ab$, $a + b$, $a \circ b$, and $a*b$. 
+Formally speaking, instead of writing $+(3,5) = 8$, we write $3+5 = 8$ to denote addition of two numbers. The binary operation $\mu$ is thought of as multiplication and instead of $\mu(a,b)$, we utilize notation such as $ab$, $a + b$, $a \circ b$, and $a\*b$. 
 
 Let $G$ be a finite set of $n$ elements. Then, we can present a binary operation, for example $\*$, by an $n$ by $n$ array called the multiplication table. If $(a,b) \in G$, then the $(a,b)$ entry of this table is $a\*b$.
 
