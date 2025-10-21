@@ -26,7 +26,7 @@ Bridging the gap between the theoretical concepts of group theory and their prac
 
 - A potential concern about steering too far from the core astrophysics. Am I diving too deep into pure group theory and G-CNN mechanics without a clear, immediate link back to the gravitational lensing problem? The goal is invariance for lensing data, and I need to ensure this foundational work directly serves that aim.
 
-- Translating the compact notation $[f * k](g) = ... k_i(g^{-1}y)$ into an intuitive, visual understanding of how the filter is being transformed and applied.
+- Translating the compact notation $\[f * k \](g) = ... k_i(g^{-1}y)$ into an intuitive, visual understanding of how the filter is being transformed and applied.
 
 - Fully grasping the implication that after the first layer, the feature maps themselves are functions on the group $G$, not just on the spatial grid. What does it mean to "convolve on a group"? 
 ***
