@@ -52,6 +52,8 @@ Fun proofs:
 2. <u>Lemma 1.2.2</u>: In a  group, $(G,\*)$, 
 	 (i) if $(b\*a) = e$, then $a\*b = e$ and
 	 (ii) $a\*e = a$ for all $a\in G$.
+	
+	Furthermore, there is one and only one element $e$ in $G$ which satisfies $a\*e = a$. Also, for all $a\in G$, there is only one $b\in G$ which satisfies $b\*a = e$. 
 
 	<u>Proof</u>:
 		Suppose 
