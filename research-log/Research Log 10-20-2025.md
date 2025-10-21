@@ -38,7 +38,7 @@ Bridging the gap between the theoretical concepts of group theory and their prac
 
 - How computationally expensive are G-CNNs compared to standard CNNs? The output tensors have an extra group dimension—does this lead to a linear increase in parameters and memory?
 
--  
+- For gravitational lensing, which specific symmetry group is most relevant? Is it the p4 group (90° rotations), a continuous rotation group, or perhaps a group that includes flips (p4m)? 
 ***
 ### Next Steps
 
