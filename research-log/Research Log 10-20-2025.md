@@ -18,7 +18,7 @@ Bridging the gap between the theoretical concepts of group theory and their prac
 
 - The fundamental difference between standard and group convolution is the transformation of the kernel by the group element $g^{-1}$ before the inner product. This is the mechanism that builds in equivariance.
 
-- A G-CNN's first layer lifts data from the base space ($\mathbb{Z}^{2} -> G$), and subsequent layers operate entirely within the group space ($G \rightarrow G$).
+- A G-CNN's first layer lifts data from the base space ($\mathbb{Z}^{2} \rightarrow G$), and subsequent layers operate entirely within the group space ($G \rightarrow G$).
 
 - The code example concretely shows that a `P4ConvP4` layer outputs a feature map with the shape `(batch, channels, 4 rotations, height, width)`, directly demonstrating the model's internal representation of multiple orientations.
 ***
