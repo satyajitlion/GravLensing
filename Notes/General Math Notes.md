@@ -41,9 +41,6 @@ Then, we have the following table:
 </div>
 
 For this table, note here that $(a\*b)\*c = b\*c = d$, but $a\*(b\*c) = a\*d = a$. This is therefore not a group as a binary operation on a set G must be associative such that $(a\*b)\*c = a\*(b\*c)$.
-
-Fun proofs:
-
 ##### **Lemma 1.2.1**: 
 If $(G, \*)$ is a **group** and $a \in G$, then for $a\* a = a$ implies that $a = e$ where $e$ is the identity element. 
 
