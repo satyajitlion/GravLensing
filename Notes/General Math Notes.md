@@ -56,7 +56,9 @@ Fun proofs:
 	Furthermore, there is one and only one element $e$ in $G$ which satisfies $a\*e = a$. Also, for all $a\in G$, there is only one $b\in G$ which satisfies $b\*a = e$. 
 
 	<u>Proof</u>:
-		Suppose 
+		- Suppose $b\*a = e$, then we have $(a\*b)\*(a\*b) = a\* (b\*a)\*b = a\*e\*b = a\*b$. But, from lemma 1.2.1, we saw that $a\*b = e$. Therefore, we have (i).
+		- Now, suppose that $a\in G$ and let $b\in G$ such that $b\*a = e$. Then, by (i), we see that $a\*e = a\*(b\*a) = (a\*b)\*a = e\*a = a$ for all $a\in G$ Therefore, we have (ii).
+		- Now
 
 3. 
 
