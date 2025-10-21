@@ -40,7 +40,7 @@ Then, we have the following table:
 | $d$ | $d$ | $a$ | $c$ | $b$ |
 </div>
 
-For this table, note here that $(a*b)*c = b*c = d$, but $a*(b*c) = a*d = a$. This is therefore not a group as a binary operation on a set G must be associative such that $(a*b)*c = a*(b*c)$.
+For this table, note here that $(a\*b)\*c = b\*c = d$, but $a\*(b\*c) = a\*d = a$. This is therefore not a group as a binary operation on a set G must be associative such that $(a\*b)\*c = a\*(b\*c)$.
 
 ### Tensor Math
 
