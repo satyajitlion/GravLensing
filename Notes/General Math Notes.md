@@ -8,11 +8,13 @@
 		- Rotate or transform pixels with the elements in the Group.
 
 ```math
-\text{Group} \rightarrow (G, \cdot) 
+\text{Group} \rightarrow (G, \mu) 
 ```
 ```math
-\Rightarrow G \times G \rightarrow G
+\mu: \ G \times G \rightarrow G
 ```
+
+- For the above, for some arbitrary non empty set G, given some binary operation, $\mu$ on G, then $\mu$ is a function such that $G \times G \rightarrow G$. 
 
 Note:
 A group needs to fulfill all of the following 4 properties to be considered as a group.
@@ -20,6 +22,9 @@ A group needs to fulfill all of the following 4 properties to be considered as a
 2. Associativity - Operation assigned to group is associative
 3. Identity - Group contains an identity element which keeps all elements inside the group
 4. Inverse - An inverse element exists inside of a group that maps to the identity.
+
+
+
 
 
 ### Tensor Math
