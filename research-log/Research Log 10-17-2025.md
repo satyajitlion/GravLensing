@@ -32,10 +32,19 @@ Understanding the mathematical fundamentals of group theory and its application 
 ***
 ### Questions & Ideas
 
+- For a real-world problem like medical imaging (e.g., MRI scans), what are the most relevant symmetry groups? Is it just rotations, or do we need to consider more complex transformations?
+
+- How is the output transformation `t'` determined in an equivariant network? Is it always the same as the input transformation `t`, or can it be different?
 ***
 ### Next Steps
 
-##### Tags:
+1. Read a foundational paper on a specific equivariant architecture (e.g., Group Equivariant Convolutional Networks (G-CNNs) or Steerable CNNs).
+    
+2. Find a code implementation (e.g., in PyTorch) of a basic equivariant layer to understand its mechanics.
+    
+3. Formulate a concrete, testable hypothesis for a small-scale experiment comparing an equivariant model to a baseline CNN.
+
+##### Tags: #NeuralNetworks #ENNs #GroupTheory #Transformation-Invariance 
 
 
 
