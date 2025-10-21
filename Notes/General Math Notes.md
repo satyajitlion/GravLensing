@@ -49,10 +49,10 @@ Fun proofs:
 	<u>Proof</u>:
 		Suppose $a\in G$, then $a\*a = a$ like given. Now suppose $\exists \ b\in G$ such that $b\*a = e$, then it follows that $b\*(a\*a) = b\*a = e$. Therefore, if we have $a$, this is the same thing as an identity element times $a$. Therefore, $a = e\*a = (b\*a)\*a = b\*(a\*a) = b\*a = e$. Therefore, we see that $a = e$.
 		
-2. <u>Lemma 1.2.2</u>: In a  group, $(G,\*)$
+2. <u>Lemma 1.2.2</u>: In a  group, $(G,\*)$,
 
 	<u>Proof</u>:
-		Suppose $a\in G$, then $a\*a = a$ like given. Now suppose $\exists \ b\in G$ such that $b\*a = e$, then it follows that $b\*(a\*a) = b\*a = e$. Therefore, if we have $a$, this is the same thing as an identity element times $a$. Therefore, $a = e\*a = (b\*a)\*a = b\*(a\*a) = b\*a = e$. Therefore, we see that $a = e$.
+		Suppose 
 
 
 ### Tensor Math
