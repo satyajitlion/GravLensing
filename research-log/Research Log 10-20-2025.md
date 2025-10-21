@@ -34,6 +34,11 @@ Bridging the gap between the theoretical concepts of group theory and their prac
 ***
 ### Questions & Ideas
 
+- How do I _use_ a G-CNN to achieve the **invariance** I need for gravitational lensing? Is the final step simply a group-invariant pooling layer (e.g., max-pooling over the group axis) after the last equivariant layer?
+
+- How computationally expensive are G-CNNs compared to standard CNNs? The output tensors have an extra group dimension—does this lead to a linear increase in parameters and memory?
+
+-  
 ***
 ### Next Steps
 
