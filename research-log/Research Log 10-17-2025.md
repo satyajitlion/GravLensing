@@ -18,7 +18,7 @@ Understanding the mathematical fundamentals of group theory and its application 
 
 - The translational equivariance of CNNs is a specific, limited case of group equivariance. Their fixed filters make them inherently poor at handling rotations not seen in training.
     
-- Equivariant NNs embed symmetry constraints directly into the architecture (an inductive bias), leading to benefits like data efficiency and better generalization, but at the cost of expressivity for patterns outside the assumed symmetries.
+- Equivariant NNs embed symmetry constraints directly into the architecture (an inductive bias), leading to benefits like data efficiency and better generalization, but at the cost of flexibility for patterns outside the assumed symmetries.
     
 - Data augmentation is an imperfect, post-hoc method to achieve insensitivity to transformations, whereas equivariant models build this property directly into every layer.
 ***
