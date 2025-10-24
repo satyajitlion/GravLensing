@@ -49,9 +49,17 @@ My primary focus was on advancing the project through a discussion with my profe
 ***
 ### Questions & Ideas
 
+- For our specific dataset, what is the more efficient approach: creating 2D images or using a different, more compact data representation?
+
+- How exactly is the "group action" of rotation/translation implemented in a GCNN's architecture? 
 ***
 ### Next Steps
 
+1. Write a Python script to sort and preprocess the lensing data by time delays, as discussed.
+
+2. Develop a minimal script to generate mock lens data and try to convert a set of 2 mock lenses int into 2D "images" to understand the process and data structure.
+
+3. Begin a literature review on different neural network architectures suitable for this data type (e.g., GCNNs, Graph NNs, standard CNNs) to inform the model selection decision.
 ##### Tags:
 
 
