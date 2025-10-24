@@ -78,6 +78,10 @@ def Generate_MockLens(args):
     
     return values
 
+# Create output directory
+output_dir = "AmarelOutput"
+os.makedirs(output_dir, exist_ok=True)
+
 # Save code     
 try:
     task_id = os.getenv('SLURM_ARRAY_TASK_ID', '0') # parallel processing aspect for Amarel
@@ -86,11 +90,11 @@ try:
     vals_ellip = Generate_MockLens([False, True, False])
     vals_both = Generate_MockLens([False, False, True])
 
-    np.save(f'valShear_{task_id}.npy', vals_shear)
-    np.save(f'valEllip_{task_id}.npy', vals_ellip)
-    np.save(f'valBoth_{task_id}.npy', vals_both)
+    np.save(f'{output_dir}/valShear_{task_id}.npy', vals_shear)
+    np.save(f'{output_dir}/valEllip_{task_id}.npy', vals_ellip)
+    np.save(f'{output_dir}/valBoth_{task_id}.npy', vals_both)
     
-    print("Mock lenses generated successfully!")
+    print(f"Mock lenses generated successfully{output_dir}/!")
     
 except Exception as e:
     print(f"Error generating mock lenses: {e}")
