@@ -1,4 +1,4 @@
-### Quick Matrix Note:
+### Quick Matrix Note: 
 
 ```python
 # Input
@@ -19,7 +19,7 @@ shape of arr2 : (3, 1)
 ```math
 \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}
 ```
-   which has a shape of (3,1). This is the same as the python script above which is why the shape indicated above yields (1,3) and (3,1) respectively and is vital to understand for the latter parts of the math required for the NN.
+   which has a shape of (3,1). This is the same as the python script above which is why the shape indicated above yields (1,3) and (3,1) respectively and is vital to understand for the latter parts of the math required for the NN. 
 ### Quick Gradient Note:
 
 Recall that for a derivative with respect to any specific variable, let's say we take the derivative of $y$ with respect to $x$ such that we have $\frac{dy}{dx}$, then this accounts for the change along the $x$ direction for the $y$ function. Extending this to 3 dimensions, recall that we take the gradient of a function with respect to it's multiple variables to find the **change** in that direction for the function. 
@@ -1034,7 +1034,7 @@ IMPORTANT NOTE:
 
 - The validation accuracy must be ~1-2% (or ~0.01-0.02 as a decimal) close to the training dataset accuracy otherwise we have a model that is either underfitting or overfitting.
 
-### Inference and Test Sets (important distinction between test and validation here:)
+### Inference and Test Sets (important distinction between test and validation here)
 
 - Validation datasets stem from the training set itself and help test the network against bits and pieces from the training dataset itself
 
@@ -1042,6 +1042,80 @@ IMPORTANT NOTE:
 
 **Test datasets $\neq$ Validation data!!!!!!**
 
+### Equivariance NNs
+
+```math
+f(t(x)) = t^\prime(f(x))
+```
+
+- When pattern in input changes by some $t(x)$, then the output changes equivalently by some $t^\prime(x)$.
+	- CNNs are translationally equivariant (note that they aren't great for handling rotations).
+		- Why? $\rightarrow$ The learn filters in CNNs do not respond well to rotated versions of objects as long as they weren't part of the training data. This is because the convolutional networks are translated in the pixel space but always kept at the same rotation degree. 
+- Inductive bias = less flexibility
+	- When we introduce assumptions about symmetries for the data, we lose flexibility as we can only operate on data that aligns with our assumptions..
+- Pros for Equivariance NNs
+	- Data Efficiency (and no data augmentation)
+	- Equivariance in all layers (instead of just the input layers)
+	- Better generalizability (but also less expressivity)
+	- reduce parameters (weight sharing)
+- Data Augmentation $\rightarrow$ most common way to make the model insensitive to different transformations.
+	- Network is trained on transformed versions of input data
+	- Not efficient as equivariant models.
+	- Can only be applied to the input layer
+### Invariance NNs
+
+```math
+f(t(x)) = f(x)
+```
+
+- For an invariant neural network, the output doesn't change at all (no matter the type of transformation acting on the input).
+- Invariance is generally applied through something called "pooling." 
+	- $\text{max}(x), \text{mean}(x), \text{sum}(x)$, etc.
+
+### Group Convolutional Neural Networks
+
+- **Recall**: Classical CNNs map pixels to feature maps which are stacked based on the number of filters that are used. These models perform template matching, meaning they use the small learnable filters to search for similar patterns on the image. They are translation equivariant as when there is a translation in the pixels, there is an equivalent translation that takes place in the feature maps.
+
+Recall that a convolution is:
+
+```math
+\mathbb{Z}^2 \rightarrow \mathbb{R}^{n}: \ [f * k](x) = \sum_{y\in\mathbb{Z}^2}\sum^{I}_{i=1} f_{i}(y)k_{i}(x-y)
+```
+
+Here, a convolution is the inner product of a signal or image $f$ and kernel (kernel = filter) $k$. Since there can exist multiple kernels, then there is an added sum for the number of channels ($I$). Note that channels refers to different types of information or features within the input data, such as red, green, and blue "layers" of an image. This basically means that the input signal is evaluated as some position $y$ and multiplied with the Kernel which is translated by different amounts in the pixel space.
+
+For a group convolution, it then is as follows:
+
+```math
+[f * k](g) = \sum_{y\in\mathbb{Z}^2}\sum_{i=1} f_{i}(y)k_{i}(g^{-1}y)
+```
+
+A way to think about group convolutions is to say that they are data augmentations on the filters.
+
+NOTE, the notation of group convolution changes after the first layer as the group action is slightly different when acting in group space:
+
+```math
+G\rightarrow \mathbb{R}: \ [f * k](g) = \sum_{h\in\mathbb{G}}\sum_{i=1} f_{i}(h)k_{i}(g^{-1}h)
+```
+
+Taco cohen has a library called grouppy in pytorch that can help in setting up GCNNs as such:
+
+```python
+import torch
+from torch.autograd import Variable
+from groupy.gconv.pytorch_gcoonv import P4ConvZ2, P4ConvP4
+
+# Construct G-Conv layers
+C1 = P4ConvZ2(in_channels=3, out_channels=64, kernel_size=3, stride=1, padding=1)
+C2 = P4ConvP4(in_channels=64, out_channels=64, kernel_size=3, stride=1, padding=1)
+
+# Create 10 image with 3 channels and 9x9 pixels:
+x = Variable(torch.randn(10, 3, 9, 9))
+
+# fprop
+y = C2(C1(x))
+print y.data.shape # output --> (10, 64, 4, 9, 9)
+```
 
 ***
 ### Tags: #NeuralNetworks #Keras
