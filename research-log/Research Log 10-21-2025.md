@@ -18,7 +18,7 @@ My primary focus was on advancing the project through a discussion with my profe
     
 - Understood the arrival order of images: the farthest images (lowest gravitational potential) arrive first, followed by the images inside the Einstein ring.
     
-- A transformation that scales the Einstein radius by a factor `w` and the source position by the same `w` will scale the image positions by `w`.
+- A transformation that scales the Einstein radius by a factor `w` and the source position by the same `w` will scale the image positions by `w` (if I recall correctly).
     
 - Defined two potential paths for the neural network:
     
