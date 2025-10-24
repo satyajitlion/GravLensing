@@ -39,11 +39,14 @@ def Generate_MockLens(args):
         model_elpow.tile()
         
         imgarr, muarr, tarr = model_elpow.findimg([c.betaOne[i], c.betaTwo[i]])
-        defarr, garr = model_elpow.defmag(imgarr)
+        parr, defarr, garr = plane_elpow.defmag(imgarr)
+        # defarr, marr = model_elpow.defmag(imgarr) deflection, magnification
+        
         # Filter small magnification values
         boolean_mask = np.fabs(muarr) > (10**(-4))
         newImg_arr = imgarr[boolean_mask]
         newMag_arr = muarr[boolean_mask]
+        newP_arr = parr[boolean_mask]
         newDef_arr = defarr[boolean_mask]
         newG_arr = garr[boolean_mask]
         newTime_arr = tarr[boolean_mask]
@@ -51,21 +54,21 @@ def Generate_MockLens(args):
         # Create dictionary with corrected variable references
         if shear_only:
             elpow_dict = dict(
-                img=newImg_arr, mu=newMag_arr, time=newTime_arr, deflec=newDef_arr,
+                img=newImg_arr, mu=newMag_arr, time=newTime_arr, potent=newP_arr, deflec=newDef_arr,
                 ellipc=0.0, ellips=0.0, gammc=c.gc[i], gamms=c.gs[i],
                 einrad=c.EinsArr[i], zLens=c.zlens[i], zSrc=c.zsrc[i],
                 betaOne=c.betaOne[i], betaTwo=c.betaTwo[i]
             )
         elif ellip_only:
             elpow_dict = dict(
-                img=newImg_arr, mu=newMag_arr, time=newTime_arr, deflec=newDef_arr,
+                img=newImg_arr, mu=newMag_arr, time=newTime_arr, potent=newP_arr, deflec=newDef_arr,
                 ellipc=c.ec[i], ellips=c.es[i], gammc=0.0, gamms=0.0,
                 einrad=c.EinsArr[i], zLens=c.zlens[i], zSrc=c.zsrc[i],
                 betaOne=c.betaOne[i], betaTwo=c.betaTwo[i]  
             )
         elif both:
             elpow_dict = dict(
-                img=newImg_arr, mu=newMag_arr, time=newTime_arr, deflec=newDef_arr,
+                img=newImg_arr, mu=newMag_arr, time=newTime_arr, potent=newP_arr, deflec=newDef_arr,
                 ellipc=c.ec[i], ellips=c.es[i], gammc=c.gc[i], gamms=c.gs[i],
                 einrad=c.EinsArr[i], zLens=c.zlens[i], zSrc=c.zsrc[i],
                 betaOne=c.betaOne[i], betaTwo=c.betaTwo[i]
@@ -77,7 +80,7 @@ def Generate_MockLens(args):
 
 # Save code     
 try:
-    task_id = os.getenv('SLURM_ARRAY_TASK_ID', '0') # parallel processing aspect 
+    task_id = os.getenv('SLURM_ARRAY_TASK_ID', '0') # parallel processing aspect for Amarel
     
     vals_shear = Generate_MockLens([True, False, False])
     vals_ellip = Generate_MockLens([False, True, False])
