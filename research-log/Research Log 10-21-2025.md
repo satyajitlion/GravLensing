@@ -60,6 +60,8 @@ My primary focus was on advancing the project through a discussion with my profe
 2. Develop a minimal script to generate mock lens data and try to convert a set of 2 mock lenses int into 2D "images" to understand the process and data structure.
 
 3. Begin a literature review on different neural network architectures suitable for this data type (e.g., GCNNs, Graph NNs, standard CNNs) to inform the model selection decision.
+
+4. Move from general group theory to specifically study the rotation and translation groups (e.g., the cyclic group C4, the rotation group SO(2)), which are most relevant for image equivariance. 
 ##### Tags:
 
 
