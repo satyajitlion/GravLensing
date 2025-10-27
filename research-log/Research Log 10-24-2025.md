@@ -44,7 +44,7 @@ The primary focus was on data management, validation, and initiating the first f
     
 2. Use the now-functional `Analysis.ipynb` to perhaps perform a more in-depth analysis of the dataset? Additionally, analyze the data and brainstorm how I can create a pre-processing script to separate the data into pieces that are manageable that could directly be "plugged" into the Neural Network (once it develops).
     
-3. Create more specific and informative plots based on the initial corner plots, focusing on the science questions.
+3. Create more specific and informative plots? 
     
 4.  Start structuring this consolidated and analyzed data into the final format required for training the Group Equivariant Neural Network.
 
