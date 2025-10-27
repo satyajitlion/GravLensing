@@ -37,6 +37,8 @@ The primary focus was on data management, validation, and initiating the first f
 	- Could do this for the neural network too to avoid retraining the neural network every single time.
 
 - Now that we have initial corner plots and graphs, what differences can I spot between the previous dataset of 1000 mock lenses per model to this model which has $10^5$ mock lenses per model? How are the corner plots different and what patterns in the corner plots am I realistically trying to spot such that the neural network will also spot those same patterns? 
+
+- Is it worth converting the dataset into a 2D image in order to use the CNN architecture? 
 ***
 ### Next Steps
 
@@ -46,9 +48,9 @@ The primary focus was on data management, validation, and initiating the first f
     
 3. Create more specific and informative plots? 
     
-4.  Start structuring this consolidated and analyzed data into the final format required for training the Group Equivariant Neural Network.
+4. Start developing the Neural Network and just test out different Network models. Think about if converting the dataset into a 2D image would be worthwhile in the context of which model to use. It might be worth investigating the performance differences between models and comparing which models yield the best results for this type of data.
 
-##### Tags:
+##### Tags: #DataPreprocessing #TrainingData #Amarel #DeepLearning #GravitationalLensing #MockLensGeneration #NeuralNetworks #Python 
 
 
 
