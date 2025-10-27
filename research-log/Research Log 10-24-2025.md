@@ -27,6 +27,9 @@ The primary focus was on data management, validation, and initiating the first f
 ***
 ### Challenges & Pause Points
 
+- The initial run of the analysis notebook was prohibitively slow (ran for over an hour without completing). The root cause was traced to verbose printing operations within the loop processing the lenses.
+
+- Paused to diagnose the slow performance. Identified the print statements as the culprit, commented them out, and confirmed the fix led to a massive reduction in processing time. 
 ***
 ### Questions & Ideas
 
