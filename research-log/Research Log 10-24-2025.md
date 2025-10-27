@@ -19,6 +19,11 @@ The primary focus was on data management, validation, and initiating the first f
 ***
 ### Results
 
+- Acquired a clean, validated, and consolidated dataset of 100,000 mock lenses for each model.
+
+- Implemented a more organized and automated data output structure for all future batch jobs.
+
+- Produced the first set of analytical plots (corner plots) from the complete dataset, marking a significant milestone in the project. The analysis is now feasible after fixing the performance issue. 
 ***
 ### Challenges & Pause Points
 
