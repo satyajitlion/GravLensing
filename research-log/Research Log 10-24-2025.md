@@ -33,6 +33,10 @@ The primary focus was on data management, validation, and initiating the first f
 ***
 ### Questions & Ideas
 
+- Consider saving the processed data (e.g., calculated potentials, derived parameters) into a new, analysis-ready HDF5 file or similar format to avoid re-running the entire computation every time the notebook is opened. 
+	- Could do this for the neural network too to avoid retraining the neural network every single time.
+
+- Now that we have initial corner plots and graphs, what differences can I spot between the previous dataset of 1000 mock lenses per model to this model which has $10^5$ mock lenses per model? How are the corner plots different and what patterns in the corner plots am I realistically trying to spot such that the neural network will also spot those same patterns? 
 ***
 ### Next Steps
 
