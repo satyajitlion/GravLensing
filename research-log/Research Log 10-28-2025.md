@@ -28,10 +28,24 @@ A notable challenge was handling the edge cases of lenses that produced an unusu
 ***
 ### Questions & Ideas
 
+- How do the percentage distributions of singles, doubles, and quads compare across the three different lensing configurations? 
+	- Understanding these differences could reveal the individual and combined effects of shear and ellipticity on image formation. 
+- The physical origin of the "rare case" lenses is particularly intriguing; what specific potential configurations lead to these unusual numbers of images? 
+- For the neural network, the immediate next step is to transition from testing with random data to using the actual lensing parameters. This raises the question of whether the current model architecture is optimal or if a Convolutional Neural Network might be more suitable for analyzing the spatial relationships within the image arrays.
 ***
 ### Next Steps
 
-##### Tags:
+1. Replace the neural network's sample data with the actual lensing parameter arrays from the simulations.
+    
+2. Perform a comparative analysis of the statistical results across the three configurations to identify key patterns.
+    
+3. Refactor the classification code to reduce duplication and create a single, reusable function.
+    
+4. Investigate the physical significance and properties of the identified rare case lenses.
+    
+5. Develop visualizations to effectively communicate the distributions of lens types.
+
+##### Tags: #GravitationalLensing #NeuralNetworks #DataAnalysis #Classification #Python #Keras #TensorFlow
 
 
 
