@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "remote-research-log/Notes/Neural Networks and Keras Notes.md",
+                "file": "remote-research-log/Meeting- Notes/Research Meeting Notes 10-28-2025.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Neural Networks and Keras Notes"
+              "title": "Research Meeting Notes 10-28-2025"
             }
           }
         ]
@@ -140,13 +140,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "remote-research-log/Notes/Neural Networks and Keras Notes.md",
+                "file": "remote-research-log/Meeting- Notes/Research Meeting Notes 10-28-2025.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Neural Networks and Keras Notes"
+              "title": "Outline of Research Meeting Notes 10-28-2025"
             }
           }
         ],
@@ -171,13 +171,16 @@
   },
   "active": "dd0b179f7ac6f169",
   "lastOpenFiles": [
+    "remote-research-log/Meeting- Notes/Research Meeting Notes 10-21-2025.md",
+    "remote-research-log/Meeting- Notes/Research Meeting Notes 10-28-2025.md",
+    "remote-research-log/research-log/Research Log 10-28-2025.md",
+    "remote-research-log/Notes/Neural Networks and Keras Notes.md",
     "Template/Notes Template.md",
     "remote-research-log/research-log/10-27-2025.md",
     "Untitled.canvas",
     "remote-research-log/research-log/Research Log 10-24-2025.md",
     "remote-research-log/Meeting- Notes/Research Meeting Notes 09-22-2025.md",
     "remote-research-log/research-log/Research Log 10-27-2025.md",
-    "remote-research-log/Meeting- Notes/Research Meeting Notes 10-21-2025.md",
     "remote-research-log/research-log/Research Log 10-22-2025 and 10-23-2025.md",
     "remote-research-log/Notes/General Math Notes.md",
     "remote-research-log/research-log/Research Log 10-21-2025.md",
@@ -193,7 +196,6 @@
     "remote-research-log/AmarelOutput/valShear_5.npy",
     "remote-research-log/research-log/Research Log 10-23-2025.md",
     "remote-research-log/research-log/Research Log 10-20-2025.md",
-    "remote-research-log/Notes/Neural Networks and Keras Notes.md",
     "remote-research-log/research-log/Research Log 10-17-2025.md",
     "remote-research-log/research-log/Research Log 10-15-2025 and 10-16-2025.md",
     "remote-research-log/research-log/Research Log 10-01-2025 to 10-02-2025.md",
@@ -206,8 +208,6 @@
     "remote-research-log/research-log/Research Log 10-13-2025.md",
     "remote-research-log/research-log/Research Log 10-09-2025 to 10-10-2025.md",
     "remote-research-log/research-log/Research Log 10-08-2025.md",
-    "remote-research-log/research-log/Research Log 10-07-2025.md",
-    "remote-research-log/research-log/Research Log 10-06-2025.md",
     "remote-research-log/research-vault/dropout1-1.png",
     "dropout1-1.png"
   ]
