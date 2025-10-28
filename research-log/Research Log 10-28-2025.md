@@ -12,7 +12,7 @@ Today's work focused on analyzing the results for the three mock lens datasets f
     
 - Created a modular neural network in `NetworkModel.py` with functions for model creation and training.
     
-- Successfully tested the neural network pipeline with sample data in the `Analysis.ipynb` notebook.
+- Successfully tested the neural network pipeline with synthetic data in the `Analysis.ipynb` notebook to ensure that the code from the script was working properly and that the network was able to load properly into the notebook.
 ***
 ### Results
 
