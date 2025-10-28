@@ -16,7 +16,11 @@ Today's work centered on advancing the Gravitational Lens neural network researc
 ***
 ### Results
 
-
+- Successfully classified all mock lenses and calculated the statistical prevalence of singles, doubles, quads, and rare cases for each configuration.
+    
+- Implemented checks to ensure statistical calculations summed correctly to 100%, validating the analysis.
+    
+- A functional TensorFlow model was built and tested, featuring a sequential architecture with dense layers and using the Adam optimizer.
 ***
 ### Challenges & Pause Points
 
