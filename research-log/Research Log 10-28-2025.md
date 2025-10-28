@@ -36,13 +36,13 @@ A notable challenge was handling the "edge cases" of lenses that produced an unu
 ***
 ### Next Steps
 
-1. Replace the neural network's sample data with the actual lensing parameter arrays from the simulations.
-    
-2. Perform a comparative analysis of the statistical results across the three configurations to identify key patterns.
-    
-3. Refactor the classification code to reduce duplication and create a single, reusable function.
-    
-4. Investigate the physical significance and properties of the identified rare case lenses.
+1. Continue studying GCNNs and Group Theory to better understand equivariance and it's relation to invariance and the entire foundation of GCNNs.
+
+2. Work towards replacing the current neural network architecture with the a GCNN. Also consider converting image array dataset into a 2D image such that a CNN could better handle said data. 
+
+3. Replace the neural network's sample data with the actual lensing parameter arrays from the simulations.
+
+4. Perform a comparative analysis of the statistical results across the three configurations to identify key patterns.
     
 5. Develop visualizations to effectively communicate the distributions of lens types.
 
