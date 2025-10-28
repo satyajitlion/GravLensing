@@ -1041,6 +1041,9 @@ IMPORTANT NOTE:
 - Test sets or test datasets are difference training samples that weren't initially in the training sample itself and are used on the neural network to see if it's able to make an accurate inference. For my research purposes, this would refer to using the SIE dataset if the SIS+shear dataset was used to train the network. 
 
 **Test datasets $\neq$ Validation data!!!!!!**
+### Convolutional Neural Networks (CNNs)
+
+
 
 ### Equivariance NNs
 
