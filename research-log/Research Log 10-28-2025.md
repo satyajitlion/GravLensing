@@ -20,4 +20,3 @@
 
 
 
-<% tp.file.rename("Research Log " + tp.date.now("MM-DD-YYYY")) %>
