@@ -24,7 +24,7 @@ Today's work focused on analyzing the results for the three mock lens datasets f
 ***
 ### Challenges & Pause Points
 
-A notable challenge was handling the edge cases of lenses that produced an unusual number of images (not 1, 2, or 4). A system was developed to identify, log, and statistically account for these "rare" lenses, which will be crucial for understanding the completeness of our model and the physical regimes where it may break down. Furthermore, the code structure currently involves some duplication across the three lensing configurations, presenting an opportunity for future refactoring to create a more efficient and maintainable analysis script.
+A notable challenge was handling the "edge cases" of lenses that produced an unusual number of images (not 1, 2, or 4). A system was developed to identify, log, and statistically account for these "rare" lenses, which will be crucial for understanding the completeness of our model and the physical regimes where it may break down. Furthermore, the code structure currently involves some duplication across the three lensing configurations, presenting an opportunity for future refactoring to create a more efficient and maintainable analysis script.
 ***
 ### Questions & Ideas
 
