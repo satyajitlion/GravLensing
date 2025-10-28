@@ -32,6 +32,7 @@ A notable challenge was handling the "edge cases" of lenses that produced an unu
 	- Understanding these differences could reveal the individual and combined effects of shear and ellipticity on image formation. 
 - In terms of the "rare" lenses which we are not considering for this project, would this data loss lead to any errors when training the network? 
 - For the neural network, the immediate next step is to transition from testing with random data to using the actual lensing parameters. This raises the question of whether the current model architecture is optimal or if a Convolutional Neural Network might be more suitable for analyzing the spatial relationships within the image arrays.
+	- Incorporate GCNN using pytorch instead? Will need to look at a pytorch implementation for the Neural Network.
 ***
 ### Next Steps
 
