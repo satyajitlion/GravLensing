@@ -1,5 +1,7 @@
 ### Group Theory
 
+[Online Notes](https://pages.mtu.edu/~kreher/ABOUTME/syllabus/GTN.pdf)
+
 - A group is mathematically defined as a set equipped with a binary operator.
 	- A set here is just a collection of functions (i.e different Translations or Rotations)
 	- The Group operation operates on elements of this set and this operator tells us how to compose elements of this set.
@@ -81,6 +83,8 @@ Now, finally suppose that $b_1\*a =e$ and $b_2\*a = e$. Then, by (1) and (2), we
 ```math
 b_{1} = b_{1}*e = b_{1}*(a*b_{2}) = (b_{1}*a)*b_{2} = e*b_{2}=b_{2}.
 ```
+
+
 ### Tensor Math
 
 ##### Tags: #GroupTheory #Math
