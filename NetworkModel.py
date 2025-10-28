@@ -1,23 +1,32 @@
 import tensorflow as tf
 from tensorflow import keras
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Activation, Dense
-from tensorflow.keras.optimizers import Adam
-from tensorflow.keras.metrics import categorical_crossentropy
 
+# create model
+def create_model():
+    model = tf.keras.Sequential([
+        tf.keras.layers.Input(shape=(1,)),
+        tf.keras.layers.Dense(16, activation='relu'),
+        tf.keras.layers.Dense(32, activation='relu'),
+        tf.keras.layers.Dense(2, activation='softmax')
+    ])
+    
+    # use adam optimizer
+    model.compile(
+        optimizer='adam',
+        loss='sparse_categorical_crossentropy',
+        metrics=['accuracy']
+    )
+    return model
 
-# actual model itself
-model = Sequential([
-
-	# note the input_shape here is completely wrong for my dataset, 
-	# this is just an example
-	
-	Dense(units=16, input_shape=(1,), activation='relu'), # first hidden layer
-	Dense(units=32, activation='relu'), # second hidden layer
-	Dense(units=2, activation='softmax') # output layer, recall why softmax is used.
-])
-
-# note the structure that exists here. I will have to design something similar for my dataset. 
-
-
-model.summary() 
+# train the model
+def train_model(model, x, y):
+    history = model.fit(
+        x=x, 
+        y=y,
+        validation_split=0.1,
+        batch_size=10, 
+        epochs=30, 
+        shuffle=True, 
+        verbose=2
+    )
+    return history
