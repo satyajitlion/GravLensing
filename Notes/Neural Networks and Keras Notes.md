@@ -1052,6 +1052,45 @@ CNNs are a type of neural network designed specifically for images. They fix the
 2. **No Spatial Understanding:** A standard NN doesn't know that a "cat ear" in the top-left is the same as a "cat ear" in the bottom-right. It would have to learn the same feature all over again for every single location.
 
 CNNs solve this with two brilliant ideas: **local filters** and **weight sharing**.
+#### How CNNs Work: 
+
+1. **Convolutional Layers (`Conv2D`): Learning Local Features**
+    
+    - Instead of connecting every neuron to every input pixel, we use small **filters** (e.g., 3x3 grids) that scan across the image.
+        
+    - Each filter is designed to detect a specific **feature**, like a vertical edge, a horizontal line, or a blotch of color.
+        
+    - As the filter slides over the image, it calculates the dot product, producing a **feature map** that shows where that feature appears.
+        
+2. **Weight Sharing: Translation Equivariance**
+    
+    - The same filter is used across the entire image. A filter that detects a vertical edge will find vertical edges _anywhere_.
+        
+    - This massively reduces the number of parameters and makes the network **translation equivariant**—if the input moves, the output feature map moves the same way.
+        
+3. **Hierarchical Feature Learning**
+    
+    - We stack multiple convolutional layers.
+        
+    - **Early layers** learn simple features (edges, corners).
+        
+    - **Deeper layers** combine these to learn complex patterns (shapes, textures, objects).
+#### The Basic CNN Layer Structure
+
+A typical CNN block looks like this:
+
+1. **`Conv2D` Layer:** Applies filters to create feature maps.
+    
+2. **Activation Function (`ReLU`):** Adds non-linearity. `ReLU` is used because it's simple and helps with the vanishing gradient problem.
+    
+3. **`MaxPooling2D` Layer:** Shrinks the feature maps by taking the maximum value in small windows (e.g., 2x2). This makes the network faster, reduces parameters, and helps it be more robust to small shifts in the image (a form of **translation invariance**).
+    
+This `Conv2D -> ReLU -> Pooling` block is repeated to build the feature hierarchy.
+#### Final Steps: Classification
+
+After several convolutional blocks, the 3D feature maps are **flattened** into a 1D vector and fed into standard **`Dense` layers** (just like in our previous Keras models) for the final classification (e.g., using `softmax` for the output).
+
+**In a nutshell:** CNNs use local, shared filters to efficiently learn spatial hierarchies of features from images, making them perfect for computer vision.
 ### Equivariance NNs
 
 ```math
