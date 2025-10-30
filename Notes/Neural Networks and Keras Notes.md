@@ -1043,8 +1043,15 @@ IMPORTANT NOTE:
 **Test datasets $\neq$ Validation data!!!!!!**
 ### Convolutional Neural Networks (CNNs)
 
+CNNs are a type of neural network designed specifically for images. They fix the main problems with using standard `Dense` layers for pictures.
 
+#### The Problem with Standard NNs for Images
 
+1. **Too Many Parameters:** For a 100x100 color image (100 * 100 * 3 = 30,000 pixels), a single `Dense` layer with 1,000 neurons needs **30 million weights**. This is inefficient and slow.
+    
+2. **No Spatial Understanding:** A standard NN doesn't know that a "cat ear" in the top-left is the same as a "cat ear" in the bottom-right. It would have to learn the same feature all over again for every single location.
+
+CNNs solve this with two brilliant ideas: **local filters** and **weight sharing**.
 ### Equivariance NNs
 
 ```math
@@ -1121,4 +1128,4 @@ print y.data.shape # output --> (10, 64, 4, 9, 9)
 ```
 
 ***
-### Tags: #NeuralNetworks #Keras
+	### Tags: #NeuralNetworks #Keras
