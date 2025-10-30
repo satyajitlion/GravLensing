@@ -1044,7 +1044,6 @@ IMPORTANT NOTE:
 ### Convolutional Neural Networks (CNNs)
 
 CNNs are a type of neural network designed specifically for images. They fix the main problems with using standard `Dense` layers for pictures.
-
 #### The Problem with Standard NNs for Images
 
 1. **Too Many Parameters:** For a 100x100 color image (100 * 100 * 3 = 30,000 pixels), a single `Dense` layer with 1,000 neurons needs **30 million weights**. This is inefficient and slow.
