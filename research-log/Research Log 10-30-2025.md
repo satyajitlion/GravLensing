@@ -1,5 +1,4 @@
-### The Focus for These Two Days
-
+### Today's Focus
 
 ***
 ### What I was able to accomplish
