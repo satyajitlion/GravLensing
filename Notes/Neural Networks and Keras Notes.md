@@ -1164,6 +1164,61 @@ x = Variable(torch.randn(10, 3, 9, 9))
 y = C2(C1(x))
 print y.data.shape # output --> (10, 64, 4, 9, 9)
 ```
+### Notes on Group Equivariant Deep Learning:
+[Group Equivariant Deep Learning Playlist](https://www.youtube.com/watch?v=z2OEyUgSH2c&list=PL8FnQMH2k7jzPrxqdYufoiYVHim8PyZWd)
+
+#### Lecture 1.1
+According to Erik Bekkers, G-CNNs are not only relevant for invariant problems but also for any type of structured data.
+
+Importance of Equivariance:
+- No information is lost when the input is transformed
+- Guaranteed stability to (local + global) transformations
+
+Group convolutions:
+- Equivariance beyond translations
+- Geometric guarantees
+- increased weight sharing
+
+#### Lecture 1.2
+
+#### Lecture 1.3
+
+#### Lecture 1.4
+
+#### Lecture 1.5
+
+#### Lecture 1.6
+
+#### Lecture 1.7
+
+#### Lecture 1.2
+
+#### Lecture 2.1
+
+#### Lecture 2.2
+
+#### Lecture 2.3
+
+#### Lecture 2.4
+
+#### Lecture 2.5
+
+#### Lecture 2.6
+
+#### Lecture 3.1
+
+#### Lecture 3.2
+
+#### Lecture 3.3
+
+#### Lecture 3.4
+
+#### Lecture 3.5
+
+#### Lecture 3.6
+
+#### Lecture 3.7
+
 
 ***
 	### Tags: #NeuralNetworks #Keras
