@@ -858,6 +858,7 @@ ES = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=5)
 model.fit(trainX, trainy, validation_data=(valX, valy), epochs=20,callbacks=[ES])
 ```
 
+***
 ### Starting with Keras:
 
 - Sequential model 
@@ -1041,6 +1042,7 @@ IMPORTANT NOTE:
 - Test sets or test datasets are difference training samples that weren't initially in the training sample itself and are used on the neural network to see if it's able to make an accurate inference. For my research purposes, this would refer to using the SIE dataset if the SIS+shear dataset was used to train the network. 
 
 **Test datasets $\neq$ Validation data!!!!!!**
+***
 ### Convolutional Neural Networks (CNNs)
 
 CNNs are a type of neural network designed specifically for images. They fix the main problems with using standard `Dense` layers for pictures.
@@ -1164,6 +1166,7 @@ x = Variable(torch.randn(10, 3, 9, 9))
 y = C2(C1(x))
 print y.data.shape # output --> (10, 64, 4, 9, 9)
 ```
+***
 ### Notes on Group Equivariant Deep Learning:
 [Group Equivariant Deep Learning Playlist](https://www.youtube.com/watch?v=z2OEyUgSH2c&list=PL8FnQMH2k7jzPrxqdYufoiYVHim8PyZWd)
 
