@@ -36,12 +36,12 @@ project/
 
 ## Project Pipeline
 
-### Phase 1: Data Generation (Current)
+### Phase 1: Data Generation (Completed)
 - **Input**: Cosmological parameters, lens/source redshifts, mass distributions
 - **Process**: Physical lens modeling using `pygravlens.py`
 - **Output**: Mock lens systems with known parameters (→ training data)
 
-### Phase 2: Machine Learning Training (Future)
+### Phase 2: Machine Learning Training (Current)
 - **Input**: Mock lens data (image positions, magnifications, time delays)
 - **Process**: Neural network training to learn parameter → observables mapping
 - **Output**: Trained models that can predict parameters from observables
