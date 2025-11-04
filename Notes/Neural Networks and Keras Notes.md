@@ -1202,6 +1202,10 @@ g^{-1} = (-x),
 ```
 
 where $g = (x)$, $g^{\prime} = (x^{\prime})$, and $x, x^{\prime} \in \mathbb{R}^2$.
+
+Now consider the **roto-translation group SE(2)** (aka the <u>2</u>D <u>S</u>pecial <u>E</u>uclidean Motion Group). 
+
+The group SE(2) = $\mathbb{R}^2$. 
 #### Lecture 1.3
 
 #### Lecture 1.4
