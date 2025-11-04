@@ -44,6 +44,14 @@ My focus was to successfully train the first neural network model on the preproc
 ***
 ### Questions & Ideas
 
+- The model is learning effectively, but the very low final MAE (0.011) raises questions - are we potentially overfitting on a simple pattern? Should we test on a held-out test set?
+
+- Now that I have a working baseline model, it is important to do the following:
+	- Evaluate on a completely unseen test set to verify real-world performance
+	- Experiment with more complex architectures (deeper networks, skip connections)
+	- Consider normalizing the input data to potentially improve convergence speed
+
+- Given the "success" of this simple feedforward network (as in it works functionally), I could experiment with implementing the Group Equivariant CNN which might work better potentially.
 ***
 ### Next Steps
 
