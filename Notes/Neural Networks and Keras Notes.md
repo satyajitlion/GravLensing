@@ -1182,7 +1182,13 @@ Group convolutions:
 - Geometric guarantees
 - increased weight sharing
 
+
+You can divide a structure into components and distinguish them by the complexity of features to better apply the group theory representation to them. i.e you can establish low-level features such that an arrangement of the low-level features with respect to the relative angle and displacements forms mid-level features and the arrangement of  mid-level features with respect to the relative angle and displacements forms high-level features.. 
+
+For instance, say you have a heart that you want to be rotationally or translationally invariant. Then you could say that the low-level features of said heart are simply local surfaces. These features can appear at arbitrary locations, angles, and scales. The arrangement of these local surfaces at relative angles and displacements would form mid-level features such as the vessel segments of the heart. Finally arranging all of these mid-level features, or vessel segments,  at relative angles and displacements form high-level features such as bifurcations of the heart and so on. 
 #### Lecture 1.2
+
+
 
 #### Lecture 1.3
 
