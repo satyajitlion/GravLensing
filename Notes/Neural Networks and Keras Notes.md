@@ -1182,8 +1182,39 @@ Group convolutions:
 - Geometric guarantees
 - increased weight sharing
 
+
+You can divide a structure into components and distinguish them by the complexity of features to better apply the group theory representation to them. i.e you can establish low-level features such that an arrangement of the low-level features with respect to the relative angle and displacements forms mid-level features and the arrangement of  mid-level features with respect to the relative angle and displacements forms high-level features.. 
+
+For instance, say you have a heart that you want to be rotationally or translationally invariant. Then you could say that the low-level features of said heart are simply local surfaces. These features can appear at arbitrary locations, angles, and scales. The arrangement of these local surfaces at relative angles and displacements would form mid-level features such as the vessel segments of the heart. Finally arranging all of these mid-level features, or vessel segments,  at relative angles and displacements form high-level features such as bifurcations of the heart and so on. 
 #### Lecture 1.2
 
+Group theory basics:
+
+As stated in [General Math Notes](https://github.com/satyajitlion/GravLensing/blob/92e7fe8a13c64c3d5bcef69f026070b37cb4bbf2/Notes/General%20Math%20Notes.md), a group $(G, \cdot)$ is a set of elements $G$ equipped with a group product $\cdot$, which is a binary operator, that satisfies the four following axioms: Closure, Associativity, Identity Element, and Inverse element. tldr; the group product of two elements in $G$ has to exist in G, the product should be associative such that $a \cdot (b \cdot c) = (a \cdot b) \cdot c$ for $a, b, c \in G$. Additionally, there needs to exist an identity element $e \in G$ such that $a\cdot e = a$ for $a \in G$ and an inverse element $a^{-1} \in G$ such that $a\cdot a^{-1} = e$ for some arbitrary $a\in G$.
+
+So, given this brief recap of what a group is, we then have a **translational group** $(\mathbb{R}^2, +)$ which consists of all possible translations in $\mathbb{R}^2$ and is equipped with the group product and group inverse as follows:
+
+```math 
+g \cdot g^{\prime} = (x + x^{\prime})
+```
+```math 
+g^{-1} = (-x),
+```
+
+where $g = (x)$, $g^{\prime} = (x^{\prime})$, and $x, x^{\prime} \in \mathbb{R}^2$. 
+
+Now consider the **roto-translation group $\text{SE}(2)$** (aka the <u>2</u>D <u>S</u>pecial <u>E</u>uclidean Motion Group). 
+
+The group $\text{SE}(2)$ = $\mathbb{R}^2 \rtimes$ $\text{SO}(2)$ consists of the **coupled** space $\mathbb{R}^2\times S^1$ of translation vectors in $\mathbb{R}^2$, and rotations in $\text{SO}(2)$ (or equivalently orientations in $S^1$), and it is equipped with group product and group inverse as follows:
+
+```math
+g \cdot g^\prime = (\vec{x}, \vec{R}_{\theta}) \cdot (\vec{x}^{\prime}, \vec{R}_{\theta^{\prime}}) = (\vec{R}_{\theta}\vec{x}^{\prime} + \vec{x}, \vec{R}_{\theta+\theta^{\prime}})
+```
+```math
+g^{-1} = (-\vec{R}_{\theta}^{-1}\vec{x}, \vec{R}^{-1}_{\theta}),
+```
+
+where $g = (\vec{x}, \vec{R}_{\theta})$ and $g^{\prime} = (\vec{x^{\prime}}, \vec{R}_{\theta^{\prime}})$.
 #### Lecture 1.3
 
 #### Lecture 1.4
