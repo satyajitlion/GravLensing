@@ -1,6 +1,0 @@
-{
-  "autorun": true,
-  "template": "Template/Research Log Template",
-  "format": "MM-DD-YYYY",
-  "folder": "remote-research-log/research-log"
-}
