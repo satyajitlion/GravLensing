@@ -1201,11 +1201,13 @@ g \cdot g^{\prime} = (x + x^{\prime})
 g^{-1} = (-x),
 ```
 
-where $g = (x)$, $g^{\prime} = (x^{\prime})$, and $x, x^{\prime} \in \mathbb{R}^2$.
+where $g = (x)$, $g^{\prime} = (x^{\prime})$, and $x, x^{\prime} \in \mathbb{R}^2$. 
 
-Now consider the **roto-translation group SE(2)** (aka the <u>2</u>D <u>S</u>pecial <u>E</u>uclidean Motion Group). 
+Now consider the **roto-translation group $\text{SE}(2)$** (aka the <u>2</u>D <u>S</u>pecial <u>E</u>uclidean Motion Group). 
 
-The group SE(2) = $\mathbb{R}^2$. 
+The group $\text{SE}(2)$ = $\mathbb{R}^2 \rtimes$ $\text{SO}(2)$ consists of the **coupled** space $\R^2\times S^1$ of translation vectors in $\R^2$, and rotations in $\text{SO}(2)$ (or equivalently orientations in $S^1$), and it is equipped with group product and group inverse as follows:
+
+
 #### Lecture 1.3
 
 #### Lecture 1.4

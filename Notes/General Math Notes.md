@@ -84,7 +84,10 @@ Now, finally suppose that $b_1\*a =e$ and $b_2\*a = e$. Then, by (1) and (2), we
 b_{1} = b_{1}*e = b_{1}*(a*b_{2}) = (b_{1}*a)*b_{2} = e*b_{2}=b_{2}.
 ```
 
+#### Semi-Direct Product
 
+The symbol "$\rtimes$" is used to denote the [**semi-direct**](http://en.wikipedia.org/wiki/Semidirect_product) product.
+- "In mathematics, specifically in group theory, a semidirect product is a particular way in which a group can be constructed from two subgroups, one of which is a normal subgroup. A semidirect product is a generalization of a direct product."
 ### Tensor Math
 
 ##### Tags: #GroupTheory #Math
