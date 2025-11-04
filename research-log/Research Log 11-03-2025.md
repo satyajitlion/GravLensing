@@ -1,26 +1,36 @@
 ### Today's Focus
 
-My focus was to complete the `extract_lens_data` function by resolving the `.to_value()` errors and implementing the remaining padding logic for time delays, potentials, and deflections, ultimately creating a robust data preprocessing pipeline.
+My focus was to successfully train the first neural network model on the preprocessed gravitational lensing data. This involved integrating the data pipeline with the model architecture, executing the training process, and analyzing the results to validate our entire approach.
 ***
 ### What I was able to accomplish
 
-- Successfully diagnosed and fixed the `.to_value()` errors that were halting progress.
+- Successfully diagnosed and fixed the `.to_value()` errors that were halting progress by discovering `system['time']` was already numeric.
     
-- Implemented and tested the padding logic for the remaining three data components: `time_padded`, `potent_padded`, and `deflec_padded`.
+- Finalized the `extract_lens_data` function and processed the entire `vals_shear` dataset.
     
-- Finalized the function by correctly assembling the `input_vec` and `output_vec` for all systems in the dataset.
+- Integrated the data pipeline with the neural network model, creating a complete training workflow.
     
-- Ran the completed function on a dataset sample to validate the output shapes and data integrity.
+- Successfully trained the model for 100 epochs and achieved excellent convergence.
+    
+- Created visualization plots to analyze the training history and model performance.
+    
+- Updated the model architecture to match the exact dimensions of our dataset (14 inputs, 12 outputs).
 ***
 ### Results
 
-- The `extract_lens_data` function is now complete and returns standardized NumPy arrays ready for machine learning.
+- Established a fully functional ML pipeline from raw data to trained model.
     
-- Discovered that `system['time']` was already a numeric array; removed the erroneous `.to_value()` call, which resolved the primary execution error.
+- The model converged effectively, with final metrics showing strong performance:
+    - **Training Loss (MSE):** 3.87e-04
+    - **Training MAE:** 0.0118
+    - **Validation Loss (MSE):** 3.63e-04
+    - **Validation MAE:** 0.0106
+        
+- Confirmed the input shape (14 features) and output shape (12 values) match our data structure.
     
-- The function successfully transforms variable-length lensing systems into fixed-size input and output vectors, solving the initial data structure challenge.
+- The close alignment between training and validation curves indicates the model is generalizing well without overfitting.
     
-- Confirmed via test runs that the output arrays have consistent shapes, verifying the padding logic works correctly for all data components.
+- Created loss and MAE plots that clearly show stable and consistent improvement throughout training.
 ***
 ### Challenges & Pause Points
 
