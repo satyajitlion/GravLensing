@@ -34,11 +34,13 @@ My focus was to successfully train the first neural network model on the preproc
 ***
 ### Challenges & Pause Points
 
-- The main challenge was debugging the `.to_value()` error. I paused to inspect the actual data type of `system['time']` and realized it was already a numeric array, making the conversion method unnecessary and incorrect.
+- The main initial challenge was debugging the `.to_value()` error, which was resolved by inspecting the actual data structure.
     
-- Ensuring the padding dimensions were consistent for 1D (time, potential) vs. 2D (image, deflection) data required careful attention, but the plan established on 10/31 provided a clear roadmap.
+- Determining the correct input dimension (14) required calculating: `max_images * 2` for images + `max_images` for times + 2 for redshifts = `4*2 + 4 + 2 = 14`.
     
-- The complexity of multiple padding steps was managed by methodically implementing one component at a time, as planned.
+- Ensuring the output dimension (12) matched: `max_images` for potentials + `max_images * 2` for deflections = `4 + 4*2 = 12`.
+    
+- The training progression showed some minor fluctuations around epochs 7-11, but the model quickly stabilized and continued improving.
 ***
 ### Questions & Ideas
 
