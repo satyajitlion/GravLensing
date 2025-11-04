@@ -1192,6 +1192,13 @@ Group theory basics:
 
 As stated in [General Math Notes], a group $(G, \cdot)$ is a set of elements $G$ equipped with a group product $\cdot$, which is a binary operator, that satisfies the four following axioms: Closure, Associativity, Identity Element, and Inverse element. tldr; the group product of two elements in $G$ has to exist in G, the product should be associative such that $a \cdot (b \cdot c) = (a \cdot b) \cdot c$ for $a, b, c \in G$. Additionally, there needs to exist an identity element $e \in G$ such that $a\cdot e = a$ for $a \in G$ and an inverse element $a^{-1} \in G$ such that $a\cdot a^{-1} = e$ for some arbitrary $a\in G$.
 
+So, given this brief recap of what a group is, we then have a translational group which consists of all possible translations in $\mathbb{R}^2$ and is equipped with the group product and group inverse as follows:
+
+```math 
+g \cdot g^{\prime} = (x + x^{\prime})
+
+g^{-1} = (-x)
+```
 #### Lecture 1.3
 
 #### Lecture 1.4
