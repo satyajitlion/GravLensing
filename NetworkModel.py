@@ -1,32 +1,30 @@
 import tensorflow as tf
 from tensorflow import keras
 
-# create model
 def create_model():
     model = tf.keras.Sequential([
-        tf.keras.layers.Input(shape=(1,)),
-        tf.keras.layers.Dense(16, activation='relu'),
-        tf.keras.layers.Dense(32, activation='relu'),
-        tf.keras.layers.Dense(2, activation='softmax')
+        tf.keras.layers.Input(shape=(14,)),  # 14 input features
+        tf.keras.layers.Dense(64, activation='relu'),
+        tf.keras.layers.Dense(128, activation='relu'),
+        tf.keras.layers.Dense(64, activation='relu'),
+        tf.keras.layers.Dense(12, activation='linear')  # 12 regression outputs
     ])
     
-    # use adam optimizer
     model.compile(
         optimizer='adam',
-        loss='sparse_categorical_crossentropy',
-        metrics=['accuracy']
+        loss='mse',
+        metrics=['mae']
     )
     return model
 
-# train the model
 def train_model(model, x, y):
     history = model.fit(
         x=x, 
         y=y,
         validation_split=0.1,
-        batch_size=10, 
-        epochs=30, 
+        batch_size=32,  # Larger batch size for regression
+        epochs=100,      # More epochs for regression
         shuffle=True, 
-        verbose=2
+        verbose=1
     )
     return history
