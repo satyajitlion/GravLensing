@@ -1188,7 +1188,9 @@ You can divide a structure into components and distinguish them by the complexit
 For instance, say you have a heart that you want to be rotationally or translationally invariant. Then you could say that the low-level features of said heart are simply local surfaces. These features can appear at arbitrary locations, angles, and scales. The arrangement of these local surfaces at relative angles and displacements would form mid-level features such as the vessel segments of the heart. Finally arranging all of these mid-level features, or vessel segments,  at relative angles and displacements form high-level features such as bifurcations of the heart and so on. 
 #### Lecture 1.2
 
+Group theory basics:
 
+As stated in [General Math Notes], a group $(G, \cdot)$ is a set of elements $G$ equipped with a group product $\cdot$, which is a binary operator, that satisfies the four following axioms: Closure, Associativity, Identity Element, and Inverse element. tldr; the group product of two elements in $G$ has to exist in G, the product should be associative such that $a \cdot (b \cdot c) = (a \cdot b) \cdot c$ for $a, b, c \in G$. Additionally, there needs to exist an identity element $e \in G$ such that $a\cdot e = a$ for $a \in G$ and an inverse element $a^{-1} \in G$ such that $a\cdot a^{-1} = e$ for some arbitrary $a\in G$.
 
 #### Lecture 1.3
 
