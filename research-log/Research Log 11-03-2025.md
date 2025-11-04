@@ -24,11 +24,18 @@ My focus was to complete the `extract_lens_data` function by resolving the `.to_
 ***
 ### Challenges & Pause Points
 
+- The main challenge was debugging the `.to_value()` error. I paused to inspect the actual data type of `system['time']` and realized it was already a numeric array, making the conversion method unnecessary and incorrect.
+    
+- Ensuring the padding dimensions were consistent for 1D (time, potential) vs. 2D (image, deflection) data required careful attention, but the plan established on 10/31 provided a clear roadmap.
+    
+- The complexity of multiple padding steps was managed by methodically implementing one component at a time, as planned.
 ***
 ### Questions & Ideas
 
 ***
 ### Next Steps
+
+
 
 ##### Tags:
 
