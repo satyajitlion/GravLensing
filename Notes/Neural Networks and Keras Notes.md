@@ -1196,9 +1196,12 @@ So, given this brief recap of what a group is, we then have a translational grou
 
 ```math 
 g \cdot g^{\prime} = (x + x^{\prime})
-
-g^{-1} = (-x)
 ```
+```math 
+g^{-1} = (-x),
+```
+
+where $g = (x)$, $g^{\prime} = (x^{\prime})$, and $x, x^{\prime} \in \mathbb{R}^2$.
 #### Lecture 1.3
 
 #### Lecture 1.4
