@@ -55,9 +55,17 @@ My focus was to successfully train the first neural network model on the preproc
 ***
 ### Next Steps
 
+1. Save the trained model and evaluate it on a separate test dataset to confirm generalization capability.
 
+2. Analyze which output variables (potentials vs. deflections) the model predicts best and where it struggles.
 
-##### Tags:
+3. Begin experimenting with different model architectures and hyperparameters to push performance further.
+
+4. Implement and test feature normalization to see if it improves training efficiency.
+
+5. Document the complete workflow for future reproducibility and scaling. Fix naming errors and try to keep everything consistent in the GitHub documentation.  
+
+##### Tags: #ModelTraining #NeuralNetwork #GravitationalLensing #Keras #TensorFlow 
 
 
 
