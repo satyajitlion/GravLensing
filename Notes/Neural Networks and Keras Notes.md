@@ -1316,9 +1316,18 @@ This simply says that if you first apply the convolution and then transform the 
 **Cross correlations** are convolutions with reflected convoution kernels (and vice versa), given as such:
 
 ```math
-(k \ \star_{\mathbb{R}^2} f)(\mathbf{x}) = \int_{\mathbb{R}^2} k(\mathbf{x}^\prime - \mathbf{x})f(\mathbf{x}^\prime)d\mathbf{x}^\prime
+(k \ \star_{\mathbb{R}^2} f)(\mathbf{x}) = \int_{\mathbb{R}^2} k(\mathbf{x}^\prime - \mathbf{x})f(\mathbf{x}^\prime)d\mathbf{x}^\prime = (\mathcal{L}_{g} k, f)_{\mathbb{L_{2}(\mathbb{R^2})}}
 ```
 
+Recall from Lecture 1.2 that 
+
+```math
+\mathcal{L}_{g}[f](x):= f(g^{-1}\cdot x)
+```
+
+which is the **left-regular representation** that transforms functions $f$ by transforming their domains via the inverse group action.
+
+This basically means that the group action equals the group product when the domain is $G$.
 
 ***
 	### Tags: #NeuralNetworks #Keras
