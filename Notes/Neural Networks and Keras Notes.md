@@ -1332,5 +1332,15 @@ Recall from Lecture 1.2 that $\mathcal{L}_{g}$ is a representation of the transl
 The inner product here can be thought of as the "similarity" between the kernel $k$ and signal $f$.
 
 So then the cross-correlation operator can be thought of as a form of template matching where $k$ is the templates which we're matching with the function $f$ under all possible transformations.
+
+However, this is for normal CNNs that aren't rotationally equivariant but only translationally equivariant.
+
+**$\text{SE}(2)$ equivariant cross correlations**:
+
+```math
+(k \ \tilde{\star} \ f)(\mathbf{x}) = (\mathcal{L}^{\text{SE}(2) \rightarrow \mathbb{L}_{2}(\mathbb{R}^2)}_{g}k, f)_{\mathbb{L_{2}(\mathbb{R}^2)}}
+```
+
+
 ***
-	### Tags: #NeuralNetworks #Keras
+### Tags: #NeuralNetworks #Keras
