@@ -1298,7 +1298,17 @@ This simply means that $\rho(g)$ is a linear transformation that is parametrized
 \rho(g^\prime) \circ \rho(g)[\mathbf{v}] = \rho(g\cdot g^\prime)[\mathbf{v}]
 ```
 
-Simply put, the group representation allows one to transform an image using groups and preserves the group structure. Note that vectors can be transformed by this. This might mean that a 2D image representation of the data I have might not be needed. 
+Simply put, the group representation allows one to transform an image using groups and preserves the group structure. Note that vectors can be transformed by this. This might mean that a 2D image representation of the data I have might not be needed.
+
+Equivariance definition:
+
+Equivariance is the property of an operator $\Phi: X \rightarrow Y$ (such as a neural network layer) by which it commutes with the group action: 
+
+```math
+
+\Phi \cdot \rho^X(g) = \rho^Y(g) \cdot \Phi
+
+```
 #### Lecture 1.3
 
 #### Lecture 1.4
