@@ -1217,7 +1217,7 @@ g^{-1} = \left( -\mathbf{R}_{\mathbf{\theta}}^{-1}\mathbf{x}, \mathbf{R}^{-1}_{\
 where, 
 
 ```math
-g = \left( \mathbf{x}, \mathbf{R}_{mathbf{\theta}} \right)$ and $g^{\prime} = \left( \mathbf{x^{\prime}}, \mathbf{R}_{\mathbf{\theta}^{\prime}} \right).
+g = \left( \mathbf{x}, \mathbf{R}_{\mathbf{\theta}} \right) and g^{\prime} = \left( \mathbf{x^{\prime}}, \mathbf{R}_{\mathbf{\theta}^{\prime}} \right).
 ``` 
 
 **Matrix Representation of** $\text{SE}(2)$:
