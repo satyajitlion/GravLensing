@@ -1226,11 +1226,11 @@ g = \left( \mathbf{x}, \mathbf{R}_{\mathbf{\theta}} \right) and g^{\prime} = \le
 g = \left( \mathbf{x}, \mathbf{R}_{\mathbf{\theta}} \right) \leftrightarrow
 \mathbf{G} = 
 
-\begin{bmatrix}
+\begin{pmatrix}
 \cos\left(\theta\right) & -\sin\left(\theta\right) & x \\
 \sin\left(\theta\right) & \cos\left(\theta\right) & y \\
 0 & 0 & 1
-\end{bmatrix}
+\end{pmatrix}
 
 = 
 
