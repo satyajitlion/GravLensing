@@ -1276,6 +1276,9 @@ Recall that the $R_{\theta}$ and $x$ are vectors that transform original image. 
 
 There are other groups that were discussed in this lecture such as the scale-translation groups but I am not going to go over this as it does not matter for my research. The affine or general definition for roto-translation and scale-translation (groups with two types of transformations of the image) were also covered. 
 
+So, how does this math translate to how to code GCNNs?
+
+If you have a set of points or group elements, you can think of them as a collection of parts in certain poses relative to each other. Then, similarly, if you have a convolution kernel, then you can think of it as a function on the group that assigns a weight to every relative position. Well, relative to what? Relative to the "part." For example, if you have an image of a symmetrical smiley face and it's drawn as a set of points in $\mathbb{R}^2$, then the collection of parts would refer to the eyes, nose, mouth etc. So, for the convolution kernel, it would then assign a weight to every relative position, relative to the nose. 
 #### Lecture 1.3
 
 #### Lecture 1.4
