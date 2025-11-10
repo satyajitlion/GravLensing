@@ -1234,10 +1234,10 @@ g = \left( \mathbf{x}, \mathbf{R}_{\mathbf{\theta}} \right) \leftrightarrow
 
 = 
 
-\begin{bmatrix}
+\begin{pmatrix}
 \mathbf{R}_{\mathbf{\theta}} & \mathbf{x} \\
 \mathbf{0}^T & 1
-\end{bmatrix}
+\end{pmatrix}
 ```
 
 with the group product and inverse simply given by the matrix product and matrix inverse. 
@@ -1252,24 +1252,24 @@ Note that bold letters here signify vectors (meant to simplify notation otherwis
 ```math
 \text{\textbf{Matrix form}: }
 
-\begin{bmatrix}
+\begin{pmatrix}
 \mathbf{R}_{\theta} & \mathbf{x} \\
 \mathbf{0}^T & 1
-\end{bmatrix}
+\end{pmatrix}
 
 \cdot
 
-\begin{bmatrix}
+\begin{pmatrix}
 \mathbf{R^\prime}_{\theta} & \mathbf{x^\prime} \\
 \mathbf{0}^T & 1
-\end{bmatrix}
+\end{pmatrix}
 
 = 
 
-\begin{bmatrix}
+\begin{pmatrix}
 \mathbf{R}_{\theta + \theta^\prime} & \mathbf{R}_{\theta}\mathbf{x}^\prime + \mathbf{x} \\
 \mathbf{0}^T & 1
-\end{bmatrix}
+\end{pmatrix}
 ```
 
 Recall that the $R_{\theta}$ and $x$ are vectors that transform original image. $R_{\theta}$ rotates it by some $\theta$ and $x$ is a translation. So for roto-translation, both rotation and translation are being accounted for in the GCNN.
