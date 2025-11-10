@@ -1240,7 +1240,9 @@ g = \left( \mathbf{x}, \mathbf{R}_{\mathbf{\theta}} \right) \leftrightarrow
 \end{bmatrix}
 ```
 
-Note that bold letters here signify vectors (meant to simplify notation otherwise the actual vector symbols make everything too crowded).
+with the group product and inverse simply given by the matrix product and matrix inverse. 
+
+Note that bold letters here signify vectors (meant to simplify notation otherwise the actual vector symbols make everything too crowded). 
 #### Lecture 1.3
 
 #### Lecture 1.4
