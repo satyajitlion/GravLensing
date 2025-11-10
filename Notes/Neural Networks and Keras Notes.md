@@ -1298,7 +1298,7 @@ This simply means that $\rho(g)$ is a linear transformation that is parametrized
 \rho(g^\prime) \circ \rho(g)[\mathbf{v}] = \rho(g\cdot g^\prime)[\mathbf{v}]
 ```
 
-Simply put, the group representation allows one to transform an image using groups. 
+Simply put, the group representation allows one to transform an image using groups and preserves the group structure. 
 #### Lecture 1.3
 
 #### Lecture 1.4
