@@ -1223,7 +1223,22 @@ g = \left( \mathbf{x}, \mathbf{R}_{mathbf{\theta}} \right)$ and $g^{\prime} = \l
 **Matrix Representation of** $\text{SE}(2)$:
 
 ```math
-g = \left( \mathbf{x}, \mathbf{R} \right) \leftrightarrow 
+g = \left( \mathbf{x}, \mathbf{R}_{\mathbf{\theta}} \right) \leftrightarrow
+\mathbf{G} = 
+
+\begin{bmatrix}
+\cos\left(\theta\right) & -\sin\left(\theta\right) & x \\
+\sin\left(\theta\right) & \cos\left(\theta\right) & y \\
+0 & 0 & 1
+\end{bmatrix}
+
+= 
+
+\begin{bmatrix}
+\mathbf{R}_{\mathbf{\theta}} & \mathbf{x} \\
+\mathbf{0}^T & 1
+\end{bmatrix}
+
 ```
 #### Lecture 1.3
 
