@@ -1208,13 +1208,19 @@ Now consider the **roto-translation group $\text{SE}(2)$** (aka the <u>2</u>D <u
 The group $\text{SE}(2)$ = $\mathbb{R}^2 \rtimes$ $\text{SO}(2)$ consists of the **coupled** space $\mathbb{R}^2\times S^1$ of translation vectors in $\mathbb{R}^2$, and rotations in $\text{SO}(2)$ (or equivalently orientations in $S^1$), and it is equipped with group product and group inverse as follows:
 
 ```math
-g \cdot g^\prime = (\vec{x}, \vec{R}_{\theta}) \cdot (\vec{x}^{\prime}, \vec{R}_{\theta^{\prime}}) = (\vec{R}_{\theta}\vec{x}^{\prime} + \vec{x}, \vec{R}_{\theta+\theta^{\prime}})
+g \cdot g^\prime = (\mathbf{x}, \mathbf{R}_{\mathbf{\theta}}) \cdot (\mathbf{x}^{\prime}, \mathbf{R}_{\mathbf{\theta}^{\prime}}) = (\mathbf{R}_{\mathbf{\theta}}\mathbf{x}^{\prime} + \mathbf{x}, \mathbf{R}_{\mathbf{\theta}+\mathbf{\theta}^{\prime}})
 ```
 ```math
-g^{-1} = (-\vec{R}_{\theta}^{-1}\vec{x}, \vec{R}^{-1}_{\theta}),
+g^{-1} = (-\mathbf{R}_{\mathbf{\theta}}^{-1}\mathbf{x}, \mathbf{R}^{-1}_{\mathbf{\theta}}),
 ```
 
-where $g = (\vec{x}, \vec{R}_{\theta})$ and $g^{\prime} = (\vec{x^{\prime}}, \vec{R}_{\theta^{\prime}})$.
+where $g = (\vec{x}, \vec{R}_{\theta})$ and $g^{\prime} = (\vec{x^{\prime}}, \vec{R}_{\theta^{\prime}})$. 
+
+**Matrix Representation of** $\text{SE}(2)$:
+
+```math
+g = (\mathbf{x}, \mathbf{R})
+```
 #### Lecture 1.3
 
 #### Lecture 1.4
