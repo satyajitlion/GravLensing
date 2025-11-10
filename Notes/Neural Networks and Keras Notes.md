@@ -1313,7 +1313,7 @@ Equivariance is the property of an operator $\Phi: X \rightarrow Y$ (such as a n
 This simply says that if you first apply the convolution and then transform the image or transform the image first and then convolve it, the final result will still be the same. This means the operator commutes with the group action and thus the operator is group equivariant.
 #### Lecture 1.3
 
-Cross correlation:
+**Cross correlations** are convolutions with reflected convoution kernels (and vice versa), given as such:
 
 ```math
 (k \ \star_{\mathbb{R}^2} f)(\mathbf{x}) = \int_{\mathbb{R}^2} k(\mathbf{x}^\prime - \mathbf{x})f(\mathbf{x}^\prime)d\mathbf{x}^\prime
