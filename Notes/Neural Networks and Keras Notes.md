@@ -1330,5 +1330,7 @@ This simply says that if you first apply the convolution and then transform the 
 Recall from Lecture 1.2 that $\mathcal{L}_{g}$ is a representation of the translation group and acts on the kernel to shift it to a different point on the image and then takes the inner product on $f$
 
 The inner product here can be thought of as the "similarity" between the kernel $k$ and signal $f$.
+
+So then the cross-correlation operator can be thought of as a form of template matching where $k$ is the templates which we're matching with the function $f$ under all possible translations.
 ***
 	### Tags: #NeuralNetworks #Keras
