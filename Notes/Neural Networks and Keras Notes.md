@@ -1331,6 +1331,6 @@ Recall from Lecture 1.2 that $\mathcal{L}_{g}$ is a representation of the transl
 
 The inner product here can be thought of as the "similarity" between the kernel $k$ and signal $f$.
 
-So then the cross-correlation operator can be thought of as a form of template matching where $k$ is the templates which we're matching with the function $f$ under all possible translations.
+So then the cross-correlation operator can be thought of as a form of template matching where $k$ is the templates which we're matching with the function $f$ under all possible transformations.
 ***
 	### Tags: #NeuralNetworks #Keras
