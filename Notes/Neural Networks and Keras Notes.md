@@ -1291,6 +1291,14 @@ A representation
 ```
 
 where this is a group homomorphism from $G$ to the general linear group $GL(V)$.
+
+This simply means that $\rho(g)$ is a linear transformation that is parametrized by group elements $g\in G$ that transforms some vector $\mathbf{v}\in V$ (e.g an image) such that we get get the following:
+
+```math
+\rho(g^\prime) \circ \rho(g)[\mathbf{v}] = \rho(g\cdot g^\prime)[\mathbf{v}]
+```
+
+Simply put, the group representation allows one to transform an image using groups. 
 #### Lecture 1.3
 
 #### Lecture 1.4
