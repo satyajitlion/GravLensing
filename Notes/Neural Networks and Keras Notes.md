@@ -1283,6 +1283,14 @@ If you have a set of points or group elements, you can think of them as a collec
 That is how the kernels are able to describe features of an image by assigning weights to relative positions.
 
 So the set of points transforms via the **group product** and for a convolution kernel, it then transforms via **group representations**..
+
+A representation 
+
+```math
+\rho: G\rightarrow GL(V),
+```
+
+where this is a group homomorphism from $G$ to the general linear group $GL(V)$.
 #### Lecture 1.3
 
 #### Lecture 1.4
