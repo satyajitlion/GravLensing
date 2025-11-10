@@ -1309,6 +1309,8 @@ Equivariance is the property of an operator $\Phi: X \rightarrow Y$ (such as a n
 \Phi \cdot \rho^X(g) = \rho^Y(g) \cdot \Phi
 
 ```
+
+This simply says that if you first apply the convolution and then transform the image or transform the image first and then convolve it, the final result will still be the same. This means the operator commutes with the group action and thus the operator is group equivariant.
 #### Lecture 1.3
 
 #### Lecture 1.4
