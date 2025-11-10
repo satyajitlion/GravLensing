@@ -1313,41 +1313,6 @@ Equivariance is the property of an operator $\Phi: X \rightarrow Y$ (such as a n
 This simply says that if you first apply the convolution and then transform the image or transform the image first and then convolve it, the final result will still be the same. This means the operator commutes with the group action and thus the operator is group equivariant.
 #### Lecture 1.3
 
-#### Lecture 1.4
-
-#### Lecture 1.5
-
-#### Lecture 1.6
-
-#### Lecture 1.7
-
-#### Lecture 1.2
-
-#### Lecture 2.1
-
-#### Lecture 2.2
-
-#### Lecture 2.3
-
-#### Lecture 2.4
-
-#### Lecture 2.5
-
-#### Lecture 2.6
-
-#### Lecture 3.1
-
-#### Lecture 3.2
-
-#### Lecture 3.3
-
-#### Lecture 3.4
-
-#### Lecture 3.5
-
-#### Lecture 3.6
-
-#### Lecture 3.7
 
 
 ***
