@@ -1300,6 +1300,14 @@ This simply means that $\rho(g)$ is a linear transformation that is parametrized
 
 Simply put, the group representation allows one to transform an image using groups and preserves the group structure. Note that vectors can be transformed by this. This might mean that a 2D image representation of the data I have might not be needed.
 
+The **left-regular representation** that transforms functions $f$ by transforming their domains via the inverse group action as such:
+
+```math
+\mathcal{L}_{g}[f](x):= f(g^{-1}\cdot x)
+```
+
+This basically means that the group action equals the group product when the domain is $G$.
+
 Equivariance definition:
 
 Equivariance is the property of an operator $\Phi: X \rightarrow Y$ (such as a neural network layer) by which it commutes with the group action: 
@@ -1319,15 +1327,8 @@ This simply says that if you first apply the convolution and then transform the 
 (k \ \star_{\mathbb{R}^2} f)(\mathbf{x}) = \int_{\mathbb{R}^2} k(\mathbf{x}^\prime - \mathbf{x})f(\mathbf{x}^\prime)d\mathbf{x}^\prime = (\mathcal{L}_{g} k, f)_{\mathbb{L_{2}(\mathbb{R^2})}}
 ```
 
-Recall from Lecture 1.2 that 
+Recall from Lecture 1.2 that $\mathcal{L}_{g}$ is a representation of the translation group and acts on the kernel to shift it to a different point on the image and then takes the inner product on $f$
 
-```math
-\mathcal{L}_{g}[f](x):= f(g^{-1}\cdot x)
-```
-
-which is the **left-regular representation** that transforms functions $f$ by transforming their domains via the inverse group action.
-
-This basically means that the group action equals the group product when the domain is $G$.
-
+The inner product here can be thought of as the "similarity" between the kernel $k$ and signal $f$.
 ***
 	### Tags: #NeuralNetworks #Keras
