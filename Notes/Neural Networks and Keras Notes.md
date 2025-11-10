@@ -1324,7 +1324,7 @@ This simply says that if you first apply the convolution and then transform the 
 **Cross correlations** are convolutions with reflected convoution kernels (and vice versa), given as such:
 
 ```math
-(k \ \star_{\mathbb{R}^2} f)(\mathbf{x}) = \int_{\mathbb{R}^2} k(\mathbf{x}^\prime - \mathbf{x})f(\mathbf{x}^\prime)d\mathbf{x}^\prime = (\mathcal{L}_{g} k, f)_{\mathbb{L_{2}(\mathbb{R^2})}}
+(k \ \star_{\mathbb{R}^2} f)(\mathbf{x}) = \int_{\mathbb{R}^2} k(\mathbf{x}^\prime - \mathbf{x})f(\mathbf{x}^\prime)d\mathbf{x}^\prime = (\mathcal{L}_{g} k, f)_{\mathbb{L}_{2}(\mathbb{R}^2)}
 ```
 
 Recall from Lecture 1.2 that $\mathcal{L}_{g}$ is a representation of the translation group and acts on the kernel to shift it to a different point on the image and then takes the inner product on $f$
