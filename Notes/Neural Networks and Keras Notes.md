@@ -1214,7 +1214,7 @@ g \cdot g^\prime = (\mathbf{x}, \mathbf{R}_{\mathbf{\theta}}) \cdot (\mathbf{x}^
 g^{-1} = (-\mathbf{R}_{\mathbf{\theta}}^{-1}\mathbf{x}, \mathbf{R}^{-1}_{\mathbf{\theta}}),
 ```
 
-where $g = (\vec{x}, \vec{R}_{\theta})$ and $g^{\prime} = (\vec{x^{\prime}}, \vec{R}_{\theta^{\prime}})$. 
+where $g = (\mathbf{x}, \mathbf{R}_{mathbf{\theta}})$ and $g^{\prime} = (\mathbf{x^{\prime}}, \mathbf{R}_{mathbf{\theta}^{\prime}})$. 
 
 **Matrix Representation of** $\text{SE}(2)$:
 
