@@ -1214,12 +1214,16 @@ g \cdot g^\prime = \left(\mathbf{x}, \mathbf{R}_{\mathbf{\theta}} \right) \cdot 
 g^{-1} = \left( -\mathbf{R}_{\mathbf{\theta}}^{-1}\mathbf{x}, \mathbf{R}^{-1}_{\mathbf{\theta}} \right),
 ```
 
-where $g = \left( \mathbf{x}, \mathbf{R}_{mathbf{\theta}} \right)$ and $g^{\prime} = \left( \mathbf{x^{\prime}}, \mathbf{R}_{\mathbf{\theta}^{\prime}} \right)$. 
+where, 
+
+```math
+g = \left( \mathbf{x}, \mathbf{R}_{mathbf{\theta}} \right)$ and $g^{\prime} = \left( \mathbf{x^{\prime}}, \mathbf{R}_{\mathbf{\theta}^{\prime}} \right).
+``` 
 
 **Matrix Representation of** $\text{SE}(2)$:
 
 ```math
-g = \left( \mathbf{x}, \mathbf{R} \right)
+g = \left( \mathbf{x}, \mathbf{R} \right) \leftrightarrow 
 ```
 #### Lecture 1.3
 
