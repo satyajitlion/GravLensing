@@ -1273,6 +1273,9 @@ Note that bold letters here signify vectors (meant to simplify notation otherwis
 ```
 
 Recall that the $R_{\theta}$ and $x$ are vectors that transform original image. $R_{\theta}$ rotates it by some $\theta$ and $x$ is a translation. So for roto-translation, both rotation and translation are being accounted for in the GCNN.
+
+There are other groups that were discussed in this lecture such as the scale-translation groups but I am not going to go over this as it does not matter for my research. The affine or general definition for roto-translation and scale-translation (groups with two types of transformations of the image) were also covered. 
+
 #### Lecture 1.3
 
 #### Lecture 1.4
