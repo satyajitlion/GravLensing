@@ -1242,7 +1242,37 @@ g = \left( \mathbf{x}, \mathbf{R}_{\mathbf{\theta}} \right) \leftrightarrow
 
 with the group product and inverse simply given by the matrix product and matrix inverse. 
 
-Note that bold letters here signify vectors (meant to simplify notation otherwise the actual vector symbols make everything too crowded). 
+Note that bold letters here signify vectors (meant to simplify notation otherwise the actual vector symbols make everything too crowded). Also, I accidentally bolded the $\theta$ above but it isn't a vector (as seems to be the case in the lecture). 
+
+**Key differences in parametric and matrix form**:
+
+```math
+\text{\textbf{Parametric form}: }\left(\mathbf{x}, \theta\right) \cdot \left( \mathbf{x}^\prime, \theta^\prime \right) = \left( \mathbf{R}_{\theta}\mathbf{x}^\prime + \mathbf{x}, \ \theta + \theta^\prime \text{ mod } 2\pi\right)
+```
+```math
+\text{\textbf{Matrix form}: }
+
+\begin{bmatrix}
+\mathbf{R}_{\theta} & \mathbf{x} \\
+\mathbf{0}^T & 1
+\end{bmatrix}
+
+\cdot
+
+\begin{bmatrix}
+\mathbf{R^\prime}_{\theta} & \mathbf{x^\prime} \\
+\mathbf{0}^T & 1
+\end{bmatrix}
+
+= 
+
+\begin{bmatrix}
+\mathbf{R}_{\theta + \theta^\prime} & \mathbf{R}_{\theta}\mathbf{x}^\prime + \mathbf{x} \\
+\mathbf{0}^T & 1
+\end{bmatrix}
+```
+
+Recall that the $R_{\theta}$ and $x$ are vectors that transform original image. $R_{\theta}$ rotates it by some $\theta$ and $x$ is a translation. So for roto-translation, both rotation and translation are being accounted for in the GCNN.
 #### Lecture 1.3
 
 #### Lecture 1.4
