@@ -1208,51 +1208,200 @@ Now consider the **roto-translation group $\text{SE}(2)$** (aka the <u>2</u>D <u
 The group $\text{SE}(2)$ = $\mathbb{R}^2 \rtimes$ $\text{SO}(2)$ consists of the **coupled** space $\mathbb{R}^2\times S^1$ of translation vectors in $\mathbb{R}^2$, and rotations in $\text{SO}(2)$ (or equivalently orientations in $S^1$), and it is equipped with group product and group inverse as follows:
 
 ```math
-g \cdot g^\prime = (\vec{x}, \vec{R}_{\theta}) \cdot (\vec{x}^{\prime}, \vec{R}_{\theta^{\prime}}) = (\vec{R}_{\theta}\vec{x}^{\prime} + \vec{x}, \vec{R}_{\theta+\theta^{\prime}})
+g \cdot g^\prime = \left(\mathbf{x}, \mathbf{R}_{\mathbf{\theta}} \right) \cdot \left( \mathbf{x}^{\prime}, \mathbf{R}_{\mathbf{\theta}^{\prime}} \right) = \left( \mathbf{R}_{\mathbf{\theta}}\mathbf{x}^{\prime} + \mathbf{x}, \mathbf{R}_{\mathbf{\theta}+\mathbf{\theta}^{\prime}} \right)
 ```
 ```math
-g^{-1} = (-\vec{R}_{\theta}^{-1}\vec{x}, \vec{R}^{-1}_{\theta}),
+g^{-1} = \left( -\mathbf{R}_{\mathbf{\theta}}^{-1}\mathbf{x}, \mathbf{R}^{-1}_{\mathbf{\theta}} \right),
 ```
 
-where $g = (\vec{x}, \vec{R}_{\theta})$ and $g^{\prime} = (\vec{x^{\prime}}, \vec{R}_{\theta^{\prime}})$.
+where, 
+
+```math
+g = \left( \mathbf{x}, \mathbf{R}_{\mathbf{\theta}} \right) \text{ and } g^{\prime} = \left( \mathbf{x^{\prime}}, \mathbf{R}_{\mathbf{\theta}^{\prime}} \right).
+``` 
+
+**Matrix Representation of** $\text{SE}(2)$:
+
+```math
+g = \left( \mathbf{x}, \mathbf{R}_{\mathbf{\theta}} \right) \leftrightarrow
+\mathbf{G} = 
+
+\begin{pmatrix}
+\cos\left(\theta\right) & -\sin\left(\theta\right) & x \\
+\sin\left(\theta\right) & \cos\left(\theta\right) & y \\
+0 & 0 & 1
+\end{pmatrix}
+
+= 
+
+\begin{pmatrix}
+\mathbf{R}_{\mathbf{\theta}} & \mathbf{x} \\
+\mathbf{0}^T & 1
+\end{pmatrix}
+```
+
+with the group product and inverse simply given by the matrix product and matrix inverse. 
+
+Note that bold letters here signify vectors (meant to simplify notation otherwise the actual vector symbols make everything too crowded). Also, I accidentally bolded the $\theta$ above but it isn't a vector (as seems to be the case in the lecture). 
+
+**Key differences in parametric and matrix form**:
+
+```math
+\text{\textbf{Parametric form}: }\left(\mathbf{x}, \theta\right) \cdot \left( \mathbf{x}^\prime, \theta^\prime \right) = \left( \mathbf{R}_{\theta}\mathbf{x}^\prime + \mathbf{x}, \ \theta + \theta^\prime \text{ mod } 2\pi\right)
+```
+```math
+\text{\textbf{Matrix form}: }
+
+\begin{pmatrix}
+\mathbf{R}_{\theta} & \mathbf{x} \\
+\mathbf{0}^T & 1
+\end{pmatrix}
+
+\cdot
+
+\begin{pmatrix}
+\mathbf{R^\prime}_{\theta} & \mathbf{x^\prime} \\
+\mathbf{0}^T & 1
+\end{pmatrix}
+
+= 
+
+\begin{pmatrix}
+\mathbf{R}_{\theta + \theta^\prime} & \mathbf{R}_{\theta}\mathbf{x}^\prime + \mathbf{x} \\
+\mathbf{0}^T & 1
+\end{pmatrix}
+```
+
+Recall that the $R_{\theta}$ and $x$ are vectors that transform original image. $R_{\theta}$ rotates it by some $\theta$ and $x$ is a translation. So for roto-translation, both rotation and translation are being accounted for in the GCNN.
+
+There are other groups that were discussed in this lecture such as the scale-translation groups but I am not going to go over this as it does not matter for my research. The affine or general definition for roto-translation and scale-translation (groups with two types of transformations of the image) were also covered. 
+
+So, how does this math translate to how to code GCNNs?
+
+If you have a set of points or group elements, you can think of them as a collection of parts in certain poses relative to each other. Then, similarly, if you have a convolution kernel, then you can think of it as a function on the group that assigns a weight to every relative position. Well, relative to what? Relative to the "part." For example, if you have an image of a symmetrical smiley face and it's drawn as a set of points in $\mathbb{R}^2$, then the collection of parts would refer to the eyes, nose, mouth etc. So, for the convolution kernel, it would then assign a weight to every relative position, relative to the nose. 
+
+That is how the kernels are able to describe features of an image by assigning weights to relative positions.
+
+So the set of points transforms via the **group product** and for a convolution kernel, it then transforms via **group representations**.
+
+A representation 
+
+```math
+\rho: G\rightarrow GL(V),
+```
+
+where this is a group homomorphism from $G$ to the general linear group $GL(V)$.
+
+This simply means that $\rho(g)$ is a linear transformation that is parametrized by group elements $g\in G$ that transforms some vector $\mathbf{v}\in V$ (e.g an image) such that we get get the following:
+
+```math
+\rho(g^\prime) \circ \rho(g)[\mathbf{v}] = \rho(g\cdot g^\prime)[\mathbf{v}]
+```
+
+Simply put, the group representation allows one to transform an image using groups and preserves the group structure. Note that vectors can be transformed by this. This might mean that a 2D image representation of the data I have might not be needed.
+
+The **left-regular representation** that transforms functions $f$ by transforming their domains via the inverse group action as such:
+
+```math
+\mathcal{L}_{g}[f](x):= f(g^{-1}\cdot x)
+```
+
+This basically means that the group action equals the group product when the domain is $G$.
+
+Equivariance definition:
+
+Equivariance is the property of an operator $\Phi: X \rightarrow Y$ (such as a neural network layer) by which it commutes with the group action: 
+
+```math
+
+\Phi \cdot \rho^X(g) = \rho^Y(g) \cdot \Phi
+
+```
+
+This simply says that if you first apply the convolution and then transform the image or transform the image first and then convolve it, the final result will still be the same. This means the operator commutes with the group action and thus the operator is group equivariant.
 #### Lecture 1.3
 
-#### Lecture 1.4
+**Cross correlations** are convolutions with reflected convoution kernels (and vice versa), given as such:
 
-#### Lecture 1.5
+```math
+(k \ \star_{\mathbb{R}^2} f)(\mathbf{x}) = \int_{\mathbb{R}^2} k(\mathbf{x}^\prime - \mathbf{x})f(\mathbf{x}^\prime)d\mathbf{x}^\prime = (\mathcal{L}_{g} k, f)_{\mathbb{L}_{2}(\mathbb{R}^2)}
+```
 
-#### Lecture 1.6
+Recall from Lecture 1.2 that $\mathcal{L}_{g}$ is a representation of the translation group and acts on the kernel to shift it to a different point on the image and then takes the inner product on $f$
 
-#### Lecture 1.7
+The inner product here can be thought of as the "similarity" between the kernel $k$ and signal $f$.
 
-#### Lecture 1.2
+So then the cross-correlation operator can be thought of as a form of template matching where $k$ is the templates which we're matching with the function $f$ under all possible transformations.
 
-#### Lecture 2.1
+However, this is for normal CNNs that aren't rotationally equivariant but only translationally equivariant.
 
-#### Lecture 2.2
+**$\text{SE}(2)$ equivariant cross correlations**:
 
-#### Lecture 2.3
+```math
+\text{Lifting Correlations: } (k \ \tilde{\star} \ f)(\mathbf{x}, \theta) = (\mathcal{L}^{\text{SE}(2) \rightarrow \mathbb{L}_{2}(\mathbb{R}^2)}_{g}k, f)_{\mathbb{L}_{2}(\mathbb{R}^2)} = (\mathcal{L}^{\mathbf{R}^2 \rightarrow \mathbb{L}_{2}(\mathbb{R}^2)}_{\mathbf{x}} \mathcal{L}^{\mathbf{\text{SO}(2)} \rightarrow \mathbb{L}_{2}(\mathbb{R}^2)}_{\theta}k,f)_{\mathbb{L}_{2}(\mathbb{R}^2)}
+```
 
-#### Lecture 2.4
+Here, the part that **rotates** the kernel is this:
 
-#### Lecture 2.5
+```math
+\mathcal{L}^{\mathbf{\text{SO}(2)} \rightarrow \mathbb{L}_{2}(\mathbb{R}^2)}_{\theta}
+```
 
-#### Lecture 2.6
+and the part that **translates** the kernel is this:
+```math
+\mathcal{L}^{\mathbf{R}^2 \rightarrow \mathbb{L}_{2}(\mathbb{R}^2)}_{\mathbf{x}}
+```
 
-#### Lecture 3.1
+Note that 
 
-#### Lecture 3.2
+```math
+(\mathcal{L}^{\mathbf{R}^2 \rightarrow \mathbb{L}_{2}(\mathbb{R}^2)}_{\mathbf{x}} \mathcal{L}^{\mathbf{\text{SO}(2)} \rightarrow \mathbb{L}_{2}(\mathbb{R}^2)}_{\theta}k,f)_{\mathbb{L}_{2}(\mathbb{R}^2)} = (k(\mathbf{R}_{\theta}^{-1}(\mathbf{x}^\prime - \mathbf{x})), f)_{\mathbb{L}_{2}(\mathbb{R}^2)}
+```
 
-#### Lecture 3.3
+where,
 
-#### Lecture 3.4
+```math
+\text{the term }  \underbrace{\mathcal{L}^{\mathbf{R}^2 \rightarrow \mathbb{L}_{2}(\mathbb{R}^2)}_{\mathbf{x}} \mathcal{L}^{\mathbf{\text{SO}(2)} \rightarrow \mathbb{L}_{2}(\mathbb{R}^2)}_{\theta}k} \text{ equals } \underbrace{k(\mathbf{R}_{\theta}^{-1}(\mathbf{x}^\prime - \mathbf{x}))}.
+```
 
-#### Lecture 3.5
+What happens here is that the convolution kernel rotates and tries to match the pattern with what it sees and if it doesn't match, it doesn't detect the pattern but if the rotation angle is correct and the match happens, then it notes the pattern as being detected. For example, going back to the smiley face example, if the kernel is able to detect the smile pattern post rotation then we have a hit detection and no hit detection if smile pattern does not match.
 
-#### Lecture 3.6
+Note that the feature map isn't just a function of $(x, y)$ anymore but it is additionally a function of $(x, y, \theta)$. This means that we aren't just accounting for all possible translations in $(x, y)$ but also for all rotations $\theta$ such that we have $(x, y, \theta)$. Therefore, the previous 2D feature map becomes a 3D feature map. 
 
-#### Lecture 3.7
+**Important**: the $\text{SE}(2)$ group lifting convolutions are roto-translation equivariant.
 
+Now we have "lifted features," so what now?
+
+```math
+\text{Group Correlations: } (k \star f)(\mathbf{x}, \theta) = (\mathcal{L}_{g}^{\text{SE}(2)\rightarrow \mathbb{L}_{2}(\text{SE}(2))}k,f)_{\mathbb{L}_{2}(\text{SE}(2))} = (\mathcal{L}^{\mathbf{R}^2 \rightarrow \mathbb{L}_{2}(\text{SE}(2))}_{\mathbf{x}} \mathcal{L}^{\mathbf{\text{SO}(2)} \rightarrow \mathbb{L}_{2}(\text{SE}(2))}_{\theta}k,f)_{\mathbb{L}_{2}(\text{SE}(2))} = (k(\mathbf{R}_{\theta}^{-1}(\mathbf{x}^\prime - \mathbf{x}), \mathbf{R}_{\theta^\prime - \theta}), f)_{\mathbb{L}_{2}(\mathbb{R}^2)}
+```
+
+where,
+
+```math
+\text{the term } \underbrace{\mathcal{L}^{\mathbf{R}^2 \rightarrow \mathbb{L}_{2}(\text{SE}(2))}_{\mathbf{x}} \mathcal{L}^{\mathbf{\text{SO}(2)} \rightarrow \mathbb{L}_{2}(\text{SE}(2))}_{\theta}k} \text{ equals } \underbrace{k(\mathbf{R}_{\theta}^{-1}(\mathbf{x}^\prime - \mathbf{x}), \mathbf{R}_{\theta^\prime - \theta})}.
+```
+
+
+Now, we saw have seen 3 types of cross-correlations (for normal CNNS, for CNNs equivariant to roto-translations, and a Group Correlation (G-corr) for template matching with kernels in 3D).
+
+**Important difference** between Lifting-corr and G-corr is that the input for lifting-corr has 2D feature maps while the input for G-corr has 3D feature maps.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/satyajitlion/GravLensing/refs/heads/main/GCNN_diagram.png"/>
+</p>
+
+A bonus that GCNNs have is that they also identify the features in the right locations with the right orientations. For instance, if you have a picture of a person and the kernel is able to find the eyes of said person through the image, then for a standard CNN it might be the case that the eyes are properly identified in the right location, however, they might be rotated by some arbitrary degree and might not have the right orientation which could cause the image to be quite distorted. GCNNs solve this issue and allow the eyes and other features from the image to have the same orientation as in the original image.
+
+Now, if you want to be invariant to the orientation of the image (accounting for its translation and rotation), then you would have to take a max projection or a mean pooling over the vertical axis of the Group feature map (3D). This would then yield the 2D feature map again. 
+
+**Brief Summary**:
+
+- Group convolution neural networks intuitively perform template matching.
+- A template (kernel) is transformed and matched (inner-product) under all possible transformations in the group
+- This creates higher-dimensional feature maps (functions on the group) on which we again define template matching via the group action
+- In these higher dimensional feature maps, we can detect advanced patterns in terms of features at _relative poses_.
+- G-CNNs are based on equivariant layers (and so they allow for weight sharing) and guarantee invariance through pooling.
 
 ***
-	### Tags: #NeuralNetworks #Keras
+### Tags: #NeuralNetworks #Keras
