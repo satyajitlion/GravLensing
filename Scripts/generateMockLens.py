@@ -3,7 +3,7 @@ import os
 import constants as c
 import numpy as np
 import matplotlib.pyplot as plt
-import Scripts.pygravlens as gl
+import pygravlens as gl
 from astropy.cosmology import Planck18 as cosmo
 
 def Generate_MockLens(args):
