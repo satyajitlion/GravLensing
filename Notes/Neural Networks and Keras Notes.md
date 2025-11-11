@@ -1364,6 +1364,6 @@ where,
 \text{the term } \mathcal{L}^{\mathbf{R}^2 \rightarrow \mathbb{L}_{2}(\mathbb{R}^2)}_{\mathbf{x}} \mathcal{L}^{\mathbf{\text{SO}(2)} \rightarrow \mathbb{L}_{2}(\mathbb{R}^2)}_{\theta}k \text{ equals } k(\mathbf{R}_{\theta}^{-1}(\mathbf{x}^\prime - \mathbf{x}))
 ```
 
-
+What happens here is that the convolution kernel rotates and tries to match the pattern with what it sees and if it doesn't match, it doesn't detect the pattern but if the rotation angle is correct and the match happens, then it notes the pattern as being detected. For example, going back to the smiley face example, if the kernel is able to detect the smile pattern post rotation then we have a hit detection and no hit detection if smile pattern does not match.
 ***
 ### Tags: #NeuralNetworks #Keras
