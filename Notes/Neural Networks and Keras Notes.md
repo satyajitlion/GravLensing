@@ -1393,5 +1393,11 @@ Now, we saw have seen 3 types of cross-correlations (for normal CNNS, for CNNs e
 
 A bonus that GCNNs have is that they also identify the features in the right locations with the right orientations. For instance, if you have a picture of a person and the kernel is able to find the eyes of said person through the image, then for a standard CNN it might be the case that the eyes are properly identified in the right location, however, they might be rotated by some arbitrary degree and might not have the right orientation which could cause the image to be quite distorted. GCNNs solve this issue and allow the eyes and other features from the image to have the same orientation as in the original image.
 
+Now, if you want to be invariant to the orientation of the image (accounting for its translation and rotation), then you would have to take a max projection or a mean pooling over the vertical axis of the Group feature map (3D). This would then yield the 2D feature map again. 
+
+**Brief Summary**:
+
+- Group convolution neural networks intuitively perform template matching. 
+
 ***
 ### Tags: #NeuralNetworks #Keras
