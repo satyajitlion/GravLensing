@@ -1401,7 +1401,7 @@ Now, if you want to be invariant to the orientation of the image (accounting for
 - A template (kernel) is transformed and matched (inner-product) under all possible transformations in the group
 - This creates higher-dimensional feature maps (functions on the group) on which we again define template matching via the group action
 - In these higher dimensional feature maps, we can detect advanced patterns in terms of features at _relative poses_.
-- G-CNNs are based on equivariant layers (and so weight sharing) and guarantee invariance through pooling.
+- G-CNNs are based on equivariant layers (and so they allow for weight sharing) and guarantee invariance through pooling.
 
 ***
 ### Tags: #NeuralNetworks #Keras
