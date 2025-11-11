@@ -1373,7 +1373,7 @@ Note that the feature map isn't just a function of $(x, y)$ anymore but it is ad
 Now we have "lifted features," so what now?
 
 ```math
-\text{Group Correlations: } (k \star f)(\mathbf{x}) = (\mathcal{L}_{g}^{\text{SE}(2)\rightarrow \mathbb{L}_{2}(\text{SE}(2))}k,f)_{}
+\text{Group Correlations: } (k \star f)(\mathbf{x}) = (\mathcal{L}_{g}^{\text{SE}(2)\rightarrow \mathbb{L}_{2}(\text{SE}(2))}k,f)_{\mathbb{L}_{2}(\text{SE}(2))} = (\mathcal{L}^{\mathbf{R}^2 \rightarrow \mathbb{L}_{2}(\text{SE}(2))}_{\mathbf{x}} \mathcal{L}^{\mathbf{\text{SO}(2)} \rightarrow \mathbb{L}_{2}(\text{SE}(2))}_{\theta}k,f)_{\mathbb{L}_{2}(\text{SE}(2))} = (k(\mathbf{R}_{\theta}^{-1}(\mathbf{x}^\prime - \mathbf{x}), \mathbf{R}_{\theta^\prime - \theta}), f)_{\mathbb{L}_{2}(\mathbb{R}^2)}
 ```
 
 ***
