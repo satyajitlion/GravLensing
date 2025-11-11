@@ -1352,6 +1352,17 @@ and the part that **translates** the kernel is this:
 \mathcal{L}^{\mathbf{R}^2 \rightarrow \mathbb{L}_{2}(\mathbb{R}^2)}_{\mathbf{x}}
 ```
 
+Note that 
+
+```math
+(\mathcal{L}^{\mathbf{R}^2 \rightarrow \mathbb{L}_{2}(\mathbb{R}^2)}_{\mathbf{x}} \mathcal{L}^{\mathbf{\text{SO}(2)} \rightarrow \mathbb{L}_{2}(\mathbb{R}^2)}_{\theta}k,f)_{\mathbb{L}_{2}(\mathbb{R}^2)} = (k(\mathbf{R}_{\theta}^{-1}(\mathbf{x}^\prime - \mathbf{x})), f)_{\mathbb{L}_{2}(\mathbb{R}^2)}
+```
+
+where,
+
+```math
+\text{the term } \mathcal{L}^{\mathbf{R}^2 \rightarrow \mathbb{L}_{2}(\mathbb{R}^2)}_{\mathbf{x}} \mathcal{L}^{\mathbf{\text{SO}(2)} \rightarrow \mathbb{L}_{2}(\mathbb{R}^2)}_{\theta}k \text{ equals } k(\mathbf{R}_{\theta}^{-1}(\mathbf{x}^\prime - \mathbf{x}))
+```
 
 
 ***
