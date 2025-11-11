@@ -1361,7 +1361,7 @@ Note that
 where,
 
 ```math
-\text{the term } \mathcal{L}^{\mathbf{R}^2 \rightarrow \mathbb{L}_{2}(\mathbb{R}^2)}_{\mathbf{x}} \mathcal{L}^{\mathbf{\text{SO}(2)} \rightarrow \mathbb{L}_{2}(\mathbb{R}^2)}_{\theta}k \text{ equals } k(\mathbf{R}_{\theta}^{-1}(\mathbf{x}^\prime - \mathbf{x}))
+\text{the term }  \underbrace{\mathcal{L}^{\mathbf{R}^2 \rightarrow \mathbb{L}_{2}(\mathbb{R}^2)}_{\mathbf{x}} \mathcal{L}^{\mathbf{\text{SO}(2)} \rightarrow \mathbb{L}_{2}(\mathbb{R}^2)}_{\theta}k} \text{ equals } \underbrace{k(\mathbf{R}_{\theta}^{-1}(\mathbf{x}^\prime - \mathbf{x}))}.
 ```
 
 What happens here is that the convolution kernel rotates and tries to match the pattern with what it sees and if it doesn't match, it doesn't detect the pattern but if the rotation angle is correct and the match happens, then it notes the pattern as being detected. For example, going back to the smiley face example, if the kernel is able to detect the smile pattern post rotation then we have a hit detection and no hit detection if smile pattern does not match.
@@ -1375,6 +1375,13 @@ Now we have "lifted features," so what now?
 ```math
 \text{Group Correlations: } (k \star f)(\mathbf{x}) = (\mathcal{L}_{g}^{\text{SE}(2)\rightarrow \mathbb{L}_{2}(\text{SE}(2))}k,f)_{\mathbb{L}_{2}(\text{SE}(2))} = (\mathcal{L}^{\mathbf{R}^2 \rightarrow \mathbb{L}_{2}(\text{SE}(2))}_{\mathbf{x}} \mathcal{L}^{\mathbf{\text{SO}(2)} \rightarrow \mathbb{L}_{2}(\text{SE}(2))}_{\theta}k,f)_{\mathbb{L}_{2}(\text{SE}(2))} = (k(\mathbf{R}_{\theta}^{-1}(\mathbf{x}^\prime - \mathbf{x}), \mathbf{R}_{\theta^\prime - \theta}), f)_{\mathbb{L}_{2}(\mathbb{R}^2)}
 ```
+
+where,
+
+```math
+\text{the term } \underbrace{\mathcal{L}^{\mathbf{R}^2 \rightarrow \mathbb{L}_{2}(\text{SE}(2))}_{\mathbf{x}} \mathcal{L}^{\mathbf{\text{SO}(2)} \rightarrow \mathbb{L}_{2}(\text{SE}(2))}_{\theta}k} \text{ equals } \underbrace{k(\mathbf{R}_{\theta}^{-1}(\mathbf{x}^\prime - \mathbf{x}), \mathbf{R}_{\theta^\prime - \theta})}.
+```
+
 
 ***
 ### Tags: #NeuralNetworks #Keras
