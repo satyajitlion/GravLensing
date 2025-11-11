@@ -1365,5 +1365,8 @@ where,
 ```
 
 What happens here is that the convolution kernel rotates and tries to match the pattern with what it sees and if it doesn't match, it doesn't detect the pattern but if the rotation angle is correct and the match happens, then it notes the pattern as being detected. For example, going back to the smiley face example, if the kernel is able to detect the smile pattern post rotation then we have a hit detection and no hit detection if smile pattern does not match.
+
+Note that the feature map isn't just a function of $(x, y)$ anymore but it is additionally a function of $(x, y, \theta)$
+
 ***
 ### Tags: #NeuralNetworks #Keras
