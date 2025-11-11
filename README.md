@@ -15,11 +15,16 @@ This project develops a machine learning approach to gravitational lens modeling
 Gravitational lens time delays provide one of the most direct methods for measuring $H_0$, but traditional modeling approaches are computationally inefficient. This project explores machine learning as a faster, more scalable alternative for extracting cosmological parameters from lensed systems.
 
 ## File Structure
+## Project Structure
+
 | File/Folder | Description |
 |-------------|-------------|
 | `pygravlens.py` | Dr. Keeton's gravlens software |
 | `generateMockLenses.py` | Main generation script |
 | `constants.py` | Configuration parameters and constants |
+| `NetworkModel.py` | Neural Network architecture |
+| `combineMockLens.py` | Combines batch Amarel output files into single files |
+| `extract_data.py` | Extracts and simplifies data for neural network input |
 | `analysis.ipynb` | Jupyter notebook for analyzing mock lenses |
 | `MockLensTests.ipynb` | Testing dictionary structure and functionality |
 | `lensingBasics.ipynb` | Educational notebook for lensing basics |
@@ -28,6 +33,8 @@ Gravitational lens time delays provide one of the most direct methods for measur
 | `valShear.npy` | Output: shear-only lenses |
 | `valEllip.npy` | Output: ellipticity-only lenses |
 | `valBoth.npy` | Output: combined lenses |
+| `AmarelOutput/` | Folder containing all Amarel cluster data output |
+| `CombinedArrays/` | Folder containing combined arrays from Amarel output |
 | `Meeting-Notes/` | Folder of notes from research meetings |
 | `Research Log/` | Folder documenting my work |
 | `Notes/` | Folder of notes I took for this research |
