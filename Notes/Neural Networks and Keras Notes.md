@@ -1385,7 +1385,7 @@ where,
 
 Now, we saw have seen 3 types of cross-correlations (for normal CNNS, for CNNs equivariant to roto-translations, and a Group Correlation (G-corr) for template matching with kernels in 3D).
 
-Important difference between Lifting-corr and G-corr is that the input for lifting-corr has 2D feature maps while the input for G-corr has 3D feature maps.
+**Important difference** between Lifting-corr and G-corr is that the input for lifting-corr has 2D feature maps while the input for G-corr has 3D feature maps.
 
 ***
 ### Tags: #NeuralNetworks #Keras
