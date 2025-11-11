@@ -1383,5 +1383,7 @@ where,
 ```
 
 
+Now, we saw have seen 3 types of cross-correlations (for normal CNNS, for CNNs equivariant to roto-translations, and a Group Correlation (G-corr) for template matching with kernels in 3D).
+
 ***
 ### Tags: #NeuralNetworks #Keras
