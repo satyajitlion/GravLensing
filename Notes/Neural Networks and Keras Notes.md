@@ -1338,7 +1338,7 @@ However, this is for normal CNNs that aren't rotationally equivariant but only t
 **$\text{SE}(2)$ equivariant cross correlations**:
 
 ```math
-(k \ \tilde{\star} \ f)(\mathbf{x}) = (\mathcal{L}^{\text{SE}(2) \rightarrow \mathbb{L}_{2}(\mathbb{R}^2)}_{g}k, f)_{\mathbb{L}_{2}(\mathbb{R}^2)} = (\mathcal{L}^{\mathbf{R}^2 \rightarrow \mathbb{L}_{2}(\mathbb{R}^2)}_{\mathbf{x}} \mathcal{L}^{\mathbf{\text{SO}(2)} \rightarrow \mathbb{L}_{2}(\mathbb{R}^2)}_{\theta}k,f)_{\mathbb{L}_{2}(\mathbb{R}^2)}
+\text{Lifting Correlations: } (k \ \tilde{\star} \ f)(\mathbf{x}) = (\mathcal{L}^{\text{SE}(2) \rightarrow \mathbb{L}_{2}(\mathbb{R}^2)}_{g}k, f)_{\mathbb{L}_{2}(\mathbb{R}^2)} = (\mathcal{L}^{\mathbf{R}^2 \rightarrow \mathbb{L}_{2}(\mathbb{R}^2)}_{\mathbf{x}} \mathcal{L}^{\mathbf{\text{SO}(2)} \rightarrow \mathbb{L}_{2}(\mathbb{R}^2)}_{\theta}k,f)_{\mathbb{L}_{2}(\mathbb{R}^2)}
 ```
 
 Here, the part that **rotates** the kernel is this:
