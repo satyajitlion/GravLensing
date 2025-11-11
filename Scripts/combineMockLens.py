@@ -1,7 +1,7 @@
 import numpy as np
 import glob
 
-folder_path = "AmarelOutput"
+folder_path = "amarel_output"
 
 def combine_arrays(array_type, folder=folder_path):
     file_pattern = f"{folder}/{array_type}_*.npy"
@@ -16,7 +16,7 @@ valBoth = combine_arrays('valBoth', folder_path)
 
 # Saving the arrays
 
-output_folder = "CombinedArrays"
+output_folder = "combined_arrays"
 
 np.save(f"{output_folder}/valShear.npy", valShear)
 np.save(f"{output_folder}/valEllip.npy", valEllip)
