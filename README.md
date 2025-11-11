@@ -15,24 +15,23 @@ This project develops a machine learning approach to gravitational lens modeling
 Gravitational lens time delays provide one of the most direct methods for measuring $H_0$, but traditional modeling approaches are computationally inefficient. This project explores machine learning as a faster, more scalable alternative for extracting cosmological parameters from lensed systems.
 
 ## File Structure
-```
-project/
-├── pygravlens.py # Dr. Keeton's gravlens software
-├── generateMockLenses.py # Main generation script
-├── constants.py # Configuration parameters and constants
-├── analysis.ipynb # Jupyter notebook for analyzing mock lenses
-├── MockLensTests.ipynb # Testing dictionary structure and functionality
-├── lensingBasics.ipynb # Educational notebook for lensing basics
-├── timedelays.ipynb # Educational notebook for learning about time delays 
-├── Honors in Astronomy Project Outline.pdf # Project proposal/documentation
-├── valShear.npy # Output: shear-only lenses
-├── valEllip.npy # Output: ellipticity-only lenses
-├── valBoth.npy # Output: combined lenses
-├── Meeting-Notes # Folder of my notes from research meetings  
-├── Research Log # Folder documenting my work. 
-├── Notes # Folder of notes I took for this research
-└── README.md # This file
-```
+| File/Folder | Description |
+|-------------|-------------|
+| `pygravlens.py` | Dr. Keeton's gravlens software |
+| `generateMockLenses.py` | Main generation script |
+| `constants.py` | Configuration parameters and constants |
+| `analysis.ipynb` | Jupyter notebook for analyzing mock lenses |
+| `MockLensTests.ipynb` | Testing dictionary structure and functionality |
+| `lensingBasics.ipynb` | Educational notebook for lensing basics |
+| `timedelays.ipynb` | Educational notebook for learning about time delays |
+| `Honors in Astronomy Project Outline.pdf` | Project proposal/documentation |
+| `valShear.npy` | Output: shear-only lenses |
+| `valEllip.npy` | Output: ellipticity-only lenses |
+| `valBoth.npy` | Output: combined lenses |
+| `Meeting-Notes/` | Folder of notes from research meetings |
+| `Research Log/` | Folder documenting my work |
+| `Notes/` | Folder of notes I took for this research |
+| `README.md` | Project documentation |
 
 ## Project Pipeline
 
