@@ -26,7 +26,7 @@ Systematic patching of the G-CNN codebase to work with modern toolchains while p
 ***
 ### Challenges & Pause Points
 
-- Batch normalization dimension mismatches revealed a fundamental issue: true G-CNNs output `channels * group_size` but our fallback uses regular convolution dimensions.
+- Batch normalization dimension mismatches revealed that true G-CNNs output `channels * group_size` but our fallback uses regular convolution dimensions.
     
 - The pure PyTorch fallback loses the true group-equivariant properties, essentially becoming a regular CNN with G-CNN interface.
     
