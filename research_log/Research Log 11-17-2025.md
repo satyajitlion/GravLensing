@@ -48,7 +48,7 @@ Final validation of the patched G-CNN implementation and comprehensive testing t
 ***
 ### Next Steps
 
-##### Tags:
+##### Tags: #GroupTheory #GCNN #CNN #Debugging #Troubleshooting #NeuralNetwork #GroupEquivariantCNNs 
 
 
 
