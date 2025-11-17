@@ -37,8 +37,6 @@ Setting up the PyTorch G-CNN implementation and troubleshooting extensive compat
 - Is the performance gain from CUDA extensions essential for initial experiments, or can we proceed with slower pure-PyTorch implementations?
     
 - Would it be more efficient to reimplement the core G-CNN layers in modern PyTorch rather than debugging this specific repository?
-    
-- How critical are the optimized C++/CUDA kernels for the gravitational lensing application scale? Our datasets may be small enough that Python overhead is acceptable initially.
 ***
 ### Next Steps
 
