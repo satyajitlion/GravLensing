@@ -24,9 +24,9 @@ Setting up the PyTorch G-CNN implementation and troubleshooting extensive compat
 ***
 ### Challenges & Pause Points
 
-- Deep dependency hell: modern PyTorch versions incompatible with repository's CUDA 11.3 requirement, and old PyTorch versions no longer available.
+- Modern PyTorch versions incompatible with repository's CUDA 11.3 requirement, and old PyTorch versions no longer available.
     
-- CUDA extension compilation failures due to API changes between CUDA versions and missing dependencies (ninja build system).
+- CUDA extension compilation failures due to API changes between CUDA versions and missing dependencies.
     
 - Complex build process with multiple setup files (setup_cpp.py, setup_cuda.py) requiring careful environment configuration.
     
