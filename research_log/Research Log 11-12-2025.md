@@ -16,7 +16,7 @@ Initial exploration of group-equivariant convolutional neural networks (G-CNNs) 
 
 - Confirmed that G-CNNs theoretically align well with gravitational lensing problems, where the same physical source appears in multiple orientations due to lensing geometry.
     
-- Determined that the PyTorch implementation would be more maintainable long-term due to better ecosystem support and my existing PyTorch expertise.
+- Determined that the PyTorch implementation would be more maintainable long-term due to better ecosystem support.
     
 - Established that the key innovation - building equivariance directly into convolution weights rather than data augmentation - could provide significant efficiency and generalization benefits for lensing analysis.
 ***
