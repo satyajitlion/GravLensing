@@ -30,7 +30,7 @@ Systematic patching of the G-CNN codebase to work with modern toolchains while p
     
 - The pure PyTorch fallback loses the true group-equivariant properties, essentially becoming a regular CNN with G-CNN interface.
     
-- Extensive terminal output from the training script made debugging difficult, requiring modifications to reduce verbosity.
+- A big terminal output from the training script made debugging difficult, requiring modifications to reduce verbosity.
     
 - Uncertainty about whether the patched implementation preserves enough of the G-CNN benefits to be useful for our gravitational lensing application.
 ***
@@ -52,7 +52,7 @@ Systematic patching of the G-CNN codebase to work with modern toolchains while p
     
 4. Plan performance benchmarking to quantify the cost of using fallback implementations vs. optimized extensions.
 
-##### Tags:
+##### Tags: #GroupTheory #GCNN #CNN #Debugging #Troubleshooting #NeuralNetwork #GroupEquivariantCNNs 
 
 
 

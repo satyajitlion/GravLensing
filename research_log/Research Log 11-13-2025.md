@@ -47,7 +47,7 @@ Setting up the PyTorch G-CNN implementation and troubleshooting extensive compat
 3. Test the pure-PyTorch fallback implementation to verify mathematical correctness even without performance optimizations.
     
 4. Begin planning the adaptation from image classification (MNIST) to parameter regression (lensing parameters).
-##### Tags: #Patching #FixingErrors #NeuralNetwork #GroupTheory #GCNN 
+##### Tags: #GroupTheory #GCNN #CNN #Debugging #Troubleshooting #NeuralNetwork #GroupEquivariantCNNs 
 
 
 

@@ -46,7 +46,7 @@ Initial exploration of group-equivariant convolutional neural networks (G-CNNs) 
     
 4. Plan architecture modifications to handle the specific data structure of gravitational lensing systems.
 
-##### Tags: #GCNN #GroupEquivariantCNNs #GroupConvolution #GroupTheory 
+##### Tags: #GroupTheory #GCNN #CNN #Debugging #Troubleshooting #NeuralNetwork #GroupEquivariantCNNs 
 
 
 
