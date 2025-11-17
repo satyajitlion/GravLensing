@@ -1,6 +1,6 @@
 ### Today's Focus
 
-Initial exploration of group-equivariant convolutional neural networks (G-CNNs) for gravitational lensing analysis. The goal was to understand G-CNN theory and identify potential implementations that could handle the rotational symmetries present in gravitational lensing systems, particularly for processing multiple images of the same lens system.
+Initial exploration of group-equivariant convolutional neural networks (G-CNNs) for gravitational lensing analysis. The goal was to use learned G-CNN theory and identify potential implementations that could handle the rotational symmetries present in gravitational lensing systems, particularly for processing multiple images of the same lens system. For this, I used the [Jack Ding's repository](https://github.com/diningeachox/G-CNN). 
 ***
 ### What I was able to accomplish
 
