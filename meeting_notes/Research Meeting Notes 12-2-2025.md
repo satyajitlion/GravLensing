@@ -9,3 +9,4 @@
 	```
 	
 - for data augmentation, position and deflection changes by the same amount 
+- Ardent (algebra for Group theory)
