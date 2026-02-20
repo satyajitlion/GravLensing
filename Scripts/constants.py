@@ -17,17 +17,31 @@ EinsArr = np.random.uniform(1.0, 1.5, num_mock)
 # from a radius of 0 to 1 in polar coords
 r = np.sqrt(np.random.uniform(0.0, 1.0, num_mock))
 
-theta_src = np.random.uniform(0, 2*math.pi, num_mock)
+# sources:
+# theta_src = np.random.uniform(0, 2*math.pi, num_mock)
+
+# images:
+
+theta_im = np.random.uniform(0, 2*math.pi, num_mock)
+im1 = [];
+im2 = [];
 
 # random source positions
 betaOne = [];
 betaTwo = [];
 
 for i in range(num_mock):
+    im1.append(r[i]*np.cos(theta_im[i]));
+    im2.append(r[i]*np.sin(theta_im[i]));
+
+'''
+for i in range(num_mock):
     # x = rcos theta
     # y = rsin theta
     betaOne.append(r[i]*np.cos(theta_src[i]))
     betaTwo.append(r[i]*np.sin(theta_src[i]))
+'''
+
 
 # randomized shear vals b/w 0 and 0.1 and ellipticity vals between 0 and 0.5
 

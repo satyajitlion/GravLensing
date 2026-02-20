@@ -22,6 +22,17 @@ def Generate_MockLens(args):
 
     values = []
     
+    src = []
+    mag_tensor = []
+    time_del = []
+
+    for i in range(c.num_mock):
+        src_i, mag_tensor_i, time_del_i = model_elpow.lenseqn([c.im1[i], c.im2[i]])
+        src.append(src_i)
+        mag_tensor.append(mag_tensor_i)
+        time_del.append(time_del_i)
+        
+    
     for i in range(c.num_mock):
         
         # Simplified conditional logic
@@ -38,7 +49,7 @@ def Generate_MockLens(args):
         model_elpow = gl.lensmodel([plane_elpow], Ds=c.Dsrc[i])
         model_elpow.tile()
         
-        imgarr, muarr, tarr = model_elpow.findimg([c.betaOne[i], c.betaTwo[i]])
+        imgarr, muarr, tarr = model_elpow.findimg(src[i])
         parr, defarr, garr = plane_elpow.defmag(imgarr)
         # defarr, marr = model_elpow.defmag(imgarr) deflection, magnification
         
