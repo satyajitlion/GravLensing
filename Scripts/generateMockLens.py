@@ -22,15 +22,6 @@ def Generate_MockLens(args):
 
     values = []
     
-    src = []
-    mag_tensor = []
-    time_del = []
-    
-    for i in range (c.num_mock):
-        src.append(src_i)
-        mag_tensor.append(mag_tensor_i)
-        time_del.append(time_del_i)
-    
     for i in range(c.num_mock):
         # Create lens plane based on the chosen model type
         if shear_only:
@@ -45,13 +36,17 @@ def Generate_MockLens(args):
         
         # Build the full lens model and tile it (if required)
         model_elpow = gl.lensmodel([plane_elpow], Ds=c.Dsrc[i])
-        model_elpow.tile()
+        
+        model_elpow.maingrid(-3,3,20,-3,3,20)
+        model_elpow.galgrid(1.0e-6,3.0,20,20)
+        
+        model_elpow.tile(addlevels=0)
         
         # Compute the source position from the given image coordinates
         src_i, mag_tensor_i, time_del_i = model_elpow.lenseqn([c.im1[i], c.im2[i]]) # maps back one of the images to the source.
         
         # Find all images for that source
-        imgarr, muarr, tarr = model_elpow.findimg(src[i]) # gives back all the images that point to the source
+        imgarr, muarr, tarr = model_elpow.findimg(src_i) # gives back all the images that point to the source
         parr, defarr, garr = plane_elpow.defmag(imgarr)
         
         # defarr, marr = model_elpow.defmag(imgarr) deflection, magnification
@@ -109,7 +104,7 @@ try:
     np.save(f'{output_dir}/valEllip.npy', vals_ellip)
     np.save(f'{output_dir}/valBoth.npy', vals_both)
     
-    print(f"Mock lenses generated successfully{output_dir}/!")
+    print(f"Mock lenses generated successfully {output_dir}/!")
     
 except Exception as e:
     print(f"Error generating mock lenses: {e}")
@@ -131,7 +126,7 @@ try:
     np.save(f'{output_dir}/valEllip_{task_id}.npy', vals_ellip)
     np.save(f'{output_dir}/valBoth_{task_id}.npy', vals_both)
     
-    print(f"Mock lenses generated successfully{output_dir}/!")
+    print(f"Mock lenses generated successfully {output_dir}/!")
     
 except Exception as e:
     print(f"Error generating mock lenses: {e}")'''
