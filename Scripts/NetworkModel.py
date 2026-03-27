@@ -45,22 +45,25 @@ class MinimumEpochEarlyStopping(tf.keras.callbacks.Callback):
 def create_single_model():
     """Model for single image lenses (5 inputs, 3 outputs)"""
     model = tf.keras.Sequential([
-        tf.keras.layers.Input(shape=(5,)),  # 5 input features
-        
+        # 5 input features
+        tf.keras.layers.Input(shape=(5,)),
         # Simpler architecture for small dataset
+        # Reduced L2
         tf.keras.layers.Dense(16, activation='relu',
-                            kernel_regularizer=tf.keras.regularizers.l2(0.0005)),  # Reduced L2
-        tf.keras.layers.Dropout(0.1),  # Reduced dropout
+                            kernel_regularizer=tf.keras.regularizers.l2(0.0005)),
+        # Reduced dropout
+        tf.keras.layers.Dropout(0.1),
         tf.keras.layers.BatchNormalization(),
         
         tf.keras.layers.Dense(8, activation='relu'),
         tf.keras.layers.Dropout(0.1),
-        
-        tf.keras.layers.Dense(3, activation='linear')  # 3 regression outputs
+        # 3 regression outputs
+        tf.keras.layers.Dense(3, activation='linear')
     ])
     
     model.compile(
-        optimizer=tf.keras.optimizers.Adam(learning_rate=0.001),  # Higher learning rate
+        # Higher learning rate
+        optimizer=tf.keras.optimizers.Adam(learning_rate=0.001),
         loss='mse',
         metrics=['mae']
     )
@@ -69,12 +72,13 @@ def create_single_model():
 def create_double_model():
     """Model for double image lenses (8 inputs, 6 outputs)"""
     model = tf.keras.Sequential([
-        tf.keras.layers.Input(shape=(8,)),  # 8 input features
-        
+        # 8 input features
+        tf.keras.layers.Input(shape=(8,)),
         # Layer 1 with regularization
         tf.keras.layers.Dense(64, activation='relu',
                             kernel_regularizer=tf.keras.regularizers.l2(0.001)),
-        tf.keras.layers.Dropout(0.2),  # Slightly reduced
+        # Slightly reduced
+        tf.keras.layers.Dropout(0.2),
         tf.keras.layers.BatchNormalization(),
         
         # Layer 2 with regularization  
@@ -87,12 +91,13 @@ def create_double_model():
         tf.keras.layers.Dense(64, activation='relu'),
         tf.keras.layers.Dropout(0.2),
         tf.keras.layers.BatchNormalization(),
-        
-        tf.keras.layers.Dense(6, activation='linear')  # 6 regression outputs
+        # 6 regression outputs
+        tf.keras.layers.Dense(6, activation='linear')
     ])
     
     model.compile(
-        optimizer=tf.keras.optimizers.Adam(learning_rate=0.0005),  # Adjusted LR
+        # Adjusted LR
+        optimizer=tf.keras.optimizers.Adam(learning_rate=0.0005),
         loss='mse',
         metrics=['mae']
     )
@@ -101,22 +106,25 @@ def create_double_model():
 def create_quad_model():
     """Model for quad image lenses (14 inputs, 12 outputs)"""
     model = tf.keras.Sequential([
-        tf.keras.layers.Input(shape=(14,)),  # 14 input features
-        
+        # 14 input features
+        tf.keras.layers.Input(shape=(14,)),
         # Simpler architecture for small dataset
+        # Reduced L2
         tf.keras.layers.Dense(32, activation='relu',
-                            kernel_regularizer=tf.keras.regularizers.l2(0.0005)),  # Reduced L2
-        tf.keras.layers.Dropout(0.1),  # Reduced dropout
+                            kernel_regularizer=tf.keras.regularizers.l2(0.0005)),
+        # Reduced dropout
+        tf.keras.layers.Dropout(0.1),
         tf.keras.layers.BatchNormalization(),
         
         tf.keras.layers.Dense(16, activation='relu'),
         tf.keras.layers.Dropout(0.1),
-        
-        tf.keras.layers.Dense(12, activation='linear')  # 12 regression outputs
+        # 12 regression outputs
+        tf.keras.layers.Dense(12, activation='linear')
     ])
     
     model.compile(
-        optimizer=tf.keras.optimizers.Adam(learning_rate=0.001),  # Higher learning rate
+        # Higher learning rate
+        optimizer=tf.keras.optimizers.Adam(learning_rate=0.001),
         loss='mse',
         metrics=['mae']
     )
@@ -130,7 +138,7 @@ def train_model_with_roto_translation_singles(model, x, y, rotation_prob=0.3, tr
     if x.shape[1] != 5:
         raise ValueError(f"Single model expects 5 input features, got {x.shape[1]}")
     
-    # Use custom early stopping with minimum epochs
+    # Use early stopping with minimum epochs
     early_stopping = MinimumEpochEarlyStopping(
         min_epochs=10,  # Must train at least 10 epochs
         patience=10,
