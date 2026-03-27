@@ -89,7 +89,7 @@ def Generate_MockLens(args):
         values.append(elpow_dict)
     
     return values
-
+'''
 ### testing code locally
 
 output_dir = "local_gen_test"
@@ -129,4 +129,4 @@ try:
     print(f"Mock lenses generated successfully {output_dir}/!")
     
 except Exception as e:
-    print(f"Error generating mock lenses: {e}")'''
+    print(f"Error generating mock lenses: {e}")
