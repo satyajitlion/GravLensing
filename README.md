@@ -4,7 +4,7 @@ A pipeline for generating mock gravitational lens data and training neural netwo
 
 ## Project Overview
 
-This project develops a machine learning approach to gravitational lens modeling, with the ultimate goal of determining the Hubble Constant. The workflow consists of three main phases:
+This project develops a machine learning approach to gravitational lens modeling, with the goal of determining the Hubble Constant. The workflow consists of three main phases:
 
 1. **Mock Lens Generation**: Create realistic training data using gravitational lensing physics
 2. **Neural Network Training**: Train models to predict lens parameters from observable features
@@ -45,7 +45,7 @@ Gravitational lens time delays provide one of the most direct methods for measur
 ### Phase 1: Data Generation (Completed)
 - **Input**: Cosmological parameters, lens/source redshifts, mass distributions
 - **Process**: Physical lens modeling using `pygravlens.py`
-- **Output**: Mock lens systems with known parameters (→ training data)
+- **Output**: Mock lens systems with known parameters (our training data for ML model)
 
 ### Phase 2: Machine Learning Training (Current)
 - **Input**: Mock lens data (image positions, magnifications, time delays)
@@ -60,12 +60,12 @@ Gravitational lens time delays provide one of the most direct methods for measur
 ## Requirements
 
 ### Core Dependencies
-- Python 3.7+
-- numpy, matplotlib, astropy
+- Python 3.13.12
+- Scientific Libraries Available in requirements.txt
 - jupyter (for analysis notebooks)
 
-### ML Dependencies (Future Phase)
-- tensorflow/pytorch
+### ML Dependencies
+- tensorflow & keras
 - scikit-learn
 - pandas
 
