@@ -9,13 +9,13 @@ from astropy.cosmology import Planck18 as cosmo
 # constant vals
 
 # number of mock lenses
-num_mock = 10**4
+num_mock = 10**5
 
 # generates random einstein radii 
 EinsArr = np.random.uniform(1.0, 1.5, num_mock) 
 
 # from a radius of 0 to 1.5 in polar coords
-r = np.sqrt(np.random.uniform(0.0, 9.0, num_mock))
+r = np.sqrt(np.random.uniform(0.0, 16.0, num_mock))
 
 # sources:
 # theta_src = np.random.uniform(0, 2*math.pi, num_mock)
