@@ -195,6 +195,8 @@ def create_single_model(loss_type='mse', quantile=0.6):
 def create_double_model(loss_type='mse', quantile=0.6):
     """Model for double image lenses (8 inputs, 6 outputs)
     Architecture Change: 5 hidden layers, wider in the middle."""
+    
+    '''
     model = tf.keras.Sequential([
         tf.keras.layers.Input(shape=(8,)),
 
@@ -224,6 +226,35 @@ def create_double_model(loss_type='mse', quantile=0.6):
         tf.keras.layers.Dropout(0.0),
 
         tf.keras.layers.Dense(6, activation='linear')
+        
+    ])
+    if loss_type == 'quantile':
+        loss = lambda yt, yp: quantile_loss(quantile, yt, yp)
+    else:
+        loss = 'mse'
+
+    model.compile(
+        optimizer=tf.keras.optimizers.Adam(learning_rate=0.0003),  # lower lr for deeper network
+        loss=loss,
+        metrics=['mae']
+    )
+    return model '''
+
+    """Minimal double model with 2 hidden layers (64)"""
+    model = tf.keras.Sequential([
+        tf.keras.layers.Input(shape=(8,)),
+        
+        tf.keras.layers.Dense(32, use_bias=False),
+        tf.keras.layers.BatchNormalization(),
+        tf.keras.layers.Activation('relu'),
+        tf.keras.layers.Dropout(0.0),
+        
+        tf.keras.layers.Dense(64, use_bias=False),
+        tf.keras.layers.BatchNormalization(),
+        tf.keras.layers.Activation('relu'),
+        tf.keras.layers.Dropout(0.0),
+        
+        tf.keras.layers.Dense(6, activation='linear')
     ])
 
     if loss_type == 'quantile':
@@ -232,7 +263,7 @@ def create_double_model(loss_type='mse', quantile=0.6):
         loss = 'mse'
 
     model.compile(
-        optimizer=tf.keras.optimizers.Adam(learning_rate=0.0003),  # lower lr for deeper network
+        optimizer=tf.keras.optimizers.Adam(learning_rate=0.001), # tweak with lr --> 0.1 to 0.001
         loss=loss,
         metrics=['mae']
     )
@@ -560,7 +591,7 @@ def train_model_with_translation(model, x, y, augmentation_prob=0.5):
 
 def train_model(model, x, y):
     """Original training function without augmentation"""
-    early_stopping = MinimumEpochEarlyStopping(min_epochs=5, patience=15, monitor='val_loss')
+    early_stopping = MinimumEpochEarlyStopping(min_epochs=5, patience=100, monitor='val_loss') # original patience = 15.
     reduce_lr = tf.keras.callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=10, min_lr=1e-7, verbose=1)
     
     if x.shape[1] == 5:
@@ -575,7 +606,7 @@ def train_model(model, x, y):
         y=y,
         validation_split=0.1,
         batch_size=batch_size,
-        epochs=200,
+        epochs=1000, # changes from 200 for testing
         shuffle=True, 
         verbose=1,
         callbacks=[early_stopping, reduce_lr]
@@ -591,3 +622,64 @@ def create_model():
     """Legacy function - creates quad model."""
     print("Warning: create_model() creates a quad model. Use specific functions instead.")
     return create_quad_model()
+
+#--------------simpler models without augmentation -------------------#
+
+def create_simple_double_model(loss_type='mse', quantile=0.6):
+    """Minimal double model with 2 hidden layers (64)"""
+    model = tf.keras.Sequential([
+        tf.keras.layers.Input(shape=(8,)),
+        
+        tf.keras.layers.Dense(32, use_bias=False),
+        tf.keras.layers.BatchNormalization(),
+        tf.keras.layers.Activation('relu'),
+        tf.keras.layers.Dropout(0.0),
+        
+        tf.keras.layers.Dense(64, use_bias=False),
+        tf.keras.layers.BatchNormalization(),
+        tf.keras.layers.Activation('relu'),
+        tf.keras.layers.Dropout(0.0),
+        
+        tf.keras.layers.Dense(6, activation='linear')
+    ])
+
+    if loss_type == 'quantile':
+        loss = lambda yt, yp: quantile_loss(quantile, yt, yp)
+    else:
+        loss = 'mse'
+
+    model.compile(
+        optimizer=tf.keras.optimizers.Adam(learning_rate=0.001),
+        loss=loss,
+        metrics=['mae']
+    )
+    return model
+
+def train_simple_model(model, x, y):
+    """Original training function without augmentation"""
+    early_stopping = MinimumEpochEarlyStopping(min_epochs=5, patience=15, monitor='val_loss')
+    reduce_lr = tf.keras.callbacks.ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=10, min_lr=1e-10, verbose=1)
+    
+    if x.shape[1] == 5:
+        batch_size = 16
+    elif x.shape[1] == 8:
+        batch_size = 64
+    else:
+        batch_size = 32
+    
+    history = model.fit(
+        x=x, 
+        y=y,
+        validation_split=0.1,
+        batch_size=batch_size,
+        epochs=1000,
+        shuffle=True, 
+        verbose=1,
+        callbacks=[early_stopping, reduce_lr]
+    )
+    
+    print(f"\n=== TRAINING SUMMARY ===")
+    print(f"Stopped at epoch: {len(history.history['loss'])}")
+    print(f"Best validation loss: {min(history.history['val_loss']):.6f}")
+    
+    return history
